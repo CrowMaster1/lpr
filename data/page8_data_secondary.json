@@ -1,0 +1,23 @@
+{
+    "Groups": [
+        {
+            "GroupHeading": "Ingen ekstra",
+            "Description": "Ingen ekstra",
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "Ingen ekstra",
+                    "SKSnavn": "-",
+                    "SKScode": "-",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,855 @@
+{
+    "Groups": [
+        {
+            "GroupHeading": "Tumor lokalisation",
+            "Description": [
+				"Tumor lokalisation kodes efter bedste endoskopiske og/eller billeddiagnostiske skøn.",
+				"Uspecifik lokalisation (DC18.9) bør ikke anvendes.",
+				"Optræder denne i sammenhæng med mere specifik kodning, vil specifikke kodning have højere priotitet.",
+				"Ved synkrone tumores kodes alle lokalisationer, befinder der sig flere tumores i samme segment kodes disse som én lokalisation og data indhentes fra patobank.",
+				"Databasen understøtter TNM til hver lokalisation.",
+				"Ved evt. senere behandling/recidiv anvendes den lokalisation, der vurderes som udløsende for behandling."
+				],
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "Caecum",
+                    "SKSnavn": "Kræft i caecum",
+                    "SKScode": "DC180",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Blindtarm",
+                    "SKSnavn": "Kræft i blindtarmen",
+                    "SKScode": "DC181",
+                    "Vejledning": "Disse inkluderes nu i databasen - der sorteres efterfølgende på histologi",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Colon Ascendens",
+                    "SKSnavn": "Kræft i colon ascendens",
+                    "SKScode": "DC182",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Højre Fleksur",
+                    "SKSnavn": "Kræft i flexura coli dextra",
+                    "SKScode": "DC183",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Transversum",
+                    "SKSnavn": "Kræft i colon transversum",
+                    "SKScode": "DC184",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Venstre Fleksur",
+                    "SKSnavn": "Kræft i flexura coli sinistra",
+                    "SKScode": "DC185",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Descendens",
+                    "SKSnavn": "Kræft i colon descendens",
+                    "SKScode": "DC186",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Sigomideum",
+                    "SKSnavn": "Kræft i colon sigmoideum",
+                    "SKScode": "DC187",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Tyktarm UNS",
+                    "SKSnavn": "Kræft i tyktarmen UNS",
+                    "SKScode": "DC189",
+                    "Vejledning": "Forsøg så vidt muligt at undgå uspecifikke koder",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Endetarm",
+                    "SKSnavn": "Kræft i endetarmen",
+                    "SKScode": "DC209",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        },
+        {
+            "GroupHeading": "T stadie",
+            "Description": [
+				"T kategori tilføjes i forbindelse med diagnosen.",
+				"• cTx klassifikation udnyttes kun, når der ikke foreligger nogen undersøgelser på patient.",
+				"Er tumor ikke synlig på billededannelse, men ved skopi anvendes mindste T kategori.",
+				"• Underklassifikation af T3 & T4 stadier bør anvendes.",
+				"Databasen er klar over, dette vil være bedste vurdering foretaget ved MDT."
+			],
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "cT0",
+                    "SKSnavn": "cT1: Primær tumors størrelse/udstrækning",
+                    "SKScode": "AZCD13",
+                    "Vejledning": "Primær tumor kan ikke erkendes",
+                    "DisplayType": "simple",
+                    "Show": true
+                },                {
+                    "LabelText": "cT1",
+                    "SKSnavn": "cT1: Primær tumors størrelse/udstrækning",
+                    "SKScode": "AZCD13",
+                    "Vejledning": "Tumor vokser ned i submucosa, men ikke i muscularis propria",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "cT2",
+                    "SKSnavn": "cT2: Primær tumors størrelse/udstrækning",
+                    "SKScode": "AZCD14",
+                    "Vejledning": "Tumor vokser ned i muscularis propria men ikke igennem ",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "cT3",
+                    "SKSnavn": "cT3: Primær tumors størrelse/udstrækning",
+                    "SKScode": "AZCD15",
+                    "Vejledning": "Vokser igennem muscularis propria til subserosa  (Anvend A->D)",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "cT3a",
+                    "SKSnavn": "cT3a: Primær tumors størrelse/udstrækning",
+                    "SKScode": "AZCD15A",
+                    "Vejledning": "Nedvækst op til 1 mm igennem muscularis propria ",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "cT3b",
+                    "SKSnavn": "cT3b: Primær tumors størrelse/udstrækning",
+                    "SKScode": "AZCD15B",
+                    "Vejledning": "Nedvækst 2 til 5 mm igennem muscularis propria",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "cT3c",
+                    "SKSnavn": "cT3c: Primær tumors størrelse/udstrækning",
+                    "SKScode": "AZCD15C",
+                    "Vejledning": "Nedvækst 6 til 15 mm igennem muscularis propria ",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "cT3d",
+                    "SKSnavn": "cT3c: Primær tumors størrelse/udstrækning",
+                    "SKScode": "AZCD15C",
+                    "Vejledning": "Nedvækst >15 mm igennem muscularis propria",
+                    "DisplayType": "simple",
+                    "Show": true
+                },                
+				{
+                    "LabelText": "cT4",
+                    "SKSnavn": "cT4: Primær tumors størrelse/udstrækning",
+                    "SKScode": "AZCD16",
+                    "Vejledning": "Tumor genembryder serosa  (Anvend A/B)",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "cT4a",
+                    "SKSnavn": "cT4a: Primær tumors størrelse/udstrækning",
+                    "SKScode": "AZCD16A",
+                    "Vejledning": "Gennembryder serosa til viscerale peritoneum",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "cT4b",
+                    "SKSnavn": "cT4b: Primær tumors størrelse/udstrækning",
+                    "SKScode": "AZCD16B",
+                    "Vejledning": "Indvækst i tilstødende organ eller struktur",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "cTx",
+                    "SKSnavn": "cTx: Oplysning om tumors størrelse foreligger ikke i afdelingen",
+                    "SKScode": "AZCD19",
+                    "Vejledning": "Bør ikke anvendes (se vejledning)",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        },
+        {
+            "GroupHeading": "N stadie",
+            "Description": [
+				"N kategori tilføjes i forbindelse med diagnosen.",
+				"• Multiple forskellige N kategorier prioriteres sådan at cN kategori, der er angivet senest forud for evt. procedure udvælges.",
+				"• cNx klassifikation udnyttes kun når, der ikke foreligger nogen undersøgelser på patient."
+				],
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "cN0",
+                    "SKSnavn": "cN0: Ingen regionale lymfeknudemetastaser",
+                    "SKScode": "AZCD30",
+                    "Vejledning": "Forklar-Txt",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "cN1",
+                    "SKSnavn": "cN1: Regional lymfeknudemetastase",
+                    "SKScode": "AZCD31",
+                    "Vejledning": "Forklar-Txt",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "cN2",
+                    "SKSnavn": "cN2: Regional lymfeknudemetastase",
+                    "SKScode": "AZCD32",
+                    "Vejledning": "Forklar-Txt",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "cNx",
+                    "SKSnavn": "cNx: Oplysning om regional lymfeknudestatus foreligger ikke i afdelingen",
+                    "SKScode": "AZCD39",
+                    "Vejledning": "bør ikke anvendes",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        },
+        {
+            "GroupHeading": "M stadie",
+            "Description": [
+				"M kategori tilføjes i forbindelse med diagnosen.", 
+				"• Multiple forskellige M kategorir prioriteres sådan at cM kategori, der er angivet senest forud for evt. procedure udvælges.",
+				"• cMx klassifikation eksisterer ikke.", 
+				"• Højeste M1 kategori anvendes.",
+				"• Organ specifikke lokalisationskoder for metastaser må gerne tilføjes, ellers anvendes disse aktuelt kun ved recidiv."
+			],
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "cM0",
+                    "SKSnavn": "cM0: Ingen fjernmetastaser",
+                    "SKScode": "AZCD40",
+                    "Vejledning": "Ingen fjernmetastaser  ",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "cM1a",
+                    "SKSnavn": "cM1a: Fjernmetastase",
+                    "SKScode": "AZCD41A",
+                    "Vejledning": "Fjernmetastase i et organ system",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "cM1b",
+                    "SKSnavn": "cM1b: Fjernmetastase",
+                    "SKScode": "AZCD41B",
+                    "Vejledning": "Fjernmetastase i flere organ systemer",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "cM1c",
+                    "SKSnavn": "cM1c: Fjernmetastase",
+                    "SKScode": "AZCD41C",
+                    "Vejledning": "Fjernmetastase i peritoneum +/- andre organer",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        },
+        {
+            "GroupHeading": "MDT",
+            "Description": [
+				"DCCG databasen indsamler koder for", 
+				"• Behandlingsbesluttende MDT",
+				"• Postoperativ opfølgnings MDT",
+				"• National MDT.",
+				"o Anden MDT aktivitet indsamles ikke i databasen.",
+				"• For at koderne skal anvendes skal betingelserne under beskrivelsen være opfyldt.",
+				"• Der kan afholdes flere behandlingsbesluttende MDT’er i et patient forløb.",
+				"• Databasen rapporterer aktuelt kun den initiale.",
+				"• Der bør kun optræde 1 behandlingsbesluttende MDT forud for en DCCG procedure.",
+				"Yderligere behandlingsbesluttende MDT’er må gerne kodes ved behandlingsintentionsskifte eller ændringer i planlagte procedure." 
+			],
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "Behandlingsbesluttende MDT",
+                    "SKSnavn": "Behandlingsbesluttende MDT",
+                    "SKScode": "ZZ0190D1",
+                    "Vejledning": "Kræver minimum deltagelse af kirurg, onkolog, patolog samt radiolog. Kræver MDT foretager beslutning om behandlingsstrategi samt der foreligger tilfredsstillende diagnostiske undersøgelser",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Postoperativ opfølgning  MDT",
+                    "SKSnavn": "Postoperativ opfølgning  MDT",
+                    "SKScode": "ZZ0190D2",
+                    "Vejledning": "Der foretages systematisk audit af det operativ forløb med henblik på efterforløb samt kvalitetssikring",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "National  MDT",
+                    "SKSnavn": "National  MDT",
+                    "SKScode": "ZZ0190D3",
+                    "Vejledning": "Afholdes på højtspecialiseret afdeling med deltagelse af nationale centre",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "MDT",
+                    "SKSnavn": "MDT",
+                    "SKScode": "ZZ0190D",
+                    "Vejledning": "MDT hvor der ikke kan foretages endelig behandlingsbeslutning",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                }
+            ]
+        },
+		{
+            "GroupHeading": "Patient ikke modtaget behandling/Behandlet på anden afdeling",
+            "Description": "Denne kode tilføjes behandlingsforløb såfremt pt ikke har modtaget behandling/DCCG procedure. ZWCM7 anvendes hvis pt. Er henvist og har modtaget anden behandling på kirurgisk afdeling – dvs ikke fra kirurgisk til onkologisk afd.",
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "Alternativ Beh.",
+                    "SKSnavn": "Alternativ cancerbehandling",
+                    "SKScode": "ZWCM0",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Ingen udredning",
+                    "SKSnavn": "Klinisk beslutning om ingen udredning",
+                    "SKScode": "ZWCM1",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Beh. i anden afdeling",
+                    "SKSnavn": "Klinisk beslutning om behandling i anden afdeling",
+                    "SKScode": "ZWCM7",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Ingen Behandling",
+                    "SKSnavn": "Klinisk beslutning om ingen behandling",
+                    "SKScode": "ZWCM8",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Pt. ønsker ikke udredning",
+                    "SKSnavn": "Patienten ønsker ikke udredning",
+                    "SKScode": "ZWCM9A",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Pt. ønsker ikke behandling",
+                    "SKSnavn": "Patienten ønsker ikke behandling",
+                    "SKScode": "ZWCM9B",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Pt. ønsker ikke kontrol",
+                    "SKSnavn": "Patienten ønsker ikke kontrol",
+                    "SKScode": "ZWCM9C",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                }
+            ]
+        },
+	    {
+            "GroupHeading": "Performance Status",
+            "Description": "Performance status oplyses som den der danner grundlag for behandlingsbeslutningen. Ved flere opgivne vælges sidste inden proceduren. Der bør ikke foretages vurdering ihft journal vurdering. Her bør anvendes PS ukendt.",
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "PS0",
+                    "SKSnavn": "Performance Status 0",
+                    "SKScode": "ZZV020U0",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "PS1",
+                    "SKSnavn": "Performance Status 1",
+                    "SKScode": "ZZV020U1",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "PS2",
+                    "SKSnavn": "Performance Status 2",
+                    "SKScode": "ZZV020U2",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "PS3",
+                    "SKSnavn": "Performance Status 3",
+                    "SKScode": "ZZV020U3",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "PS4",
+                    "SKSnavn": "Performance Status 4",
+                    "SKScode": "ZZV020U4",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "PS5",
+                    "SKSnavn": "Performance Status 5",
+                    "SKScode": "ZZV020U5",
+                    "Vejledning": "Død",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "PS9",
+                    "SKSnavn": "Performance Status Ukendt",
+                    "SKScode": "ZZV020U9*",
+                    "Vejledning": "Oplysning ikke tilgængelig i journal",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        },
+		{
+            "GroupHeading": "ASA",
+            "Description": "ASA score oplyses, som den der danner grundlag for behandlingsbeslutningen. Ved flere opgivne vælges sidste inden proceduren. Der bør ikke foretages vurdering ihft journal vurdering. Her bør anvendes ASA ukendt.",
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "ASA1",
+                    "SKSnavn": "ASA funktionsniveau, ASA 1",
+                    "SKScode": "EZA1",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "ASA2",
+                    "SKSnavn": "ASA funktionsniveau, ASA 2",
+                    "SKScode": "EZA2",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "ASA3",
+                    "SKSnavn": "ASA funktionsniveau, ASA 3",
+                    "SKScode": "EZA3",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "ASA4",
+                    "SKSnavn": "ASA funktionsniveau, ASA 4",
+                    "SKScode": "EZA4",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "ASA5",
+                    "SKSnavn": "ASA funktionsniveau, ASA 5",
+                    "SKScode": "EZA5",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "ASA6",
+                    "SKSnavn": "ASA funktionsniveau, ASA 6",
+                    "SKScode": "EZA6",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "ASA9",
+                    "SKSnavn": "ASA funktionsniveau, ASA Ukendt",
+                    "SKScode": "EZA9*",
+                    "Vejledning": "Oplysning ikke tilgængelig i journal",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        },
+        {
+            "GroupHeading": "Alkohol",
+            "Description": "Alkohol indtag vurderes over sidste måned. Ved tidligere alkohol afhængighed kodes med DF102*, Ukendt undestøttes aktuelt ikke. Værdi undlades i dette tilfælde",
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "Alkohol",
+                    "SKSnavn": "Alkoholforbrug, antal genstande per uge",
+                    "SKScode": "DVRB02+VPH####",
+                    "Vejledning": "VPH#### = antallet af genstande (####)",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        },
+        {
+            "GroupHeading": "Tobak",
+            "Description": "",
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+				{
+                    "LabelText": "Ryger",
+                    "SKSnavn": "Ryger",
+                    "SKScode": "ZZP01A1A",
+                    "Vejledning": "Ryger (Inden for seneste 8 uger)",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Ikke Ryger",
+                    "SKSnavn": "Ikke Ryger",
+                    "SKScode": "ZZP01A1B",
+                    "Vejledning": "Anvend subklassifikation",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+				{
+                    "LabelText": "Rygestopper",
+                    "SKSnavn": "Rygestopper",
+                    "SKScode": "ZZP01A1B2",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": false
+                },
+                {
+                    "LabelText": "Tidligere Ryger",
+                    "SKSnavn": "Tidligere ryger",
+                    "SKScode": "ZZP01A1B2",
+                    "Vejledning": "Ikke røget de seneste 8 uger",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Aldrig Ryger",
+                    "SKSnavn": "Aldrig ryger",
+                    "SKScode": "ZZP01A1B3",
+                    "Vejledning": "Ingen eller minimalt tidligere forbrug",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        },
+		{
+            "GroupHeading": "Vægt",
+            "Description": "Ukendt understøttes ikke, undlad i dette tilfælde",
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "Vægt",
+                    "SKSnavn": "Legemsvægt ved udskrivelse (kg)",
+                    "SKScode": "DVRA01 + VPH####",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+				}
+			]
+        },
+        {
+            "GroupHeading": "Højde",
+            "Description": "Ukendt understøttes ikke, undlad i dette tilfælde",
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "Højde",
+                    "SKSnavn": "Legemshøjde (cm)",
+                    "SKScode": "DVRA10 + VPH#####",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        },
+		{
+            "GroupHeading": "Familieanamnese",
+            "Description": [
+				"DCCG databasen strategi for monitorering af arvelighed:",
+				"Oplysning ovenfor suppleres med alder, MMR status.",
+				"Efterfølgende suppleres med LPR oplsyninger om kontakt til afdeling for genetisk rådgivning.",
+				"Ved nationalt ensartet mønster og sufficient opfyldelse af retningslinjer vil oplsyning om faminieanamnese udgå.",  
+				"Manglende indtastning = spurgt og nej" 
+			],
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "Familieanamnese",
+                    "SKSnavn": "Familieanamnese med kræft i fordøjelsesorganer",
+                    "SKScode": "DZ800",
+                    "Vejledning": "Se tværfaglige/DCCG retningslinjer",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        },
+		{
+            "GroupHeading": "Jernmangelanæmi UNS",
+            "Description": "Aktuelt er fokus på anæmi, husk andre komorbiditeter også",
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "Jernmangelanæmi UNS",
+                    "SKSnavn": "Jernmangelanæmi UNS",
+                    "SKScode": "DD509",
+                    "Vejledning": "Se DCCG retningslinjer",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        },
+		{
+            "GroupHeading": "Andre interventioner",
+            "Description": "Fokus interventioner, andre skal også gerne kodes",
+            "AllowsMultipleSelections": true,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "Behandling med po. jern",
+                    "SKSnavn": "Behandling med po. jern",
+                    "SKScode": "BOHC10",
+                    "Vejledning": "Se DCCG retningslinjer",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+				{
+                    "LabelText": "Behandling med iv. jern",
+                    "SKSnavn": "Behandling med iv. jern",
+                    "SKScode": "BOHC12",
+                    "Vejledning": "Se DCCG retningslinjer",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        },
+        {
+            "GroupHeading": "Højde på rectumtumor-Skopi",
+            "Description": "Husk at kode rektoskopi som procedure i LPR",
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "Tumor Højde - Rectoskop",
+                    "SKSnavn": "Rectum Tumor Højde + bestemt ved Rectoskop",
+                    "SKScode": "ZZV009A1A + VPH####",
+                    "Vejledning": "i cm",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Tumor Højde - Rectoskop UK",
+                    "SKSnavn": "Rectum Tumor Højde + bestemt ved Rectoskop + ukendt",
+                    "SKScode": "ZZV009A9",
+                    "Vejledning": "Hvis den ikke er foretaget",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        },
+        {
+            "GroupHeading": "MR højde på tumor",
+            "Description": "-",
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "Rectum Tumor Højde MR",
+                    "SKSnavn": "MR højde på tumor",
+                    "SKScode": "ZZV009A1B + VPH####",
+                    "Vejledning": "i cm",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Rectum Tumor Højde MR UK",
+                    "SKSnavn": "Rectum Tumor Højde + bestemt ved MR + ukendt",
+                    "SKScode": "ZZV009A9 ",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        },
+        {
+            "GroupHeading": "Tumor nedvækst",
+            "Description": "Under muscularis i mm, ukendt findes ikke, undlad i dette tilfælde",
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "Tumor nedvækst",
+                    "SKSnavn": "Tumor nedvækst under tunica muscularis (mm) + VPH",
+                    "SKScode": "ZZV009A2 + VPH####",
+                    "Vejledning": "i mm",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        },
+		{
+            "GroupHeading": "MR ekstramural vene indvækst",
+            "Description": "ukendt findes ikke, undladelse af kodning = nej",
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "EMVI tilstede",
+                    "SKSnavn": "Veneinvasion påvist ved MR-skanning",
+                    "SKScode": "ZDW58B1",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        },
+		{
+            "GroupHeading": "Korteste afstand mellem cancervæv og den mesorektale fascie",
+            "Description": "Skal diskuters og ansøges",
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "tumorvæv afstand til MRF",
+                    "SKSnavn": "tumorvæv afstand til MRF",
+                    "SKScode": "Ønskes",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        } 
+    ]
+}

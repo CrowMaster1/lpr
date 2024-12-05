@@ -1,0 +1,165 @@
+{
+    "Groups": [
+        {
+            "GroupHeading": "Peritoneale Procedurer",
+            "Description": "Procedurer relateret til peritoneum og intraoperative behandlinger.",
+            "AllowsMultipleSelections": true,
+            "SeeAlso": {
+                "URL": "-",
+                "LinkText": "-"
+            },
+            "Items": [
+                {
+                    "LabelText": "Ekstensiv excesion af peritoneum",
+                    "SKSnavn": "Ekstensiv excesion af peritoneum",
+                    "SKScode": "KJAQ00",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Lap. Intraoperativ hyperterminsk kemoterapeautiskperfusion af bughule",
+                    "SKSnavn": "Laparoskopisk intraoperativ kemoterapeutisk perfusion",
+                    "SKScode": "KJAQ11",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Åben Intraoperativ hyperterminsk kemoterapeautiskperfusion af bughule",
+                    "SKSnavn": "Åben intraoperativ kemoterapeutisk perfusion",
+                    "SKScode": "KJAQ10",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        },
+        {
+            "GroupHeading": "Leverresektioner",
+            "Description": "Forskellige typer af leverresektioner, herunder atypiske og segmentale procedurer.",
+            "AllowsMultipleSelections": true,
+            "SeeAlso": {
+                "URL": "-",
+                "LinkText": "-"
+            },
+            "Items": [
+                {
+                    "LabelText": "Kileresektion af lever",
+                    "SKSnavn": "Kileresektion af lever",
+                    "SKScode": "KJJB00",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Atypisk leverresektion",
+                    "SKSnavn": "Atypisk leverresektion",
+                    "SKScode": "KJJB10",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Resektion af et leversegment",
+                    "SKSnavn": "Segmentresektion",
+                    "SKScode": "KJJB20",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Resektion af to leversegmenter",
+                    "SKSnavn": "Dobbelt segmentresektion",
+                    "SKScode": "KJJB30",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Venstresidig hepatektomi",
+                    "SKSnavn": "Venstresidig hepatektomi",
+                    "SKScode": "KJJB40",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Højresidig hepatektomi",
+                    "SKSnavn": "Højresidig hepatektomi",
+                    "SKScode": "KJJB50",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Udvidet højresidig hepatektomi",
+                    "SKSnavn": "Udvidet højresidig hepatektomi",
+                    "SKScode": "KJJB53",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Anden resektion af tre eller flere leversegmenter",
+                    "SKSnavn": "Anden resektion af tre eller flere leversegmenter",
+                    "SKScode": "KJJB60",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Laparoskopisk leverresektion",
+                    "SKSnavn": "Laparoskopisk leverresektion",
+                    "SKScode": "KJJB71",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Anden leverresektion",
+                    "SKSnavn": "Anden leverresektion",
+                    "SKScode": "KJJB96",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Radiofrekvensablation (RFA) af patologisk væv i lever",
+                    "SKSnavn": "Radiofrekvensablation (RFA) af patologisk væv i lever",
+                    "SKScode": "KJJA43A",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Mikrobølgeablation (MWA) af patologisk væv i lever",
+                    "SKSnavn": "Mikrobølgeablation (MWA) af patologisk væv i lever",
+                    "SKScode": "KJJA43B",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        },
+        {
+            "GroupHeading": "Lungeresektioner",
+            "Description": "Procedurer relateret til resektioner af lungernes væv.",
+            "AllowsMultipleSelections": true,
+            "SeeAlso": {
+                "URL": "-",
+                "LinkText": "-"
+            },
+            "Items": [
+                {
+                    "LabelText": "Lungeresektioner",
+                    "SKSnavn": "Lungeresektioner",
+                    "SKScode": "KGDB*",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        }
+    ]
+}

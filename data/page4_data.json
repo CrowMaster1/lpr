@@ -1,0 +1,95 @@
+{
+    "Groups": [
+        {
+            "GroupHeading": "Endoskopiske og Kirurgiske Procedurer",
+            "Description": "Procedurer i endetarm og tyktarm, herunder endoskopiske og kirurgiske teknikker.",
+            "AllowsMultipleSelections": true,
+            "SeeAlso": {
+                "URL": "",
+                "LinkText": ""
+            },
+            "Items": [
+                {
+                    "LabelText": "Polypektomi i tyktarm",
+                    "SKSnavn": "Polypektomi i tyktarm",
+                    "SKScode": "KJFA15",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Rectoskopisk polypektomi i endetarm",
+                    "SKSnavn": "Rectoskopisk polypektomi i endetarm",
+                    "SKScode": "KJGA05",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Rectotomi og excision af patologisk væv i endetarm",
+                    "SKSnavn": "Rectotomi og excision af patologisk væv i endetarm",
+                    "SKScode": "KJGA70",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Transanal excision af patologisk væv i endetarm",
+                    "SKSnavn": "Transanal excision af patologisk væv i endetarm",
+                    "SKScode": "KJGA73",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Rektoskopisk mikrokirugisk excision af patologisk væv i endetarm",
+                    "SKSnavn": "Rektoskopisk mikrokirugisk excision af patologisk væv i endetarm",
+                    "SKScode": "KJGA75",
+                    "Vejledning": "TEM/TEO/TAMIS",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Endoskopisk mucosa resektion (EMR) i endetarm",
+                    "SKSnavn": "Endoskopisk mucosa resektion (EMR) i endetarm",
+                    "SKScode": "KJGA52A",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Endoskopisk submukøs dissektion (ESD) i endetarm",
+                    "SKSnavn": "Endoskopisk submukøs dissektion (ESD) i endetarm",
+                    "SKScode": "KJGA52B",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Endoskopisk mucosa resektion (EMR) i tyktarm",
+                    "SKSnavn": "Endoskopisk mucosa resektion (EMR) i tyktarm",
+                    "SKScode": "JFA55A",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Endoskopisk submukøs dissektion (ESD) i tyktarm",
+                    "SKSnavn": "Endoskopisk submukøs dissektion (ESD) i tyktarm",
+                    "SKScode": "JFA55B",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Endoskopisk assisteret CELS/laparoskopisk assisteret CELS",
+                    "SKSnavn": "Endoskopisk assisteret CELS/laparoskopisk assisteret CELS",
+                    "SKScode": "KJFA87/KJFA88",
+                    "Vejledning": "Skal kodes med tillægskoder som resektioner",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        }
+    ]
+}

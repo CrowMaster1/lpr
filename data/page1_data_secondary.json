@@ -1,0 +1,31 @@
+{
+    "Groups": [
+        {
+            "GroupHeading": "Test",
+            "Description": "Pg1",
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "Option1-Page1",
+                    "SKSnavn": "This is Option 1-Page1",
+                    "SKScode": "",
+                    "Vejledning": "",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Option 2-Page1",
+                    "SKSnavn": "This is Option 2-Page 1",
+                    "SKScode": "",
+                    "Vejledning": "",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                }
+            ]
+        }
+    ]
+}

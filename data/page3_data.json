@@ -1,0 +1,711 @@
+{
+	"Groups": [			
+		{
+			"GroupHeading": "Ingen komplikationer",
+			"Description": "Kodes KUN såfremt forløbet har været ukompliceret - dvs ingen Clavion-Dindo Grad",
+			"AllowsMultipleSelections": false,
+			"SeeAlso": {
+				"URL": "https://dccg.dk",
+				"LinkText": "Link til DCCG-1"
+			},
+			"Items": [
+				{
+					"LabelText": "Ingen komplikationer ",
+					"SKSnavn": "Ingen komplikationer ",
+					"SKScode": "VV00051",
+					"Vejledning": "",
+					"DisplayType": "simple",
+					"Show": true
+				}				
+			]
+		},
+		{
+			"GroupHeading": "Clavien-Dindo Kategori",
+			"Description": "Inkluderer i DCCG både kirurgiske og medicinske",
+			"AllowsMultipleSelections": false,
+			"SeeAlso": {
+				"URL": "https://dccg.dk",
+				"LinkText": "Link til DCCG-1"
+			},
+			"Items": [
+                {
+                    "LabelText": "Clavien grad 1",
+                    "SKSnavn": "Clavien grad 1",
+                    "SKScode": "ZDA03A1",
+                    "Vejledning": "Enhver afvigelse fra det normale postoperative forløb uden kirurgisk, endoskopisk, radiologisk eller farmakologisk intervention med undtagelse af væskebehandling, behandling med antiemetika, febernedsættende medicin, smertestillende medicin eller diuretika og fysioterapi.",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Clavien grad 2",
+                    "SKSnavn": "Clavien grad 2",
+                    "SKScode": "ZDA03A2",
+                    "Vejledning": "Medicinsk behandling inkl. blodtransfusion eller parenteral ernæring, men eksklusiv væskebehandling og behandling med antiemetika, febernedsættende medicin, smertestillende medicin eller diuretika.",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Clavien grad 3a",
+                    "SKSnavn": "Clavien grad 3a",
+                    "SKScode": "ZDA03A3A",
+                    "Vejledning": "Komplikation som er behandlet kirurgisk, endoskopisk eller radiologisk (perkutan drænage) behandling uden narkose, men inkl. eventuel rus.",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Clavien grad 3b",
+                    "SKSnavn": "Clavien grad 3b",
+                    "SKScode": "ZDA03A3B",
+                    "Vejledning": "Komplikation som er behandlet kirurgisk, endoskopisk eller radiologisk (perkutan drænage) behandling i narkose ekskl. rus.",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Clavien grad 4a",
+                    "SKSnavn": "Clavien grad 4",
+                    "SKScode": "ZDA03A4A",
+                    "Vejledning": "Livstruende komplikation (inkl. CNS) som krævede indlæggelse på en intensiv afdeling, med svigt af et organ (inkl. dialyse).",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Clavien grad 4b",
+                    "SKSnavn": "Clavien grad 4",
+                    "SKScode": "ZDA03A4B",
+                    "Vejledning": "Livstruende komplikation (inkl. CNS) som krævede indlæggelse på en intensiv afdeling med multiorgansvigt.",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Clavien grad 5",
+                    "SKSnavn": "Clavien grad 5",
+                    "SKScode": "ZDA03A5",
+                    "Vejledning": "Død",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                }
+            ]
+        },
+		{
+			"GroupHeading": "Per-operative komplikationer",
+			"Description": [
+				"Komplikationer opgøres per procedure/kontakt (indlæggelse).",
+				"• Der foretages en samlet opgørelse fra proceduren til udskrivelse/afslutning af kontakt.",
+				"Samtlige komplikationer tilføjes via SKS koder.",
+				"Den højeste kategori af komplikation under indlæggelsen (Kontakt) angives via Clavien Dindo",
+				"Komplikationer opstået efter udskrivelse registreres i nye kontakt.",
+				"Databasen opsamler disse data via LPR – dvs samme sundhedsforløb bør anvendes ved komplikationer, men er ikke et krav",
+				"• Et ukompliceret forløb - defineret som ingen medicinske eller kirurgiske komplikationer, der har medført kodning nedenfor kodes med VV00051"
+			],
+			"AllowsMultipleSelections": true,
+			"SeeAlso": {
+				"URL": "",
+				"LinkText": ""
+			},
+			"Items": [
+				{
+					"LabelText": "Per-operativ blødning",
+					"SKSnavn": "Per-operativ blødning",
+					"SKScode": "T818F",
+          			"Vejledning": "<500 ml",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Utilsigtet peroperativ punktur eller læsion af gastrointestinalkanalen",
+					"SKSnavn": "Utilsigtet peroperativ punktur eller læsion af gastrointestinalkanalen",
+					"SKScode": "DT812G",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Utilsigtet peroperativ punktur eller læsion af kvindeligt kønsorgan",
+					"SKSnavn": "Utilsigtet peroperativ punktur eller læsion af kvindeligt kønsorgan",
+					"SKScode": "DT812H",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+		        {
+					"LabelText": "Utilsigtet peroperativ perforation af uterus ved resektion",
+         			 "SKSnavn": "Utilsigtet peroperativ perforation af uterus ved resektion",
+          			"SKScode": "DT812H1",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+        		},
+				{
+          			"LabelText": "Utilsigtet peroperativ punktur eller læsion af kar eller lymfesystem",
+          			"SKSnavn": "Utilsigtet peroperativ punktur eller læsion af kar eller lymfesystem",
+          			"SKScode": "DT812K",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Utilsigtet peroperativ læsion af nerve",
+          			"SKSnavn": "Utilsigtet peroperativ læsion af nerve",
+          			"SKScode": "DT812N",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Utilsigtet peroperativ punktur eller læsion af urinveje",
+          			"SKSnavn": "Utilsigtet peroperativ punktur eller læsion af urinveje",
+          			"SKScode": "DT812U",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Utilsigtet peroperativ punktur eller læsion af nyre",
+          			"SKSnavn": "Utilsigtet peroperativ punktur eller læsion af nyre",
+          			"SKScode": "DT812UA",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Utilsigtet peroperativ punktur eller læsion af nyrebækken",
+          			"SKSnavn": "Utilsigtet peroperativ punktur eller læsion af nyrebækken",
+          			"SKScode": "DT812UB",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Utilsigtet peroperativ punktur eller læsion af urinleder",
+          			"SKSnavn": "Utilsigtet peroperativ punktur eller læsion af urinleder",
+          			"SKScode": "DT812UC",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+        		},
+				{
+          			"LabelText": "Utilsigtet peroperativ punktur eller læsion af urinblære",
+          			"SKSnavn": "Utilsigtet peroperativ punktur eller læsion af urinblære",
+          			"SKScode": "DT812UD",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Utilsigtet peroperativ læsion af organ med samtidig intervention",
+          			"SKSnavn": "Utilsigtet peroperativ læsion af organ med samtidig intervention",
+          			"SKScode": "DT812V",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Utilsigtet peroperativ læsion af organ uden samtidig intervention",
+          			"SKSnavn": "Utilsigtet peroperativ læsion af organ uden samtidig intervention",
+          			"SKScode": "DT812W",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Utilsigtet peroperativ punktur eller læsion IKA",
+          			"SKSnavn": "Utilsigtet peroperativ punktur eller læsion IKA",
+          			"SKScode": "DT812",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Fremmedlegeme utilsigtet efterladt i operationsfelt",
+          			"SKSnavn": "Fremmedlegeme utilsigtet efterladt i operationsfelt",
+          			"SKScode": "DT815",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Læsion af tolvfingertarmen",
+          			"SKSnavn": "Læsion af tolvfingertarmen",
+          			"SKScode": "DS364A",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Læsion af galdeblæren",
+          			"SKSnavn": "Læsion af galdeblæren",
+          			"SKScode": "DS361B",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+					"Show": true
+        		},
+				{
+          			"LabelText": "Læsion af galdegang",
+          			"SKSnavn": "Læsion af galdegang",
+          			"SKScode": "DS361C",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Læsion af tyktarmen",
+          			"SKSnavn": "Læsion af tyktarmen",
+          			"SKScode": "DS365",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Læsion af leveren",
+          			"SKSnavn": "Læsion af leveren",
+          			"SKScode": "DS361D",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Læsion af milten",
+          			"SKSnavn": "Læsion af milten",
+          			"SKScode": "DS360",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{	
+          			"LabelText": "Læsion af pancreas",
+          			"SKSnavn": "Læsion af pancreas",
+          			"SKScode": "DS362",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Læsion af tyndtarmen",
+          			"SKSnavn": "Læsion af tyndtarmen",
+          			"SKScode": "DS364",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+					"LabelText": "Læsion af mavesækken",
+          			"SKSnavn": "Læsion af mavesækken",
+          			"SKScode": "DS363",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Læsion af ovarie",
+          			"SKSnavn": "Læsion af ovarie",
+          			"SKScode": "DS374",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Læsion af æggeleder",
+          			"SKSnavn": "Læsion af æggeleder",
+          			"SKScode": "DS375",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Læsion af livmoderen",
+          			"SKSnavn": "Læsion af livmoderen",
+          			"SKScode": "DS376",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				}				
+			]
+		},
+		{
+			"GroupHeading": "Post-operative komplikationer-Kirurgi",
+			"Description": [
+			"Avital tarm i anastomose området kodes som anastomose læk/re-operation",
+			"Post-op Stomi komplikation: Dækker prolaps, separation, retraktion, og infektion som så kodes med denne og ovenstående infektionskoder",
+			"Postoperativ tarmobstruktion: Anvendes post operativ og ikke DK567. Denne anvendes kun ved primær symptom."
+			],
+			"AllowsMultipleSelections": true,
+			"SeeAlso": {
+				"URL": "https://dccg.dk",
+				"LinkText": "Link til DCCG-1"
+			},
+			"Items": [
+                {
+                    "LabelText": "Post-operativ blødning",
+                    "SKSnavn": "Post-operativ blødning",
+                    "SKScode": "DT810G ",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+				{
+                    "LabelText": "Dyb bristning af op. sår",
+                    "SKSnavn": "Dyb bristning af op. sår ",
+                    "SKScode": "DT813D ",
+                    "Vejledning": "Fascieruptur",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+				{
+                    "LabelText": "Post-op sår infektion",
+                    "SKSnavn": "Post-op sår infektion",
+                    "SKScode": "DT814F",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+				                {
+                    "LabelText": "Post-op intra abd. abscess",
+                    "SKSnavn": "Post-op intra abd. abscess",
+                    "SKScode": "DT814B",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+				{
+				    "LabelText": "Post-op Stomi komplikation",
+                    "SKSnavn": "Post-op intra abd. abscess",
+                    "SKScode": "K914D",
+                    "Vejledning": "Dækker prolaps, separation, retraktion, og infektion som så kodes med denne og ovenstående infektionskoder",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+				{
+				    "LabelText": "Post-op Stomi nekrose",
+                    "SKSnavn": "Post-op Stomi nekrose",
+                    "SKScode": "K914C",
+                    "Vejledning": "Vil medfører re-operation",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+				{
+                    "LabelText": "Postoperativ tarmobstruktion",
+                    "SKSnavn": "Postoperativ tarmobstruktion",
+                    "SKScode": "DK913",
+                    "Vejledning": "Anvendes post operativ og ikke DK567. Denne anvendes kun ved primær symptom.",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                }
+			]	
+		},
+		{
+			"GroupHeading": "Anastomose læk",
+			"Description": [
+			"Anstomose lækager kodes iht nedenstående.", 
+			"Kræver et læk re-operation, skal der kodes ifølge nedenstående.",
+			"Der kodes for evt. Stomi og ekstra resektioner også."
+			],
+			"AllowsMultipleSelections": false,
+			"SeeAlso": {
+				"URL": "https://dccg.dk",
+				"LinkText": "Link til DCCG-1"
+			},
+			"Items": [
+                {
+                    "LabelText": "Anastomoselækage, type A",
+                    "SKSnavn": "Anastomoselækage, type A",
+                    "SKScode": "ZDA03BA",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+				{
+                    "LabelText": "Anastomoselækage, type B",
+                    "SKSnavn": "Anastomoselækage, type B",
+                    "SKScode": "ZDA03BB",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+				{
+                    "LabelText": "Anastomoselækage, type C",
+                    "SKSnavn": "Anastomoselækage, type C",
+                    "SKScode": "ZDA03BC",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                }
+			]	
+		},
+		{
+			"GroupHeading": "Anastomose re-operation",
+			"Description": [
+			"-"
+			],
+			"AllowsMultipleSelections": true,
+			"SeeAlso": {
+				"URL": "https://dccg.dk",
+				"LinkText": "Link til DCCG-1"
+			},
+			"Items": [
+                {
+                    "LabelText": "Re-operation anastomose insuff - åben",
+                    "SKSnavn": "Re-operation for sutur/anastomose insuff efter Gas operation",
+                    "SKScode": "KJWF00",
+                    "Vejledning": "husk tillægskode",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+				{
+                    "LabelText": "Re-operation anastomose insuff - lap",
+                    "SKSnavn": "Re-operation for sutur/anastomose insuff efter Gas operation",
+                    "SKScode": "KJWF01",
+                    "Vejledning": "husk tillægskode",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+				{
+                    "LabelText": "Anastomose lækage, anastomose bevaret",
+                    "SKSnavn": "Anastomose lækage, anastomose bevaret",
+                    "SKScode": "DT813A1",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+				{
+                    "LabelText": "Anastomose lækage, anastomose nedbrudt",
+                    "SKSnavn": "Anastomose lækage, anastomose nedbrudt",
+                    "SKScode": "DT813A2",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                }
+			]	
+		},
+		{
+			"GroupHeading": "Re-operationer",
+			"Description": [
+			"Alle re-operationer kodes efter re-operations klassifikation, så specifik som muligt.",
+			"• Er dette ikke dækkende, anvendes KJWW(96 –98) og subspecikke koder for ekstra procedurer.",
+			"• Eksp.Lap SKAL ikke anvendes som re-operations kode.", 
+			"o Se under anastomose re-op for specifikke kodning heraf."
+			],
+			"AllowsMultipleSelections": true,
+			"SeeAlso": {
+				"URL": "https://dccg.dk",
+				"LinkText": "Link til DCCG-1"
+			},
+			"Items": [
+				{
+					"LabelText": "Sutur af sårruptur efter gastroenterologisk operation",
+					"SKSnavn": "Sutur af sårruptur efter gastroenterologisk operation",
+					"SKScode": "KJWA00",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Sutur af sårruptur med anvendelse af traktionsnet efter gastroenterologisk operation",
+					"SKSnavn": "Sutur af sårruptur med anvendelse af traktionsnet efter gastroenterologisk operation",
+					"SKScode": "KJWA30",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Reoperation ved overfladisk infektion efter gastroenterologisk operation",
+					"SKSnavn": "Reoperation ved overfladisk infektion efter gastroenterologisk operation",
+					"SKScode": "KJWB00",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Reoperation ved dyb infektion efter gastroenterologisk operation",
+					"SKSnavn": "Reoperation ved dyb infektion efter gastroenterologisk operation",
+					"SKScode": "KJWC00",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Perkutan endoskopisk reoperation ved dyb infektion efter gastroenterologisk operation",
+					"SKSnavn": "Perkutan endoskopisk reoperation ved dyb infektion efter gastroenterologisk operation",
+					"SKScode": "KJWC01",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Reoperation for overfladisk blødning efter gastroenterologisk operation",
+					"SKSnavn": "Reoperation for overfladisk blødning efter gastroenterologisk operation",
+					"SKScode": "KJWD00",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Reoperation for dyb blødning efter gastroenterologisk operation",
+					"SKSnavn": "Reoperation for dyb blødning efter gastroenterologisk operation",
+					"SKScode": "KJWE00",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Perkutan endoskopisk reoperation for dyb blødning efter gastroenterologisk operation",
+					"SKSnavn": "Perkutan endoskopisk reoperation for dyb blødning efter gastroenterologisk operation",
+					"SKScode": "KJWE01",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Transluminal endoskopisk reoperation for dyb blødning efter gastroenterologisk operation",
+					"SKSnavn": "Transluminal endoskopisk reoperation for dyb blødning efter gastroenterologisk operation",
+					"SKScode": "KJWE02",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Reoperation for sutur- eller anastomoseinsufficiens efter gastroenterologisk operation",
+					"SKSnavn": "Reoperation for sutur- eller anastomoseinsufficiens efter gastroenterologisk operation",
+					"SKScode": "KJWF00",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Perkutan endoskopisk reoperation for sutur- eller anastomoseinsufficiens efter gastroenterologisk operation",
+					"SKSnavn": "Perkutan endoskopisk reoperation for sutur- eller anastomoseinsufficiens efter gastroenterologisk operation",
+					"SKScode": "KJWF01",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Anden reoperation efter gastroenterologisk operation",
+					"SKSnavn": "Anden reoperation efter gastroenterologisk operation",
+					"SKScode": "KJWW96",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Anden perkutan endoskopisk reoperation efter gastroenterologisk operation",
+					"SKSnavn": "Anden perkutan endoskopisk reoperation efter gastroenterologisk operation",
+					"SKScode": "KJWW97",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Anden transluminal endoskopisk reoperation efter gastroenterologisk operation",
+					"SKSnavn": "Anden transluminal endoskopisk reoperation efter gastroenterologisk operation",
+					"SKScode": "KJWW98",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				}
+			]
+
+		},
+		{
+			"GroupHeading": "Medicinske komplikationer",
+			"Description": [
+			"Medicinske komplikationer kodes så udtømmende som mulight iht. SKS.",
+			"• Listen er hyppigt forekommende - ikke udtømmende"			
+			],
+			"AllowsMultipleSelections": true,
+			"SeeAlso": {
+				"URL": "https://dccg.dk",
+				"LinkText": "Link til DCCG-1"
+			},
+			"Items": [	
+				{
+					"LabelText": "Postoperativ sepsis",
+					"SKSnavn": "Postoperativ sepsis",
+					"SKScode": "DT814D",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Postoperativ arteriel emboli eller trombose",
+					"SKSnavn": "Postoperativ arteriel emboli eller trombose",
+					"SKScode": "DT817B1",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Postoperativ dyb venetrombose",
+					"SKSnavn": "Postoperativ dyb venetrombose",
+					"SKScode": "DT817C",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Postoperativ lungeemboli",
+					"SKSnavn": "Postoperativ lungeemboli",
+					"SKScode": "DT817D",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Postoperativ apoplexia cerebri",
+					"SKSnavn": "Postoperativ apoplexia cerebri",
+					"SKScode": "DT817Y1",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Postoperativt akut myokardieinfarkt",
+					"SKSnavn": "Postoperativt akut myokardieinfarkt",
+					"SKScode": "DT817Y2",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Postoperativ hjerteinsufficiens",
+					"SKSnavn": "Postoperativ hjerteinsufficiens",
+					"SKScode": "DT817Y3",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Postoperativ nyreinsufficiens",
+					"SKSnavn": "Postoperativ nyreinsufficiens",
+					"SKScode": "DT817Y4",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Postoperativ pneumoni",
+					"SKSnavn": "Postoperativ pneumoni",
+					"SKScode": "DT814P",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Postoperativ urinvejsinfektion",
+					"SKSnavn": "Postoperativ urinvejsinfektion",
+					"SKScode": "DT814U",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Postoperativ aspirationspneumoni",
+					"SKSnavn": "Postoperativ aspirationspneumoni",
+					"SKScode": "DT814P1",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				}
+			]
+		}	
+    ]
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCCG LPR projekt</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="css/styles.css"> 
+    <link rel="stylesheet" href="css/pages_styles.css"> 
+    <link rel="stylesheet" href="css/hamster.css"> 
+</head>
+<body>
+    <header>
+        <div class="navigation-container">
+            <div class="navigation-content">
+                <script>
+                    fetch('navigation.html')
+                        .then(response => response.text())
+                        .then(data => {
+                            document.querySelector('.navigation-container').innerHTML = data;
+                        });
+                </script>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container main-container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="professional-heading">Velkommen til DCCG.dk's LPR Projekt version 0.51</h1> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img class="logo-left" src="images/logo2.png" alt="Logo2">
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img class="logo-right" src="images/logo5.png" alt="Logo5">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
+                    <div class="wheel"></div>
+                    <div class="hamster">
+                        <div class="hamster__body">
+                            <div class="hamster__head">
+                                <div class="hamster__ear"></div>
+                                <div class="hamster__eye"></div>
+                                <div class="hamster__nose"></div>
+                            </div>
+                            <div class="hamster__limb hamster__limb--fr"></div>
+                            <div class="hamster__limb hamster__limb--fl"></div>
+                            <div class="hamster__limb hamster__limb--br"></div>
+                            <div class="hamster__limb hamster__limb--bl"></div>
+                            <div class="hamster__tail"></div>
+                        </div>
+                    </div>
+                    <div class="spoke"></div>
+                </div>
+            </div>
+            <p>&copy; 2024 DCCG.dk. All rights reserved.</p>
+        </div>      
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1138 @@
+{
+	"Groups": [
+		{
+			"GroupHeading": "Proceduresigte",
+			"Description": "This group contains examples of procedures targeted towards diagnostic and therapeutic outcomes.",
+			"AllowsMultipleSelections": false,
+			"SeeAlso": {
+				"URL": "https://dccg.dk",
+				"LinkText": "Link til DCCG-1"
+			},
+			"Items": [
+				{
+					"LabelText": "Diagnostisk",
+					"SKSnavn": "diagnostisk",
+					"SKScode": "ZPZA01",
+					"Vejledning": "Procedure aimed at diagnosis.",
+					"DisplayType": "simple",
+					"Show": true
+				},
+				{
+					"LabelText": "Kurativt",
+					"SKSnavn": "intenderet kurativ behandling",
+					"SKScode": "ZPZA02C",
+					"Vejledning": "Procedure intended for curative treatment.",
+					"DisplayType": "simple",
+					"Show": true
+				},
+				{
+					"LabelText": "Neoadjuverende",
+					"SKSnavn": "neoadjuverende behandling",
+					"SKScode": "ZPZA02B",
+					"Vejledning": "Procedure for neoadjuvant treatment.",
+					"DisplayType": "udvidet",
+					"Show": false
+				},
+				{
+					"LabelText": "Palliativt",
+					"SKSnavn": "palliativ",
+					"SKScode": "ZPZA05",
+					"Vejledning": "Procedure aimed at palliation.",
+					"DisplayType": "simple",
+					"Show": true
+				},
+				{
+					"LabelText": "Metastasebehandling",
+					"SKSnavn": "metastasebehandling",
+					"SKScode": "ZPZA02D",
+					"Vejledning": "Procedure for metastasis treatment.",
+					"DisplayType": "udvidet",
+					"Show": true
+				}
+			]
+		},
+		{
+			"GroupHeading": "Prioritet",
+			"Description": [
+				"En akut operation defineres, som en procedure, der ikke kan afvente regelret udredningsprogram",
+				"Ved akutte operation anføres tilstande der fører til den akutte indikation som bi diagnoser fx ileus, perforation etc."
+			],	
+			"AllowsMultipleSelections": false,
+			"SeeAlso": {
+				"URL": "",
+				"LinkText": ""
+			},	
+			"Items": [
+				{
+					"LabelText": "Elektiv",
+					"SKSnavn": "Elektiv procedure",
+					"SKScode": "ATA3",
+					"Vejledning": "Forklar-Txt",
+					"Show": true
+				},
+				{
+					"LabelText": "Akut",
+					"SKSnavn": "Akut procedure",
+					"SKScode": "ATA1",
+					"Vejledning": "Forklar-Txt",
+					"Show": true
+				}
+			]						
+		},
+		{
+			"GroupHeading": "Konvertering",
+			"Description": [
+				"Der er foretaget konvertering såfremt et indgreb var intenderet lapraroskopisk og anden minimal invasiv kirurgi, men grundet tekniske eller intra-operative komplikationer må konverters til åben."
+			],
+			"AllowsMultipleSelections": false,
+			"SeeAlso": {
+				"URL": "",
+				"LinkText": ""
+			},
+			"Items": [
+				{
+					"LabelText": "Fra andet",
+					"SKSnavn": "konverteret fra andet",
+					"SKScode": "KZYK96",
+					"Vejledning": "Anvender ikke subklassifikationer",
+					"Show": true
+				}
+			]
+		},
+		{
+			"GroupHeading": "Robotassisteret",
+			"Description": [
+				"Såfremt et indgreb har involveret anvendelse af robot, uafhængig af tid."
+			],
+			"AllowsMultipleSelections": false,
+			"SeeAlso": {
+				"URL": "",
+				"LinkText": ""
+			},
+			"Items": [
+				{
+					"LabelText": "Robot",
+					"SKSnavn": "Robot assisteret",
+					"SKScode": "KZXX00",
+					"Vejledning": "Anvendes i alle tilfælde",
+					"Show": true
+				}
+			]
+		},
+		{
+			"GroupHeading": "Procedure type",
+			"Description": [
+				"Procedure Type"
+			],
+			"AllowsMultipleSelections": false,
+			"SeeAlso": {
+				"URL": "",
+				"LinkText": ""
+			},
+			"Items": [
+				{
+					"LabelText": "D1",
+					"SKSnavn": "D1",
+					"SKScode": "Mangler",
+					"Vejledning": "fjernelse af colon segment med tilhørende tarmnære lymfeknuder",
+					"DisplayType": "simple",
+					"Show": true
+				},
+				{
+					"LabelText": "D2",
+					"SKSnavn": "D2",
+					"SKScode": "Mangler",
+					"Vejledning": "fjernelse af colon segment med tilhørende segment lymfeknuder ",
+					"DisplayType": "simple",
+					"Show": true
+				},
+				{
+					"LabelText": "D3",
+					"SKSnavn": "D3",
+					"SKScode": "Mangler",
+					"Vejledning": "fjernelse af colon segment med tilhørende segment og centrale lymfeknuder",
+					"DisplayType": "simple",
+					"Show": true
+				}
+			]
+		},
+		{	
+			"GroupHeading": "Procedure, Diverse",
+			"Description": [
+				"Diagnostiske, palliative, bridge to Surgery.",
+				"Bridge to surgery procedurer og aflastende procedure kodes som kurativ hvis del af samlet kurativ strategi"
+			],
+			"AllowsMultipleSelections": true,
+			"SeeAlso": {
+				"URL": "",
+				"LinkText": ""
+			},
+			"Items": [
+				{
+					"LabelText": "Endoskopisk indsættelse af stent i tyktarm",
+					"SKSnavn": "Endoskopisk indsættelse af stent i tyktarm",
+					"SKScode": "KJFA68",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "loop enterostomi",
+					"SKSnavn": "loop enterostomi",
+					"SKScode": "KJFF10",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Terminal enterostomi",
+					"SKSnavn": "Terminal enterostomi",
+					"SKScode": "KJFF13",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Transverstomi",
+					"SKSnavn": "Transverstomi",
+					"SKScode": "KJFF23",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Sigmoideostomi",
+					"SKSnavn": "Sigmoideostomi",
+					"SKScode": "KJFF26",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Ileotransversostomi",
+					"SKSnavn": "Ileotransversostomi",
+					"SKScode": "KJFC10",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Eksplorativ laparotomi",
+					"SKSnavn": "Eksplorativ laparotomi",
+					"SKScode": "KJAH00",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Endoskopisk indsættelse af stent i rektum",
+					"SKSnavn": "Endoskopisk indsættelse af stent i rektum",
+					"SKScode": "KJGA58A",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "loop enterostomi - laparoskopisk",
+					"SKSnavn": "loop enterostomi - laparoskopisk",
+					"SKScode": "KJFF11",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Transverstomi - laparoskopisk",
+					"SKSnavn": "Transverstomi - laparoskopisk",
+					"SKScode": "KJFF24",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Sigmoideostomi - laparoskopisk",
+					"SKSnavn": "Sigmoideostomi - laparoskopisk",
+					"SKScode": "KJFF27",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+					{
+					"LabelText": "Eksplorativ laparoskopi",
+					"SKSnavn": "Eksplorativ laparoskopi",
+					"SKScode": "KJAH01",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				}
+			]
+		},
+		{	
+			"GroupHeading": "Procedure, Kolon",
+			"Description": [
+				"-",
+				""
+			],
+			"AllowsMultipleSelections": true,
+			"SeeAlso": {
+				"URL": "https://dccg.dk/wp-content/uploads/2023/07/Definition-af-resektioner-ved-cancer-coli-i-DCCG-databasen-20211220.pdf",
+				"LinkText": "DCCG definitioner"
+			},
+			"Items": [
+                {
+                    "LabelText": "Ileocaekal resektion",
+                    "SKSnavn": "Ileocaekal resektion",
+                    "SKScode": "KJFB20",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Højresidig hemikolektomi",
+                    "SKSnavn": "Højresidig hemikolektomi",
+                    "SKScode": "KJFB30",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Udvidet højresidig hemikolektomi",
+                    "SKSnavn": "Udvidet højresidig hemikolektomi",
+                    "SKScode": "KJFB30A",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Subtotal kolektomi",
+                    "SKSnavn": "Subtotal kolektomi",
+                    "SKScode": "KJFB30B",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Anden samtidig resektion af tyndtarm og tyktarm",
+                    "SKSnavn": "Anden samtidig resektion af tyndtarm og tyktarm",
+                    "SKScode": "KJFB33",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Resektion af colon transversum",
+                    "SKSnavn": "Resektion af colon transversum",
+                    "SKScode": "KJFB40",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Venstresidig hemikolektomi",
+                    "SKSnavn": "Venstresidig hemikolektomi",
+                    "SKScode": "KJFB43",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Resektion af colon sigmoideum",
+                    "SKSnavn": "Resektion af colon sigmoideum",
+                    "SKScode": "KJFB46",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Resektion af colon sigmoideum med kolostomi",
+                    "SKSnavn": "Resektion af colon sigmoideum med kolostomi",
+                    "SKScode": "KJFB60",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Resektion af venstre fleksur",
+                    "SKSnavn": "Resektion af venstre fleksur",
+                    "SKScode": "KJFB53",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Udvidet venstresidig hemikolektomi",
+                    "SKSnavn": "Udvidet venstresidig hemikolektomi",
+                    "SKScode": "KJFB56",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Anden colonresektion",
+                    "SKSnavn": "Anden colonresektion",
+                    "SKScode": "KJFB50",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Anden tyktarmsresektion med kolostomi og anal lukning",
+                    "SKSnavn": "Anden tyktarmsresektion med kolostomi og anal lukning",
+                    "SKScode": "KJFB63",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Kolektomi og ileorektostomi",
+                    "SKSnavn": "Kolektomi og ileorektostomi",
+                    "SKScode": "KJFH00",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Kolektomi og ileostomi",
+                    "SKSnavn": "Kolektomi og ileostomi",
+                    "SKScode": "KJFH10",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Ileocaekal resektion - laparoskopisk",
+                    "SKSnavn": "Ileocaekal resektion - laparoskopisk",
+                    "SKScode": "KJFB21",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Højresidig hemikolektomi - laparoskopisk",
+                    "SKSnavn": "Højresidig hemikolektomi - laparoskopisk",
+                    "SKScode": "KJFB31",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Udvidet højresidig hemikolektomi - laparoskopisk",
+                    "SKSnavn": "Udvidet højresidig hemikolektomi - laparoskopisk",
+                    "SKScode": "KJFB31A",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Subtotal kolektomi - laparoskopisk",
+                    "SKSnavn": "Subtotal kolektomi - laparoskopisk",
+                    "SKScode": "KJFB31B",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Anden samtidig resektion af tyndtarm og tyktarm - laparoskopisk",
+                    "SKSnavn": "Anden samtidig resektion af tyndtarm og tyktarm - laparoskopisk",
+                    "SKScode": "KJFB34",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Resektion af colon transversum - laparoskopisk",
+                    "SKSnavn": "Resektion af colon transversum - laparoskopisk",
+                    "SKScode": "KJFB41",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Venstresidig hemikolektomi - laparoskopisk",
+                    "SKSnavn": "Venstresidig hemikolektomi - laparoskopisk",
+                    "SKScode": "KJFB44",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Resektion af colon sigmoideum - laparoskopisk",
+                    "SKSnavn": "Resektion af colon sigmoideum - laparoskopisk",
+                    "SKScode": "KJFB47",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Resektion af colon sigmoideum med kolostomi - laparoskopisk",
+                    "SKSnavn": "Resektion af colon sigmoideum med kolostomi - laparoskopisk",
+                    "SKScode": "KJFB61",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Resektion af venstre fleksur - laparoskopisk",
+                    "SKSnavn": "Resektion af venstre fleksur - laparoskopisk",
+                    "SKScode": "KJFB54",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Udvidet venstresidig hemikolektomi - laparoskopisk",
+                    "SKSnavn": "Udvidet venstresidig hemikolektomi - laparoskopisk",
+                    "SKScode": "KJFB57",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Anden colonresektion - laparoskopisk",
+                    "SKSnavn": "Anden colonresektion - laparoskopisk",
+                    "SKScode": "KJFB51",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Anden tyktarmsresektion med kolostomi og anal lukning - laparoskopisk",
+                    "SKSnavn": "Anden tyktarmsresektion med kolostomi og anal lukning - laparoskopisk",
+                    "SKScode": "KJFB64",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Kolektomi og ileorektostomi - laparoskopisk",
+                    "SKSnavn": "Kolektomi og ileorektostomi - laparoskopisk",
+                    "SKScode": "KJFH01",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Kolektomi og ileostomi - laparoskopisk",
+                    "SKSnavn": "Kolektomi og ileostomi - laparoskopisk",
+                    "SKScode": "KJFH11",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Endoskopisk assisteret CELS - laparoskopisk",
+                    "SKSnavn": "Endoskopisk assisteret CELS - laparoskopisk",
+                    "SKScode": "KJFA88",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                }
+            ]
+        },
+		{	
+			"GroupHeading": "Procedure, Rektum",
+			"Description": [
+				"-",
+				""
+			],
+			"AllowsMultipleSelections": true,
+			"SeeAlso": {
+				"URL": "",
+				"LinkText": ""
+			},
+            "Items": [
+                {
+                    "LabelText": "Resektion af endetarm - laparoskopisk",
+                    "SKSnavn": "Resektion af endetarm - laparoskopisk",
+                    "SKScode": "KJGB01",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Resektion af endetarm + kolostomi - laparoskopisk",
+                    "SKSnavn": "Resektion af endetarm + kolostomi - laparoskopisk",
+                    "SKScode": "KJGB11",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "APE, ischioanal - laparoskopisk",
+                    "SKSnavn": "APE, ischioanal - laparoskopisk",
+                    "SKScode": "KJGB37",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "APE, ekstralevatorisk (ELAPE) - laparoskopisk",
+                    "SKSnavn": "APE, ekstralevatorisk (ELAPE) - laparoskopisk",
+                    "SKScode": "KJGB34",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "APE, konventionel - laparoskopisk",
+                    "SKSnavn": "APE, konventionel - laparoskopisk",
+                    "SKScode": "KJGB31",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "APE, interspincterisk - laparoskopisk",
+                    "SKSnavn": "APE, interspincterisk - laparoskopisk",
+                    "SKScode": "KJGB33",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "TaTME - laparoskopisk",
+                    "SKSnavn": "TaTME - laparoskopisk",
+                    "SKScode": "KJGB04",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Proktokolektomi og ileostomi - laparoskopisk",
+                    "SKSnavn": "Proktokolektomi og ileostomi - laparoskopisk",
+                    "SKScode": "KJFH21",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Total bækkenrømning",
+                    "SKSnavn": "Total bækkenrømning",
+                    "SKScode": "KLCE20",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Proktokolektomi og ileostomi",
+                    "SKSnavn": "Proktokolektomi og ileostomi",
+                    "SKScode": "KJFH20",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Endoskopisk assisteret CELS",
+                    "SKSnavn": "Endoskopisk assisteret CELS",
+                    "SKScode": "KJFA87",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Resektion af endetarm",
+                    "SKSnavn": "Resektion af endetarm",
+                    "SKScode": "KJGB00",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Resektion af endetarm + kolostomi",
+                    "SKSnavn": "Resektion af endetarm + kolostomi",
+                    "SKScode": "KJGB10",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "APE, ischioanal",
+                    "SKSnavn": "APE, ischioanal",
+                    "SKScode": "KJGB35",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "APE, ekstralevatorisk (ELAPE)",
+                    "SKSnavn": "APE, ekstralevatorisk (ELAPE)",
+                    "SKScode": "KJGB36",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "APE, konventionel",
+                    "SKSnavn": "APE, konventionel",
+                    "SKScode": "KJGB30",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "APE, interspincterisk",
+                    "SKSnavn": "APE, interspincterisk",
+                    "SKScode": "KJGB32",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "TaTME",
+                    "SKSnavn": "TaTME",
+                    "SKScode": "KJGB06",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Lap. transperineal excision af endetarm",
+                    "SKSnavn": "Lap. transperineal excision af endetarm",
+                    "SKScode": "KJGB31B",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                }
+            ]
+        },			
+		{
+			"GroupHeading": "Per-operative komplikationer",
+			"Description": [
+				"Komplikationer opgøres per procedure/kontakt (indlæggelse).",
+				"• Der foretages en samlet opgørelse fra proceduren til udskrivelse/afslutning af kontakt.",
+				"Samtlige komplikationer tilføjes via SKS koder.",
+				"Den højeste kategori af komplikation under indlæggelsen (Kontakt) angives via Clavien Dindo",
+				"Komplikationer opstået efter udskrivelse registreres i nye kontakt.",
+				"Databasen opsamler disse data via LPR – dvs samme sundhedsforløb bør anvendes ved komplikationer, men er ikke et krav",
+				"• Et ukompliceret forløb - defineret som ingen medicinske eller kirurgiske komplikationer, der har medført kodning nedenfor kodes med VV00051"
+			],
+			"AllowsMultipleSelections": true,
+			"SeeAlso": {
+				"URL": "",
+				"LinkText": ""
+			},
+			"Items": [
+				{
+					"LabelText": "Per-operativ blødning",
+					"SKSnavn": "Per-operativ blødning",
+					"SKScode": "T818F",
+          			"Vejledning": "<500 ml",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Utilsigtet peroperativ punktur eller læsion af gastrointestinalkanalen",
+					"SKSnavn": "Utilsigtet peroperativ punktur eller læsion af gastrointestinalkanalen",
+					"SKScode": "DT812G",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Utilsigtet peroperativ punktur eller læsion af kvindeligt kønsorgan",
+					"SKSnavn": "Utilsigtet peroperativ punktur eller læsion af kvindeligt kønsorgan",
+					"SKScode": "DT812H",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+		        {
+					"LabelText": "Utilsigtet peroperativ perforation af uterus ved resektion",
+         			 "SKSnavn": "Utilsigtet peroperativ perforation af uterus ved resektion",
+          			"SKScode": "DT812H1",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+        		},
+				{
+          			"LabelText": "Utilsigtet peroperativ punktur eller læsion af kar eller lymfesystem",
+          			"SKSnavn": "Utilsigtet peroperativ punktur eller læsion af kar eller lymfesystem",
+          			"SKScode": "DT812K",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Utilsigtet peroperativ læsion af nerve",
+          			"SKSnavn": "Utilsigtet peroperativ læsion af nerve",
+          			"SKScode": "DT812N",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Utilsigtet peroperativ punktur eller læsion af urinveje",
+          			"SKSnavn": "Utilsigtet peroperativ punktur eller læsion af urinveje",
+          			"SKScode": "DT812U",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Utilsigtet peroperativ punktur eller læsion af nyre",
+          			"SKSnavn": "Utilsigtet peroperativ punktur eller læsion af nyre",
+          			"SKScode": "DT812UA",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Utilsigtet peroperativ punktur eller læsion af nyrebækken",
+          			"SKSnavn": "Utilsigtet peroperativ punktur eller læsion af nyrebækken",
+          			"SKScode": "DT812UB",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Utilsigtet peroperativ punktur eller læsion af urinleder",
+          			"SKSnavn": "Utilsigtet peroperativ punktur eller læsion af urinleder",
+          			"SKScode": "DT812UC",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+        		},
+				{
+          			"LabelText": "Utilsigtet peroperativ punktur eller læsion af urinblære",
+          			"SKSnavn": "Utilsigtet peroperativ punktur eller læsion af urinblære",
+          			"SKScode": "DT812UD",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Utilsigtet peroperativ læsion af organ med samtidig intervention",
+          			"SKSnavn": "Utilsigtet peroperativ læsion af organ med samtidig intervention",
+          			"SKScode": "DT812V",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Utilsigtet peroperativ læsion af organ uden samtidig intervention",
+          			"SKSnavn": "Utilsigtet peroperativ læsion af organ uden samtidig intervention",
+          			"SKScode": "DT812W",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Utilsigtet peroperativ punktur eller læsion IKA",
+          			"SKSnavn": "Utilsigtet peroperativ punktur eller læsion IKA",
+          			"SKScode": "DT812",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Fremmedlegeme utilsigtet efterladt i operationsfelt",
+          			"SKSnavn": "Fremmedlegeme utilsigtet efterladt i operationsfelt",
+          			"SKScode": "DT815",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Læsion af tolvfingertarmen",
+          			"SKSnavn": "Læsion af tolvfingertarmen",
+          			"SKScode": "DS364A",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Læsion af galdeblæren",
+          			"SKSnavn": "Læsion af galdeblæren",
+          			"SKScode": "DS361B",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+					"Show": true
+        		},
+				{
+          			"LabelText": "Læsion af galdegang",
+          			"SKSnavn": "Læsion af galdegang",
+          			"SKScode": "DS361C",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Læsion af tyktarmen",
+          			"SKSnavn": "Læsion af tyktarmen",
+          			"SKScode": "DS365",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Læsion af leveren",
+          			"SKSnavn": "Læsion af leveren",
+          			"SKScode": "DS361D",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Læsion af milten",
+          			"SKSnavn": "Læsion af milten",
+          			"SKScode": "DS360",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{	
+          			"LabelText": "Læsion af pancreas",
+          			"SKSnavn": "Læsion af pancreas",
+          			"SKScode": "DS362",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Læsion af tyndtarmen",
+          			"SKSnavn": "Læsion af tyndtarmen",
+          			"SKScode": "DS364",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+					"LabelText": "Læsion af mavesækken",
+          			"SKSnavn": "Læsion af mavesækken",
+          			"SKScode": "DS363",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Læsion af ovarie",
+          			"SKSnavn": "Læsion af ovarie",
+          			"SKScode": "DS374",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Læsion af æggeleder",
+          			"SKSnavn": "Læsion af æggeleder",
+          			"SKScode": "DS375",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				},
+				{
+          			"LabelText": "Læsion af livmoderen",
+          			"SKSnavn": "Læsion af livmoderen",
+          			"SKScode": "DS376",
+          			"Vejledning": "-",
+          			"DisplayType": "udvidet",
+          			"Show": true
+				}				
+			]
+		},
+		{
+			"GroupHeading": "Peroperativt fund af metastatisk sygdom",
+			"Description": [
+				"Kodes med lokalisering af metastase som bi-diagnose",
+				"Per-operative supplerende resektioner",
+				"Kodes som procedurer iht. SKS" 
+			],
+			"AllowsMultipleSelections": true,
+			"SeeAlso": {
+				"URL": "",
+				"LinkText": ""
+			},
+			"Items": [
+								{
+					"LabelText": "Gastrokoliske ligamenter ",
+					"SKSnavn": "Gastrokoliske ligamenter ",
+					"SKScode": "KJAL30B",
+					"Vejledning": "Inklusiv metastase D kode.",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+								{
+					"LabelText": "Lateralt lymfeknude",
+					"SKSnavn": "Lateralt lymfeknude",
+					"SKScode": "KJPD54",
+					"Vejledning": "Inklusiv metastase D kode",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+								{
+					"LabelText": "Kompartment på bækkenvæg ",
+					"SKSnavn": "Kompartment på bækkenvæg",
+					"SKScode": "KPJD74",
+					"Vejledning": "Inklusiv metastase D kode",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Lever",
+					"SKSnavn": "Fjernmetastase i leveren",
+					"SKScode": "DC787",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Peritoneum",
+					"SKSnavn": "Metastase i peritoneum",
+					"SKScode": "DC786B",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Retroperitoneum eller peritoneum",
+					"SKSnavn": "Metastase i retroperitonale rum eller i peritoneum",
+					"SKScode": "DC786",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "retroperitoneale rum",
+					"SKSnavn": "Metastase i retroperitoneale rum",
+					"SKScode": "DC786C",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "æggestok",
+					"SKSnavn": "Fjernmetastase i æggestok",
+					"SKScode": "DC796",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "lymfeknude UNS",
+					"SKSnavn": "Fjernmetastase i lymfeknude UNS",
+					"SKScode": "DC779A2",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				}
+			]
+		},
+		{
+			"GroupHeading": "Perop metastase beh.",
+			"Description": [
+				"Procedure Type"
+			],
+			"AllowsMultipleSelections": true,
+			"SeeAlso": {
+				"URL": "",
+				"LinkText": ""
+			},
+			"Items": [
+				{
+					"LabelText": "Destruktion af væv i lever",
+					"SKSnavn": "Destruktion af patologisk væv i lever",
+					"SKScode": "KJJA43",
+					"Vejledning": "Forklar-Txt",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "RFA lever",
+					"SKSnavn": "Radiofrekvensablation (RFA) af patologisk væv i lever",
+					"SKScode": "KJJA43A",
+					"Vejledning": "Forklar-Txt",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "MWA lever",
+					"SKSnavn": "Mikrobølgeablation (MWA) af patologisk væv i lever",
+					"SKScode": "KJJA43B",
+					"Vejledning": "Forklar-Txt",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Excision binyre",
+					"SKSnavn": "Excision af patologisk væv i binyre",
+					"SKScode": "KBCA20",
+					"Vejledning": "Forklar-Txt",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Excision bugvæg",
+					"SKSnavn": "Excision af patologisk væv i bugvæg",
+					"SKScode": "KJAA10",
+					"Vejledning": "Forklar-Txt",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Excision diafragma",
+					"SKSnavn": "Laparoskopisk biopsi eller excision af patologisk væv i diafragma",
+					"SKScode": "KJBA11",
+					"Vejledning": "Forklar-Txt",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Excision Lever",
+					"SKSnavn": "Excision af patologisk væv i lever",
+					"SKScode": "KJJA40",
+					"Vejledning": "Forklar-Txt",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Lap. Excision Lever",
+					"SKSnavn": "Laparoskopisk excision af patologisk væv i lever",
+					"SKScode": "KJJA41",
+					"Vejledning": "Forklar-Txt",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Excision retroperitoneum",
+					"SKSnavn": "Excision af retroperitonealt patologisk væv",
+					"SKScode": "KKKB10",
+					"Vejledning": "Forklar-Txt",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Excision/destruktion af pat. væv i ovarie",
+					"SKSnavn": "Anden excision eller destruktion af patologisk væv i ovarie",
+					"SKScode": "KLAC96",
+					"Vejledning": "Forklar-Txt",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "lap. Excision/destruktion af pat. væv i ovarie",
+					"SKSnavn": "Anden laparoskopisk excision eller destruktion af patologisk væv i ovarie",
+					"SKScode": "KLAC97",
+					"Vejledning": "Forklar-Txt",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Excision/destruktion af pat. væv i bughinden",
+					"SKSnavn": "Excision eller destruktion af patologisk væv i bughinde",
+					"SKScode": "KJAL20",
+					"Vejledning": "Forklar-Txt",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Lap. Excision/destruktion af pat. væv i bughinden",
+					"SKSnavn": "Laparoskopisk excision eller destruktion af patologisk væv i bughinde",
+					"SKScode": "KJAL21",
+					"Vejledning": "Forklar-Txt",
+					"DisplayType": "udvidet",
+					"Show": true
+				}
+			]
+		}
+
+	]
+}

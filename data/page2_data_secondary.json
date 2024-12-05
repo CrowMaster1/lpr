@@ -1,0 +1,175 @@
+{
+  "Groups": [
+    {
+      "GroupHeading": "Procedurer",
+      "Description": "Procedurer",
+      "AllowsMultipleSelections": false,
+      "SeeAlso": {
+        "URL": "https://dccg.dk",
+        "LinkText": "Link til DCCG-1"
+      },
+      "Items": [
+        {
+          "LabelText": "Anden samtidig resektion af tyndtarm og tyktarm - laparoskopisk",
+          "SKSnavn": "Anden samtidig resektion af tyndtarm og tyktarm - laparoskopisk",
+          "SKScode": "KJFB34",
+          "Vejledning": "",
+          "DisplayType": "simple",
+          "Show": true
+        },
+        {
+          "LabelText": "Anden colonresektion - laparoskopisk",
+          "SKSnavn": "Anden colonresektion - laparoskopisk",
+          "SKScode": "KJFB51",
+          "Vejledning": "",
+          "DisplayType": "simple",
+          "Show": true
+        },
+        {
+          "LabelText": "Anden tyktarmsresektion med kolostomi og anal lukning - laparoskopisk",
+          "SKSnavn": "Anden tyktarmsresektion med kolostomi og anal lukning - laparoskopisk",
+          "SKScode": "KJFB64",
+          "Vejledning": "",
+          "DisplayType": "simple",
+          "Show": true
+        },
+        {
+          "LabelText": "Kolektomi og ileorektostomi - laparoskopisk",
+          "SKSnavn": "Kolektomi og ileorektostomi - laparoskopisk",
+          "SKScode": "KJFH01",
+          "Vejledning": "",
+          "DisplayType": "simple",
+          "Show": true
+        },
+        {
+          "LabelText": "Proktokolektomi og ileostomi - laparoskopisk",
+          "SKSnavn": "Proktokolektomi og ileostomi - laparoskopisk",
+          "SKScode": "KJFH21",
+          "Vejledning": "",
+          "DisplayType": "simple",
+          "Show": true
+        },
+        {
+          "LabelText": "Eksplorativ laparotomi",
+          "SKSnavn": "Eksplorativ laparotomi",
+          "SKScode": "KJAH00",
+          "Vejledning": "",
+          "DisplayType": "simple",
+          "Show": true
+        },
+        {
+          "LabelText": "Eksplorativ laparoskopi - laparoskopisk",
+          "SKSnavn": "Eksplorativ laparoskopi - laparoskopisk",
+          "SKScode": "KJAH01",
+          "Vejledning": "",
+          "DisplayType": "simple",
+          "Show": true
+        },
+        {
+          "LabelText": "Endoskopisk indsættelse af stent i tyktarm",
+          "SKSnavn": "Endoskopisk indsættelse af stent i tyktarm",
+          "SKScode": "KJFA68",
+          "Vejledning": "",
+          "DisplayType": "simple",
+          "Show": true
+        },
+        {
+          "LabelText": "Endoskopisk assisteret CELS - laparoskopisk",
+          "SKSnavn": "Endoskopisk assisteret CELS - laparoskopisk",
+          "SKScode": "KJFA88",
+          "Vejledning": "",
+          "DisplayType": "simple",
+          "Show": true
+        },
+        {
+          "LabelText": "Ileocaekal resektion",
+          "SKSnavn": "Ileocaekal resektion",
+          "SKScode": "KJFB20",
+          "Vejledning": "",
+          "DisplayType": "simple",
+          "Show": true
+        },
+        {
+          "LabelText": "Ileocaekal resektion - laparoskopisk",
+          "SKSnavn": "Ileocaekal resektion - laparoskopisk",
+          "SKScode": "KJFB21",
+          "Vejledning": "",
+          "DisplayType": "simple",
+          "Show": true
+        },
+        {
+          "LabelText": "Højresidig hemikolektomi",
+          "SKSnavn": "Højresidig hemikolektomi",
+          "SKScode": "KJFB30",
+          "Vejledning": "",
+          "DisplayType": "simple",
+          "Show": true
+        },
+        {
+          "LabelText": "Højresidig hemikolektomi - laparoskopisk",
+          "SKSnavn": "Højresidig hemikolektomi - laparoskopisk",
+          "SKScode": "KJFB31",
+          "Vejledning": "",
+          "DisplayType": "simple",
+          "Show": true
+        },
+        {
+          "LabelText": "Venstresidig hemikolektomi",
+          "SKSnavn": "Venstresidig hemikolektomi",
+          "SKScode": "KJFB43",
+          "Vejledning": "",
+          "DisplayType": "simple",
+          "Show": true
+        },
+        {
+          "LabelText": "Venstresidig hemikolektomi - laparoskopisk",
+          "SKSnavn": "Venstresidig hemikolektomi - laparoskopisk",
+          "SKScode": "KJFB44",
+          "Vejledning": "",
+          "DisplayType": "simple",
+          "Show": true
+        },
+        {
+          "LabelText": "Resektion af endetarm",
+          "SKSnavn": "Resektion af endetarm",
+          "SKScode": "KJGB00",
+          "Vejledning": "",
+          "DisplayType": "simple",
+          "Show": true
+        },
+        {
+          "LabelText": "Resektion af endetarm - laparoskopisk",
+          "SKSnavn": "Resektion af endetarm - laparoskopisk",
+          "SKScode": "KJGB01",
+          "Vejledning": "",
+          "DisplayType": "simple",
+          "Show": true
+        },
+        {
+          "LabelText": "APE, konventionel",
+          "SKSnavn": "APE, konventionel",
+          "SKScode": "KJGB30",
+          "Vejledning": "",
+          "DisplayType": "simple",
+          "Show": true
+        },
+        {
+          "LabelText": "APE, konventionel - laparoskopisk",
+          "SKSnavn": "APE, konventionel - laparoskopisk",
+          "SKScode": "KJGB31",
+          "Vejledning": "",
+          "DisplayType": "simple",
+          "Show": true
+        },
+        {
+          "LabelText": "Total bækkenrømning",
+          "SKSnavn": "Total bækkenrømning",
+          "SKScode": "KLCE20",
+          "Vejledning": "",
+          "DisplayType": "simple",
+          "Show": true
+        }
+      ]
+    }
+  ]
+}

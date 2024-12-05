@@ -1,0 +1,278 @@
+{
+    "Groups": [
+		{
+			"GroupHeading": "Proceduresigte/behandlingsintention",
+			"Description": [
+			"Proceduresigtet defineres ved onkologisk behandling som den intention behandling initielt bliver givet ved.",
+			"Dette adskiller sig fra den kirurgiske definition. "
+			],
+			"AllowsMultipleSelections": false,
+			"SeeAlso": {
+				"URL": "https://dccg.dk",
+				"LinkText": "Link til DCCG-1"
+			},
+            "Items": [
+                {
+					"LabelText": "adjuverende behandling",
+					"SKSnavn": "Adjuverende",
+					"SKScode": "ZPZA02A",
+					"Vejledning": "Behandling af patient med mulig mikroskopisk sygdom, forudgået af en kurativ procedure – resektion.",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+					"LabelText": "neoadjuverende behandling",
+					"SKSnavn": "Neo-adjuverende",
+					"SKScode": "ZPZA02B",
+					"Vejledning": "Behandling af resektabel sygdom, hvor resektion er mulig, men hvor patient kan have gavn af behandling forud for resektionsforsøg.",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+					"LabelText": "intenderet kurativ behandling",
+					"SKSnavn": "Intenderet kurativ",
+					"SKScode": "ZPZA02C",
+					"Vejledning": "Procedure der i sig selv kan opnå chance for helbredelse - uden anvendelse af ekstra modalitet (stråleterapi, onkologi etc) og tilstedeværelse af makroskopisk sygdom.",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+					"LabelText": "downstaging",
+					"SKSnavn": "Downstaging",
+					"SKScode": "ZPZA02E",
+					"Vejledning": "Behandling af non-resektabel sygdom, hvor skrumpning kan give mulighed for resektion",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+				{
+					"LabelText": "palliativ",
+					"SKSnavn": "Palliativ",
+					"SKScode": "ZPZA05",
+					"Vejledning": "Behandling hvor det ikke anses sandsynlig (90%+) at der kan opnås anden intenderet kurativ behandling ved effekt",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Ingen behandling",
+                    "SKSnavn": "Ingen behandling",
+                    "SKScode": "ZWCM8",
+                    "Vejledning": "Ingen behandling",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+
+            ]
+        },   
+		{
+			"GroupHeading": "Performance Status",
+			"Description": [
+			"Performance status oplyses som den der danner grundlag for behandlingsbeslutningen.",
+			"Ved flere opgivne vælges sidste inden proceduren.",
+			"Der bør ikke foretages vurdering ihft journal vurdering. Her bør anvendes PS ukendt."
+			],
+			"AllowsMultipleSelections": false,
+			"SeeAlso": {
+				"URL": "https://dccg.dk",
+				"LinkText": "Link til DCCG-1"
+			},
+            "Items": [
+                {
+                    "LabelText": "PS0",
+                    "SKSnavn": "Performance Status 0",
+                    "SKScode": "ZZV020U0",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "PS1",
+                    "SKSnavn": "Performance Status 1",
+                    "SKScode": "ZZV020U1",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "PS2",
+                    "SKSnavn": "Performance Status 2",
+                    "SKScode": "ZZV020U2",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "PS3",
+                    "SKSnavn": "Performance Status 3",
+                    "SKScode": "ZZV020U3",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "PS4",
+                    "SKSnavn": "Performance Status 4",
+                    "SKScode": "ZZV020U4",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "PS5",
+                    "SKSnavn": "Performance Status 5",
+                    "SKScode": "ZZV020U5",
+                    "Vejledning": "Død",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "PS9",
+                    "SKSnavn": "Performance Status Ukendt",
+                    "SKScode": "ZZV020U9*",
+                    "Vejledning": "Oplysning ikke tilgængelig i journal",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        },
+		{
+            "GroupHeading": "Kombinations regimer",
+            "Description": [
+			"Behandlinger med kombinerede kemoterapeutiske midler.",
+			"Må gerne kombineres med enkelt stoffer, hvis ikke dækkende"
+			],
+            "AllowsMultipleSelections": true,
+            "SeeAlso": {
+                "URL": "",
+                "LinkText": ""
+            },
+            "Items": [
+                {
+                    "LabelText": "Behandling med capecitabin+oxaliplatin",
+                    "SKSnavn": "CapOx",
+                    "SKScode": "BWHA222",
+                    "Vejledning": "",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Behandling med 5-fluorouracil+oxaliplatin",
+                    "SKSnavn": "FOLFOX",
+                    "SKScode": "BWHA231",
+                    "Vejledning": "",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Behandling med 5-fluorouracil+irinotecan",
+                    "SKSnavn": "FOLFIRI",
+                    "SKScode": "BWHA233",
+                    "Vejledning": "",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Behandling med fluorouracil + irinotecan + oxaliplatin",
+                    "SKSnavn": "FOLFOXIRI/FOLFIRINOX",
+                    "SKScode": "BWHA234",
+                    "Vejledning": "",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        },
+        {
+            "GroupHeading": "Enkeltstofbehandlinger",
+            "Description": [
+			"Behandlinger med enkelte kemoterapeutiske eller biologiske stoffer.",
+			"Kan kombineres"
+			],
+            "AllowsMultipleSelections": true,
+            "SeeAlso": {
+                "URL": "",
+                "LinkText": ""
+            },
+            "Items": [
+                {
+                    "LabelText": "Behandling med oxaliplatin",
+                    "SKSnavn": "",
+                    "SKScode": "BWHA108",
+                    "Vejledning": "",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Behandling med 5-fluorouracil",
+                    "SKSnavn": "",
+                    "SKScode": "BWHA110",
+                    "Vejledning": "",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Behandling med capecitabin",
+                    "SKSnavn": "",
+                    "SKScode": "BWHA123",
+                    "Vejledning": "",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Behandling med irinotecan",
+                    "SKSnavn": "",
+                    "SKScode": "BWHA212",
+                    "Vejledning": "",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Behandling med cetuximab",
+                    "SKSnavn": "",
+                    "SKScode": "BOHJ17",
+                    "Vejledning": "",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Behandling med bevacizumab",
+                    "SKSnavn": "",
+                    "SKScode": "BOHJ19B1",
+                    "Vejledning": "",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Behandling med panitumumab",
+                    "SKSnavn": "",
+                    "SKScode": "BOHJ19C2",
+                    "Vejledning": "",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Behandling med encorafenib",
+                    "SKSnavn": "",
+                    "SKScode": "BWHA446",
+                    "Vejledning": "",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Behandling med pembrolizumab",
+                    "SKSnavn": "",
+                    "SKScode": "BOHJ19J3",
+                    "Vejledning": "",
+                    "DisplayType": "simple",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Behandling med tegafur/uracil",
+                    "SKSnavn": "",
+                    "SKScode": "BWHA141",
+                    "Vejledning": "",
+                    "DisplayType": "simple",
+                    "Show": true
+                }
+            ]
+        }
+    ]
+}
