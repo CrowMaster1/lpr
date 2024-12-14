@@ -110,6 +110,18 @@ th, td {
     color: white;
 }
 
+/* VPH setup */
+#vphModal .modal-dialog {
+    max-width: 300px; /* Limit the modal width */
+    margin: auto; /* Center the modal */
+}
+
+#vphModal .modal-content {
+    padding: 15px; /* Add some padding for better spacing */
+    border-radius: 8px; /* Add slight rounding for a modern look */
+}
+
+
 /* Container for group items */
 .item-container {
     display: flex; /* Use flexbox for horizontal alignment */

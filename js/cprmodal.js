@@ -2,13 +2,14 @@ var printWindow; // Declare printWindow variable in the global scope
 
 // Function to build the summary table
 function buildSummaryTable(cprInput) {
-    var summaryContent = '<table class="table table-striped"><thead><tr><th>Group</th><th>SKS-navn</th><th>SKS</th></tr></thead><tbody>';
+    var summaryContent = '<table class="table table-striped"><thead><tr><th>SKS-navn</th><th>SKS-kode & VPH</th></tr></thead><tbody>';
 
     // Get selected values from the current page
     var selectedValues = document.querySelectorAll('input[type="radio"]:checked, input[type="checkbox"]:checked');
 
     // Retrieve saved data from localStorage
     var savedSelections = JSON.parse(localStorage.getItem('savedSelections') || '[]');
+    var vphData = JSON.parse(localStorage.getItem('vphData') || '{}'); // Retrieve VPH data
 
     // Use a Set to track displayed items and prevent duplicates
     var displayedSelections = new Set();
@@ -22,8 +23,12 @@ function buildSummaryTable(cprInput) {
             var itemData = groupData.Items.find(item => item.LabelText === labelText);
             if (itemData && !displayedSelections.has(`${group}-${labelText}`)) {
                 var SKSnavn = itemData.SKSnavn || "Unknown";
-                var SKS = itemData.SKScode || "Unknown";
-                summaryContent += `<tr><td>${group}</td><td>${SKSnavn}</td><td>${SKS}</td></tr>`;
+                var SKScode = itemData.SKScode || "Unknown";
+
+                // Combine SKScode with VPH data if applicable
+                var sksAndVph = vphData[labelText] ? `${SKScode} + VPH${vphData[labelText]}` : SKScode;
+
+                summaryContent += `<tr><td>${SKSnavn}</td><td>${sksAndVph}</td></tr>`;
                 displayedSelections.add(`${group}-${labelText}`); // Mark as displayed
             }
         }
@@ -32,7 +37,8 @@ function buildSummaryTable(cprInput) {
     // Add saved selections to the summary
     savedSelections.forEach(selection => {
         if (!displayedSelections.has(`${selection.group}-${selection.label}`)) {
-            summaryContent += `<tr><td>${selection.group}</td><td>${selection.SKSnavn}</td><td>${selection.SKS}</td></tr>`;
+            var sksAndVph = vphData[selection.label] ? `${selection.SKS} + VPH${vphData[selection.label]}` : selection.SKS;
+            summaryContent += `<tr><td>${selection.SKSnavn}</td><td>${sksAndVph}</td></tr>`;
             displayedSelections.add(`${selection.group}-${selection.label}`); // Mark as displayed
         }
     });
@@ -44,6 +50,8 @@ function buildSummaryTable(cprInput) {
 
     return summaryWithCPR; // Return the generated HTML table string with CPR
 }
+
+
 
 // Function to open CPR modal and initiate printing
 function printWithCPR() {

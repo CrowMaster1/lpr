@@ -40,8 +40,14 @@ document.addEventListener("DOMContentLoaded", () => {
             options = data;
             generateDataEntry(data);
 
+            // Attach VPH code handlers
+            addVphCodeHandler();
+
             // Load saved data into fields
             loadSavedData();
+
+            // Add the "undo" functionality to radio buttons
+            enableRadioUndo();
         })
         .catch(error => {
             console.error(`Error fetching data from ${dataFilePath}:`, error);
@@ -95,6 +101,29 @@ document.getElementById('saveDataButton').addEventListener('click', saveData);
 /////////////////////////////check////////////////////////
 document.getElementById('clearAllButton').addEventListener('click', clearSelections);
 
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Function to add "undo" functionality to radio buttons
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function enableRadioUndo() {
+    let lastCheckedRadio = null;
+
+    document.querySelectorAll('input[type="radio"]').forEach(radio => {
+        radio.addEventListener('click', function () {
+            // If the same radio is clicked again, deselect it
+            if (lastCheckedRadio === this) {
+                this.checked = false; // Deselect
+                lastCheckedRadio = null; // Reset last checked radio
+            } else {
+                // Update the last checked radio
+                lastCheckedRadio = this;
+            }
+        });
+    });
+}
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -455,36 +484,54 @@ function markPagesWithSavedData() {
 
 function showSummary() {
     const summaryContent = document.getElementById('summaryContent');
-    let content = '<table class="table table-striped"><thead><tr><th>Group</th><th>SKS-navn - SKS</th></tr></thead><tbody>';
+    let content = '<table class="table table-striped"><thead><tr><th>SKS-navn</th><th>SKS-kode & VPH</th></tr></thead><tbody>';
 
     const selectedValues = document.querySelectorAll('input[type="radio"]:checked, input[type="checkbox"]:checked');
     const savedSelections = JSON.parse(localStorage.getItem('savedSelections') || '[]');
+    const vphData = JSON.parse(localStorage.getItem('vphData') || '{}'); // Load VPH data from storage
 
     const displayedSelections = new Set();
+
+    // Log loaded VPH data
+    console.log("Loaded VPH Data:", vphData);
 
     // Display current selections
     selectedValues.forEach(selected => {
         const groupName = selected.getAttribute('name');
         const labelText = selected.value;
 
+        console.log("Processing selected item:", { groupName, labelText });
+
         if (!displayedSelections.has(`${groupName}-${labelText}`)) {
             const groupData = options.Groups.find(group => group.GroupHeading === groupName);
             if (groupData) {
+                console.log("Found group data:", groupData);
                 const itemData = groupData.Items.find(item => item.LabelText === labelText);
                 if (itemData) {
-                    const SKSnavn = itemData.SKScode || "Unknown";
-                    const SKS = itemData.LabelText;
-                    content += `<tr><td>${SKS}</td><td>${SKSnavn}</td></tr>`;
+                    console.log("Found item data:", itemData);
+                    const SKScode = itemData.SKScode || "Unknown";
+                    const SKSnavn = itemData.LabelText;
+
+                    // Combine SKScode with VPH data if available
+                    const sksAndVph = vphData[labelText] ? `${SKScode} + VPH${vphData[labelText]}` : SKScode;
+
+                    content += `<tr><td>${SKSnavn}</td><td>${sksAndVph}</td></tr>`;
                     displayedSelections.add(`${groupName}-${labelText}`);
+                } else {
+                    console.warn("Item data not found for label:", labelText);
                 }
+            } else {
+                console.warn("Group data not found for group name:", groupName);
             }
         }
     });
 
     // Display saved selections (if not already displayed)
     savedSelections.forEach(selection => {
+        console.log("Processing saved selection:", selection);
         if (!displayedSelections.has(`${selection.group}-${selection.label}`)) {
-            content += `<tr><td>${selection.label}</td><td>${selection.SKSnavn}</td></tr>`;
+            const sksAndVph = vphData[selection.label] ? `${selection.SKS} + VPH${vphData[selection.label]}` : selection.SKS;
+            content += `<tr><td>${selection.SKSnavn}</td><td>${sksAndVph}</td></tr>`;
             displayedSelections.add(`${selection.group}-${selection.label}`);
         }
     });
@@ -492,7 +539,13 @@ function showSummary() {
     content += '</tbody></table>';
     summaryContent.innerHTML = content;
     $('#summaryModal').modal('show');
+
+    // Log final summary content
+    console.log("Final Summary Content:", content);
 }
+
+
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
