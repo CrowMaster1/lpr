@@ -882,10 +882,16 @@
             "GroupHeading": "Højde på rectumtumor-Skopi",
             "Description": "Husk at kode rektoskopi som procedure i LPR",
             "AllowsMultipleSelections": false,
-            "SeeAlso": {
+            "showIf": {
+			"Condition": "DC209",
+			"GroupHeading": "Tumor lokalisation",
+			"Value": true
+			},
+			"SeeAlso": {
                 "URL": "https://dccg.dk",
                 "LinkText": "Link til DCCG-1"
             },
+			
             "Items": [
                 {
                     "LabelText": "Tumor Højde - Rectoskop",
@@ -915,7 +921,12 @@
             "GroupHeading": "MR højde på tumor",
             "Description": "-",
             "AllowsMultipleSelections": false,
-            "SeeAlso": {
+            "showIf": {
+			"Condition": "DC209",
+			"GroupHeading": "Tumor lokalisation",
+			"Value": true
+			},
+			"SeeAlso": {
                 "URL": "https://dccg.dk",
                 "LinkText": "Link til DCCG-1"
             },
@@ -947,7 +958,12 @@
             "GroupHeading": "Tumor nedvækst",
             "Description": "Under muscularis i mm, ukendt findes ikke, undlad i dette tilfælde",
             "AllowsMultipleSelections": false,
-            "SeeAlso": {
+            "showIf": {
+			"Condition": "DC209",
+			"GroupHeading": "Tumor lokalisation",
+			"Value": true
+			},
+			"SeeAlso": {
                 "URL": "https://dccg.dk",
                 "LinkText": "Link til DCCG-1"
             },
@@ -969,7 +985,12 @@
             "GroupHeading": "MR ekstramural vene indvækst",
             "Description": "ukendt findes ikke, undladelse af kodning = nej",
             "AllowsMultipleSelections": false,
-            "SeeAlso": {
+            "showIf": {
+			"Condition": "DC209",
+			"GroupHeading": "Tumor lokalisation",
+			"Value": true
+			},
+			"SeeAlso": {
                 "URL": "https://dccg.dk",
                 "LinkText": "Link til DCCG-1"
             },
@@ -990,7 +1011,12 @@
             "GroupHeading": "Korteste afstand mellem cancervæv og den mesorektale fascie",
             "Description": "Skal diskuters og ansøges",
             "AllowsMultipleSelections": false,
-            "SeeAlso": {
+            "showIf": {
+			"Condition": "DC209",
+			"GroupHeading": "Tumor lokalisation",
+			"Value": true
+			},
+			"SeeAlso": {
                 "URL": "https://dccg.dk",
                 "LinkText": "Link til DCCG-1"
             },

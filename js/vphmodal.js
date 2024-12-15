@@ -3,6 +3,43 @@
  */
 let vphData = {};
 
+document.addEventListener('DOMContentLoaded', () => {
+    const vphModal = document.getElementById('vphModal');
+    const vphInput = document.getElementById('vphInput');
+    const saveVphButton = document.getElementById('saveVphButton');
+
+    if (vphModal && vphInput && saveVphButton) {
+        saveVphButton.addEventListener('click', () => {
+            const vphCode = vphInput.value.trim();
+            
+            // Validate VPH code (must be 4 digits)
+            if (!/^\d{4}$/.test(vphCode)) {
+                console.error("Invalid VPH code. Must be 4 digits.");
+                return;
+            }
+
+            // Save VPH code logic
+            console.log(`VPH Code saved: ${vphCode}`);
+            $('#vphModal').modal('hide');
+        });
+
+        $('#vphModal').on('show.bs.modal', () => {
+            vphInput.value = ''; // Reset the input value when the modal is shown
+        });
+    } else {
+        console.warn("VPH Modal components not found in the DOM.");
+    }
+});
+
+
+
+
+
+
+
+
+
+
 /**
  * Attaches click handlers to items with "VPH": true.
  */

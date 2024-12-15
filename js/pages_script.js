@@ -1,66 +1,59 @@
 var options; // Declare options globally to make it accessible across functions
 
-
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+    // Fetch the page ID dynamically from the <body> attribute
     const currentPageId = document.body.getAttribute("data-page-id");
     if (!currentPageId) {
         console.error("data-page-id is missing in the <body> tag.");
         alert("Page ID is missing. Please contact the administrator.");
-        return;
+        return; // Stop execution if the page ID is not available
     }
 
     const dataFilePath = `data/${currentPageId}_data.json`;
 
-    // Fetch navigation content
-    fetch('navigation.html')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Navigation fetch failed with status: ${response.status}`);
-            }
-            return response.text();
-        })
-        .then(data => {
-            document.querySelector('.navigation-container').innerHTML = data;
+    try {
+        // Fetch navigation content and handle it gracefully
+        const navResponse = await fetch('navigation.html');
+        if (!navResponse.ok) {
+            throw new Error(`Navigation fetch failed with status: ${navResponse.status}`);
+        }
+        const navData = await navResponse.text();
+        document.querySelector('.navigation-container').innerHTML = navData;
 
-            // After loading the navigation, mark pages with saved data
-            markPagesWithSavedData();
-        })
-        .catch(error => console.error('Error fetching navigation:', error));
+        // After loading navigation, mark pages with saved data
+        markPagesWithSavedData();
+    } catch (error) {
+        console.error('Error fetching navigation:', error);
+        alert("Failed to load navigation. Please try again later.");
+    }
 
-    // Fetch page-specific data
-    fetch(dataFilePath)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Data fetch failed with status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log("Data loaded successfully:", data);
-            options = data;
-            generateDataEntry(data);
+    try {
+        // Fetch page-specific data
+        const dataResponse = await fetch(dataFilePath);
+        if (!dataResponse.ok) {
+            throw new Error(`Data fetch failed with status: ${dataResponse.status}`);
+        }
+        const pageData = await dataResponse.json();
 
-            // Attach VPH code handlers
-            addVphCodeHandler();
+        console.log("Data loaded successfully:", pageData);
+        options = pageData;
 
-            // Load saved data into fields
-            loadSavedData();
-
-            // Add the "undo" functionality to radio buttons
-            enableRadioUndo();
-        })
-        .catch(error => {
-            console.error(`Error fetching data from ${dataFilePath}:`, error);
-            alert("Unable to load data. Please try again later.");
-        });
+        // Render dynamic content and attach event handlers
+        generateDataEntry(pageData);
+        addVphCodeHandler(); // Add VPH handlers
+        loadSavedData(); // Load any previously saved data
+        enableRadioUndo(); // Allow undo functionality for radio buttons
+    } catch (error) {
+        console.error(`Error fetching data from ${dataFilePath}:`, error);
+        alert("Unable to load data. Please try again later.");
+    }
 
     // Check for saved data on the current page
     checkForSavedData();
 });
 
-
-
-document.getElementById('addSelectedValue').addEventListener('click', () => {
+// Suggestion: Use a named function for "Add Selected Value" logic for better readability and reuse
+function handleAddSelectedValue() {
     const selectedOptions = document.querySelectorAll('#selectModalBody .form-check-input:checked');
     if (selectedOptions.length === 0) {
         alert('Please select at least one option.');
@@ -91,22 +84,34 @@ document.getElementById('addSelectedValue').addEventListener('click', () => {
         }
     });
 
-    generateDataEntry(options);
-    $('#selectModal').modal('hide');
-});
+    generateDataEntry(options); // Re-generate the data entry section
+    $('#selectModal').modal('hide'); // Hide the modal
+}
 
-///////////////Gem data knap FUNKTION///////////////////////////////////////////////////////
-document.getElementById('saveDataButton').addEventListener('click', saveData);
+// Attach "Add Selected Value" handler with error prevention
+const addSelectedValueButton = document.getElementById('addSelectedValue');
+if (addSelectedValueButton) {
+    addSelectedValueButton.addEventListener('click', handleAddSelectedValue);
+} else {
+    console.warn("#addSelectedValue button not found in the DOM.");
+}
 
-/////////////////////////////check////////////////////////
-document.getElementById('clearAllButton').addEventListener('click', clearSelections);
+// Suggestion: Add a named function for "Save Data" logic for better readability
+function handleSaveData() {
+    saveData(); // Call the saveData function directly
+}
+
+// Attach "Save Data" handler with error prevention
+const saveDataButton = document.getElementById('saveDataButton');
+if (saveDataButton) {
+    saveDataButton.addEventListener('click', handleSaveData);
+} else {
+    console.warn("#saveDataButton not found in the DOM.");
+}
 
 
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Function to add "undo" functionality to radio buttons
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function enableRadioUndo() {
     let lastCheckedRadio = null;
@@ -124,18 +129,17 @@ function enableRadioUndo() {
         });
     });
 }
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////Hent data til siden/////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 function generateDataEntry(data) {
     const dataEntryDiv = document.getElementById('dataEntry');
+    
+    if (!dataEntryDiv) {
+        console.error("Element with ID 'dataEntry' not found in the DOM.");
+        return;
+    }
+
     dataEntryDiv.innerHTML = ''; // Clear current content to refresh
 
     if (!data || !data.Groups || !Array.isArray(data.Groups)) {
@@ -144,11 +148,14 @@ function generateDataEntry(data) {
         return;
     }
 
+    // Iterate through each group in the data
     data.Groups.forEach((group, groupIndex) => {
         const inputType = group.AllowsMultipleSelections ? 'checkbox' : 'radio';
 
         const groupDiv = document.createElement('div');
         groupDiv.classList.add('group-box');
+        groupDiv.setAttribute('data-group-index', groupIndex); // Add data attribute for debugging
+        groupDiv.setAttribute('data-group-name', group.GroupHeading); // For better visibility and tracking
 
         const groupHeading = createGroupHeading(group, groupIndex);
         groupDiv.appendChild(groupHeading);
@@ -156,39 +163,132 @@ function generateDataEntry(data) {
         const itemContainer = document.createElement('div');
         itemContainer.classList.add('item-container');
 
-        group.Items.forEach(item => {
+        group.Items.forEach((item, itemIndex) => {
             if (!item.Show) return;
+            
             const itemElement = createItemElement(item, group.GroupHeading, inputType);
+            itemElement.setAttribute('data-item-index', itemIndex); // Add data attribute for debugging
+            itemElement.setAttribute('data-item-label', item.LabelText); // Track label
+            itemElement.setAttribute('data-item-code', item.SKScode); // Track SKS code
+
             itemContainer.appendChild(itemElement);
         });
 
         groupDiv.appendChild(itemContainer);
         dataEntryDiv.appendChild(groupDiv);
     });
+
+    // Attach event listeners and initialize visibility
+    attachVisibilityHandlers(); // Attach handlers to new inputs
+    updateGroupVisibility(); // Ensure visibility reflects initial data
+
+    console.log("Data entry successfully generated.", { groupsRendered: data.Groups.length });
+}
+
+
+
+function createItemElement(item, groupName, inputType) {
+    const itemClass = item.DisplayType === 'udvidet' ? 'udvidet-item' : 'simple-item';
+    const itemElement = document.createElement('label');
+    itemElement.className = `custom${inputType === 'checkbox' ? 'Checkbox' : 'RadioButton'}Wrapper customTooltip ${itemClass}`;
+    itemElement.style.display = itemClass === 'udvidet-item' ? 'none' : 'block';
+    itemElement.innerHTML = `
+        <input class="custom${inputType === 'checkbox' ? 'Checkbox' : 'RadioButton'}Input" type="${inputType}" name="${groupName}" value="${item.LabelText}">
+        <div class="custom${inputType === 'checkbox' ? 'Checkbox' : 'RadioButton'}">${item.LabelText}</div>
+        <span class="tooltipText">
+            <div>${item.SKScode}</div>
+        </span>`;
+    return itemElement;
 }
 
 function createGroupHeading(group, groupIndex) {
     const groupHeading = document.createElement('div');
     groupHeading.classList.add('group-heading-container');
+
+    // Check if the group has items with "udvidet" display type
+    const hasUdvidetItems = Array.isArray(group.Items) && group.Items.some(item => item.DisplayType === 'udvidet');
+
+    let buttonHTML = '';
+    if (hasUdvidetItems) {
+        buttonHTML = `<button class="btn btn-outline-primary btn-sm toggle-udvidet" data-group-index="${groupIndex}" onclick="toggleUdvidet(${groupIndex})">
+                Mere
+            </button>`;
+    }
+
     groupHeading.innerHTML = `
         <label class="group-heading">
             ${group.GroupHeading}
             <button class="info-button btn btn-link" data-group-index="${groupIndex}" onclick="showGroupInfo(${groupIndex})">
                 <i class="fas fa-question-circle"></i>
             </button>
-            <button class="btn btn-outline-primary btn-sm toggle-udvidet" data-group-index="${groupIndex}" onclick="toggleUdvidet(${groupIndex})">
-                Udvid
-            </button>
+            ${buttonHTML}
         </label>`;
+
     return groupHeading;
+}
+///////////////////////////////////////////
+// Function to update visibility of groups based on selected SKScode
+function updateGroupVisibility() {
+    if (!options || !options.Groups) {
+        console.error("Options or Groups not defined.");
+        return;
+    }
+
+    const selectedSKScodes = new Set();
+
+    // Collect all selected SKScodes
+    document.querySelectorAll('input[type="radio"]:checked, input[type="checkbox"]:checked').forEach(selected => {
+        const groupName = selected.getAttribute('name');
+        const labelText = selected.value;
+
+        const groupData = options.Groups.find(group => group.GroupHeading === groupName);
+        if (groupData) {
+            const itemData = groupData.Items.find(item => item.LabelText === labelText);
+            if (itemData) {
+                selectedSKScodes.add(itemData.SKScode);
+            }
+        }
+    });
+
+    console.log("Selected SKScodes:", Array.from(selectedSKScodes));
+
+    // Iterate over groups and handle visibility
+    options.Groups.forEach((group, groupIndex) => {
+        const groupElement = document.querySelector(`.group-box[data-group-index="${groupIndex}"]`);
+
+        if (!groupElement) {
+            console.warn(`Group element for "${group.GroupHeading}" not found in the DOM.`);
+            return;
+        }
+
+        if (group.showIf) {
+            // Handle groups with showIf condition
+            const { Condition, Value } = group.showIf;
+            const shouldShow = selectedSKScodes.has(Condition) === Value;
+
+            console.log(`Group: ${group.GroupHeading}, Condition: ${Condition}, Should Show: ${shouldShow}`);
+            groupElement.style.display = shouldShow ? 'block' : 'none';
+        } else {
+            // Always display groups without showIf
+            groupElement.style.display = 'block';
+        }
+    });
+
+    console.log("Group visibility updated.");
+}
+
+
+
+// Attach visibility update to all input changes dynamically after rendering
+function attachVisibilityHandlers() {
+    document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(input => {
+        input.removeEventListener('change', updateGroupVisibility); // Prevent duplicate handlers
+        input.addEventListener('change', updateGroupVisibility);
+    });
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////gem data/////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function saveData() {
     const selectedValues = document.querySelectorAll('input[type="radio"]:checked, input[type="checkbox"]:checked');
@@ -230,8 +330,6 @@ function saveData() {
     markPagesWithSavedData();
 }
 
-
-
 ////////////////Undersøg om der er gemte data//////////////////////////////////
 function checkForSavedData() {
     const savedSelections = JSON.parse(localStorage.getItem('savedSelections') || '[]');
@@ -247,14 +345,8 @@ function checkForSavedData() {
         savedDataIndicator.style.display = 'none';
     }
 }
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////load data/////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function loadSavedData() {
     // Retrieve saved selections from localStorage
     const savedSelections = JSON.parse(localStorage.getItem('savedSelections') || '[]');
@@ -276,29 +368,9 @@ function loadSavedData() {
     console.log("Saved data has been loaded and fields are pre-filled.");
 }
 
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////Mere & Mindre Funktion/////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-function createItemElement(item, groupName, inputType) {
-    const itemClass = item.DisplayType === 'udvidet' ? 'udvidet-item' : 'simple-item';
-    const itemElement = document.createElement('label');
-    itemElement.className = `custom${inputType === 'checkbox' ? 'Checkbox' : 'RadioButton'}Wrapper customTooltip ${itemClass}`;
-    itemElement.style.display = itemClass === 'udvidet-item' ? 'none' : 'block';
-    itemElement.innerHTML = `
-        <input class="custom${inputType === 'checkbox' ? 'Checkbox' : 'RadioButton'}Input" type="${inputType}" name="${groupName}" value="${item.LabelText}">
-        <div class="custom${inputType === 'checkbox' ? 'Checkbox' : 'RadioButton'}">${item.LabelText}</div>
-        <span class="tooltipText">
-            <div>${item.SKScode}</div>
-        </span>`;
-    return itemElement;
-}
 
 function toggleUdvidet(groupIndex) {
     const groupBox = document.querySelectorAll('.group-box')[groupIndex];
@@ -347,13 +419,22 @@ function showGroupInfo(groupIndex) {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////Ryd Valg////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Define a handler for "Clear All"
+function handleClearAll() {
+    clearSelections(); // Call the clearSelections function directly
+}
 
+// Attach "Clear All" handler after DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    const clearAllButton = document.getElementById('clearAllButton');
+    if (clearAllButton) {
+        clearAllButton.addEventListener('click', handleClearAll);
+    } else {
+        console.warn("#clearAllButton not found in the DOM.");
+    }
+});
 
 function clearSelections() {
     // Clear radio and checkbox selections
@@ -366,17 +447,13 @@ function clearSelections() {
     // Clear all save icons from the navigation
     const icons = document.querySelectorAll('.save-icon');
     icons.forEach(icon => icon.remove());
+
+    console.log("All selections and saved data have been cleared.");
 }
 
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////Ekstra Valg////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 // Open Modal for Additional Selections
 function openSelectModal() {
     const pageId = document.body.getAttribute('data-page-id'); // Get pageId dynamically
@@ -431,15 +508,9 @@ function populateSelectModal(data) {
         });
     });
 }
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////Markering af sider med gemte data///////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 function markPagesWithSavedData() {
     // Retrieve saved selections from localStorage
     const savedSelections = JSON.parse(localStorage.getItem('savedSelections') || '[]');
@@ -473,15 +544,9 @@ function markPagesWithSavedData() {
         }
     });
 }
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////Vis SKS////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 function showSummary() {
     const summaryContent = document.getElementById('summaryContent');
     let content = '<table class="table table-striped"><thead><tr><th>SKS-navn</th><th>SKS-kode & VPH</th></tr></thead><tbody>';
@@ -544,17 +609,9 @@ function showSummary() {
     console.log("Final Summary Content:", content);
 }
 
-
-
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////Vejledning//////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Show Vejledning Modal
 function showVejledning() {
     const currentPage = window.location.pathname.split('/').pop();
     const modalContentFile = `/vejledninger/${currentPage.replace('.html', '')}_vejledning.html`;
@@ -575,145 +632,4 @@ function showVejledning() {
             alert("Could not load the vejledning. Please try again later.");
         });
 }
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////CPR FUNKTION///////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////CPR FUNKTION///////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////CPR FUNKTION///////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////CPR FUNKTION///////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////CPR FUNKTION///////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////CPR FUNKTION///////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var printWindow; // Declare printWindow variable in the global scope
-
-// Function to build the summary table
-function buildSummaryTable(cprInput) {
-    var summaryContent = '<table class="table table-striped"><thead><tr><th>Group</th><th>SKS-navn</th><th>SKS</th></tr></thead><tbody>';
-
-    var selectedValues = document.querySelectorAll('input[type="radio"]:checked, input[type="checkbox"]:checked');
-    selectedValues.forEach(selected => {
-        var group = selected.getAttribute('name');
-        var labelText = selected.getAttribute('value');
-        var groupData = options.Groups.find(e => e.GroupHeading === group);
-        var itemData = groupData.Items.find(item => item.LabelText === labelText);
-        var SKSnavn = itemData.SKSnavn;
-        var SKS = itemData.SKScode;
-        summaryContent += `<tr><td>${group}</td><td>${SKSnavn}</td><td>${SKS}</td></tr>`;
-    });
-
-    summaryContent += '</tbody></table>';
-
-    // Append CPR to the summary content
-    var summaryWithCPR = `<h3>CPR: ${cprInput}</h3>${summaryContent}`;
-
-    return summaryWithCPR; // Return the generated HTML table string with CPR
-}
-
-// Function to open CPR modal and initiate printing
-function printWithCPR() {
-    // Open CPR modal
-    $('#cprModal').modal('show');
-}
-
-// Function to clear the input fields and reset focus
-function clearInputFields() {
-    const cprInputFirst = document.getElementById('cprInputFirst');
-    const cprInputSecond = document.getElementById('cprInputSecond');
-
-    if (cprInputFirst && cprInputSecond) {
-        cprInputFirst.value = '';
-        cprInputSecond.value = '';
-        cprInputFirst.classList.remove('is-invalid');
-        cprInputSecond.classList.remove('is-invalid');
-
-        // Add focus back to the first input field
-        cprInputFirst.focus();
-    }
-}
-
-// Function to print summary to A4 with CPR
-function printSummaryToA4(cprInput) {
-    // Generate summary content as an HTML string
-    var summaryContent = buildSummaryTable(cprInput);
-
-    // Create a temporary print window with A4 size and basic styling
-    var printWindow = window.open('', '_blank', 'width=800,height=600'); // A4 dimensions (approximate)
-
-    printWindow.document.write(`
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <title>Printable Summary with CPR</title>
-            <style>
-                @page { size: A4; margin: 20px; } /* Set A4 size and margins */
-                body { padding: 20px; font-family: 'Arial', sans-serif; } /* Basic styling with padding and font */
-                h3 { font-family: 'Arial', serif; margin-bottom: 20px; } /* Fancy font for CPR header */
-                table { width: 100%; border-collapse: collapse; margin-top: 20px; } /* Ensure table fills available width */
-                th, td { border: 2px solid #000; padding: 8px; text-align: left; font-family: 'Arial', sans-serif; } /* Table cell styling with borders */
-                th { background-color: #f2f2f2; } /* Light background for header cells */
-            </style>
-        </head>
-        <body>
-            ${summaryContent}
-        </body>
-        </html>
-    `);
-
-    printWindow.document.close();
-
-    // Trigger printing and close the window after a short delay
-    printWindow.focus(); // Bring the window to focus (optional)
-    setTimeout(() => {
-        printWindow.print();
-        printWindow.close();
-    }, 1000); // Adjust timeout if needed
-}
-
-// Event listener for the submit button in the CPR modal
-document.getElementById('cprSubmit').addEventListener('click', function () {
-    // Get the input values for the CPR number
-    const cprInputFirst = document.getElementById('cprInputFirst');
-    const cprInputSecond = document.getElementById('cprInputSecond');
-    var cprInput = `${cprInputFirst.value}-${cprInputSecond.value}`;
-
-    // Validate the CPR number format
-    if (/^\d{6}-\d{4}$/.test(cprInput)) {
-        // Hide the CPR modal
-        $('#cprModal').modal('hide');
-        // Call the print summary function with the CPR input
-        printSummaryToA4(cprInput);
-        // Clear input fields after successful submission
-        clearInputFields();
-    } else {
-        // Add 'is-invalid' class to inputs if validation fails
-        cprInputFirst.classList.add('is-invalid');
-        cprInputSecond.classList.add('is-invalid');
-    }
-});
-
-// Event listener for the modal dismissal
-$('#cprModal').on('hidden.bs.modal', function () {
-    clearInputFields();
-});
-
-// Event listener for when the modal is shown
-$('#cprModal').on('shown.bs.modal', function () {
-    clearInputFields();
-});
-
-// Automatically move the cursor to the second input field when the first is filled
-document.getElementById('cprInputFirst').addEventListener('input', function () {
-    if (this.value.length === 6) {
-        document.getElementById('cprInputSecond').focus();
-    }
-});
-
-// Automatically move the cursor to the submit button when the second input field is filled
-document.getElementById('cprInputSecond').addEventListener('input', function () {
-    if (this.value.length === 4) {
-        document.getElementById('cprSubmit').focus();
-    }
-});
 
