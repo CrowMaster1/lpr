@@ -405,13 +405,13 @@ function showGroupInfo(groupIndex) {
     if (group.SeeAlso) {
         content += `
             <p>
-                <strong>See Also:</strong>
+                <strong>Se mere:</strong>
                 <a href="${group.SeeAlso.URL}" target="_blank">${group.SeeAlso.LinkText}</a>
             </p>`;
     }
     content += '<ul>';
     group.Items.forEach(item => {
-        content += `<li><strong>${item.LabelText}:</strong> ${item.Vejledning || "No details available."}</li>`;
+        content += `<li><strong>${item.LabelText}:</strong> ${item.Vejledning || "--"}</li>`;
     });
     content += '</ul>';
     modalBody.innerHTML = content;

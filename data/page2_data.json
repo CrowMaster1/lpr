@@ -2,7 +2,7 @@
 	"Groups": [
 		{
 			"GroupHeading": "Proceduresigte",
-			"Description": "This group contains examples of procedures targeted towards diagnostic and therapeutic outcomes.",
+			"Description": "Det endelige formål med proceduren",
 			"AllowsMultipleSelections": false,
 			"SeeAlso": {
 				"URL": "https://dccg.dk",
@@ -152,116 +152,6 @@
 					"SKScode": "Mangler",
 					"Vejledning": "fjernelse af colon segment med tilhørende segment og centrale lymfeknuder",
 					"DisplayType": "simple",
-					"Show": true
-				}
-			]
-		},
-		{	
-			"GroupHeading": "Procedure, Diverse",
-			"Description": [
-				"Diagnostiske, palliative, bridge to Surgery.",
-				"Bridge to surgery procedurer og aflastende procedure kodes som kurativ hvis del af samlet kurativ strategi"
-			],
-			"AllowsMultipleSelections": true,
-			"SeeAlso": {
-				"URL": "",
-				"LinkText": ""
-			},
-			"Items": [
-				{
-					"LabelText": "Endoskopisk indsættelse af stent i tyktarm",
-					"SKSnavn": "Endoskopisk indsættelse af stent i tyktarm",
-					"SKScode": "KJFA68",
-					"Vejledning": "-",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "loop enterostomi",
-					"SKSnavn": "loop enterostomi",
-					"SKScode": "KJFF10",
-					"Vejledning": "-",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Terminal enterostomi",
-					"SKSnavn": "Terminal enterostomi",
-					"SKScode": "KJFF13",
-					"Vejledning": "-",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Transverstomi",
-					"SKSnavn": "Transverstomi",
-					"SKScode": "KJFF23",
-					"Vejledning": "-",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Sigmoideostomi",
-					"SKSnavn": "Sigmoideostomi",
-					"SKScode": "KJFF26",
-					"Vejledning": "-",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Ileotransversostomi",
-					"SKSnavn": "Ileotransversostomi",
-					"SKScode": "KJFC10",
-					"Vejledning": "-",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Eksplorativ laparotomi",
-					"SKSnavn": "Eksplorativ laparotomi",
-					"SKScode": "KJAH00",
-					"Vejledning": "-",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Endoskopisk indsættelse af stent i rektum",
-					"SKSnavn": "Endoskopisk indsættelse af stent i rektum",
-					"SKScode": "KJGA58A",
-					"Vejledning": "-",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "loop enterostomi - laparoskopisk",
-					"SKSnavn": "loop enterostomi - laparoskopisk",
-					"SKScode": "KJFF11",
-					"Vejledning": "-",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Transverstomi - laparoskopisk",
-					"SKSnavn": "Transverstomi - laparoskopisk",
-					"SKScode": "KJFF24",
-					"Vejledning": "-",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Sigmoideostomi - laparoskopisk",
-					"SKSnavn": "Sigmoideostomi - laparoskopisk",
-					"SKScode": "KJFF27",
-					"Vejledning": "-",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-					{
-					"LabelText": "Eksplorativ laparoskopi",
-					"SKSnavn": "Eksplorativ laparoskopi",
-					"SKScode": "KJAH01",
-					"Vejledning": "-",
-					"DisplayType": "udvidet",
 					"Show": true
 				}
 			]
@@ -694,6 +584,116 @@
                 }
             ]
         },			
+		{	
+			"GroupHeading": "Procedure, Diverse",
+			"Description": [
+				"Diagnostiske, palliative, bridge to Surgery.",
+				"Bridge to surgery procedurer og aflastende procedure kodes som kurativ hvis del af samlet kurativ strategi"
+			],
+			"AllowsMultipleSelections": true,
+			"SeeAlso": {
+				"URL": "",
+				"LinkText": ""
+			},
+			"Items": [
+				{
+					"LabelText": "Endoskopisk indsættelse af stent i tyktarm",
+					"SKSnavn": "Endoskopisk indsættelse af stent i tyktarm",
+					"SKScode": "KJFA68",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "loop enterostomi",
+					"SKSnavn": "loop enterostomi",
+					"SKScode": "KJFF10",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Terminal enterostomi",
+					"SKSnavn": "Terminal enterostomi",
+					"SKScode": "KJFF13",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Transverstomi",
+					"SKSnavn": "Transverstomi",
+					"SKScode": "KJFF23",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Sigmoideostomi",
+					"SKSnavn": "Sigmoideostomi",
+					"SKScode": "KJFF26",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Ileotransversostomi",
+					"SKSnavn": "Ileotransversostomi",
+					"SKScode": "KJFC10",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Eksplorativ laparotomi",
+					"SKSnavn": "Eksplorativ laparotomi",
+					"SKScode": "KJAH00",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Endoskopisk indsættelse af stent i rektum",
+					"SKSnavn": "Endoskopisk indsættelse af stent i rektum",
+					"SKScode": "KJGA58A",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "loop enterostomi - laparoskopisk",
+					"SKSnavn": "loop enterostomi - laparoskopisk",
+					"SKScode": "KJFF11",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Transverstomi - laparoskopisk",
+					"SKSnavn": "Transverstomi - laparoskopisk",
+					"SKScode": "KJFF24",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Sigmoideostomi - laparoskopisk",
+					"SKSnavn": "Sigmoideostomi - laparoskopisk",
+					"SKScode": "KJFF27",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+					{
+					"LabelText": "Eksplorativ laparoskopi",
+					"SKSnavn": "Eksplorativ laparoskopi",
+					"SKScode": "KJAH01",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				}
+			]
+		},
 		{
 			"GroupHeading": "Per-operative komplikationer",
 			"Description": [
