@@ -1,0 +1,107 @@
+/* ============================ */
+/* MAIN CONTAINER */
+/* ============================ */
+.main-container {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for main area */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Heading */
+.section-heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2E3440; /* Dark charcoal color */
+    margin-bottom: 20px;
+}
+
+/* ============================ */
+/* DATA ENTRY CONTAINER */
+/* ============================ */
+.data-entry {
+    min-height: 150px;
+    background-color: #fff; /* White container */
+    border: 1px solid #D8DEE9; /* Light gray border */
+    border-radius: 4px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================ */
+/* BUTTON GROUP */
+/* ============================ */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Even spacing between buttons */
+    justify-content: left; /* Center-align buttons */
+    margin-top: 20px;
+}
+
+.custom-btn {
+    font-size: 0.95rem;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-btn-primary {
+    background-color: #5E81AC; /* Nordic Blue */
+    color: #fff;
+}
+
+.custom-btn-primary:hover {
+    background-color: #4C566A; /* Darker hover */
+}
+
+.custom-btn-success {
+    background-color: #A3BE8C; /* Soft Green */
+    color: #fff;
+}
+
+.custom-btn-success:hover {
+    background-color: #8FBC8F; /* Darker Green Hover */
+}
+
+.custom-btn-danger {
+    background-color: #BF616A; /* Soft Red */
+    color: #fff;
+}
+
+.custom-btn-danger:hover {
+    background-color: #B04B56; /* Darker Red Hover */
+}
+
+.custom-btn-secondary {
+    background-color: #4C566A; /* Slate Gray */
+    color: #ECEFF4; /* Snow White */
+}
+
+.custom-btn-secondary:hover {
+    background-color: #434C5E; /* Darker Slate Gray Hover */
+}
+
+.custom-btn-info {
+    background-color: #81A1C1; /* Light Blue */
+    color: #fff;
+}
+
+.custom-btn-info:hover {
+    background-color: #5E81AC; /* Nordic Blue Hover */
+}
+
+/* ============================ */
+/* OUTPUT CONTAINER */
+/* ============================ */
+.output-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ECEFF4; /* Light gray */
+    border: 1px solid #D8DEE9; /* Border color */
+    border-radius: 4px;
+    color: #2E3440; /* Text color */
+    min-height: 50px;
+}

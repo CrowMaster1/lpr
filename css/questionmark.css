@@ -1,0 +1,26 @@
+/* ======================================== */
+/* Styling for Question Mark Icons */
+/* ======================================== */
+.info-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 1.0rem;
+    color: #007bff;
+    padding: 0;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+.info-button:hover {
+    color: #0056b3;
+}
+
+.info-button i {
+    pointer-events: none;
+}
+
+.info-button:focus {
+    outline: none;
+}

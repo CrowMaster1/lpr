@@ -111,25 +111,6 @@ if (saveDataButton) {
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Function to add "undo" functionality to radio buttons
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-function enableRadioUndo() {
-    let lastCheckedRadio = null;
-
-    document.querySelectorAll('input[type="radio"]').forEach(radio => {
-        radio.addEventListener('click', function () {
-            // If the same radio is clicked again, deselect it
-            if (lastCheckedRadio === this) {
-                this.checked = false; // Deselect
-                lastCheckedRadio = null; // Reset last checked radio
-            } else {
-                // Update the last checked radio
-                lastCheckedRadio = this;
-            }
-        });
-    });
-}
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////Hent data til siden/////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function generateDataEntry(data) {
@@ -185,21 +166,41 @@ function generateDataEntry(data) {
     console.log("Data entry successfully generated.", { groupsRendered: data.Groups.length });
 }
 
-
-
 function createItemElement(item, groupName, inputType) {
     const itemClass = item.DisplayType === 'udvidet' ? 'udvidet-item' : 'simple-item';
-    const itemElement = document.createElement('label');
-    itemElement.className = `custom${inputType === 'checkbox' ? 'Checkbox' : 'RadioButton'}Wrapper customTooltip ${itemClass}`;
-    itemElement.style.display = itemClass === 'udvidet-item' ? 'none' : 'block';
-    itemElement.innerHTML = `
-        <input class="custom${inputType === 'checkbox' ? 'Checkbox' : 'RadioButton'}Input" type="${inputType}" name="${groupName}" value="${item.LabelText}">
-        <div class="custom${inputType === 'checkbox' ? 'Checkbox' : 'RadioButton'}">${item.LabelText}</div>
-        <span class="tooltipText">
-            <div>${item.SKScode}</div>
-        </span>`;
-    return itemElement;
+
+    // Create the wrapper div for consistent spacing and structure
+    const wrapperDiv = document.createElement('div');
+    wrapperDiv.className = `custom${inputType === 'checkbox' ? 'Checkbox' : 'RadioButton'}Wrapper customTooltip ${itemClass}`;
+    wrapperDiv.style.display = itemClass === 'udvidet-item' ? 'none' : 'block';
+
+    // Create the input element
+    const inputElement = document.createElement('input');
+    inputElement.className = `custom${inputType === 'checkbox' ? 'Checkbox' : 'RadioButton'}Input`;
+    inputElement.type = inputType;
+    inputElement.name = groupName;
+    inputElement.id = `${groupName}-${item.LabelText.replace(/\s+/g, '-')}`; // Unique ID based on groupName and label text
+    inputElement.value = item.LabelText;
+
+    // Create the label element associated with the input
+    const labelElement = document.createElement('label');
+    labelElement.className = `custom${inputType === 'checkbox' ? 'Checkbox' : 'RadioButton'}`;
+    labelElement.htmlFor = inputElement.id; // Link label to the input
+    labelElement.textContent = item.LabelText;
+
+    // Create the tooltip span
+    const tooltipSpan = document.createElement('span');
+    tooltipSpan.className = 'tooltipText';
+    tooltipSpan.innerHTML = `<div>${item.SKScode}</div>`;
+
+    // Assemble the elements in order
+    wrapperDiv.appendChild(inputElement);
+    wrapperDiv.appendChild(labelElement);
+    wrapperDiv.appendChild(tooltipSpan);
+
+    return wrapperDiv;
 }
+
 
 function createGroupHeading(group, groupIndex) {
     const groupHeading = document.createElement('div');
@@ -277,95 +278,12 @@ function updateGroupVisibility() {
     console.log("Group visibility updated.");
 }
 
-
-
 // Attach visibility update to all input changes dynamically after rendering
 function attachVisibilityHandlers() {
     document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(input => {
         input.removeEventListener('change', updateGroupVisibility); // Prevent duplicate handlers
         input.addEventListener('change', updateGroupVisibility);
     });
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////gem data/////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-function saveData() {
-    const selectedValues = document.querySelectorAll('input[type="radio"]:checked, input[type="checkbox"]:checked');
-    if (selectedValues.length === 0) return;
-
-    const currentPageId = document.body.getAttribute('data-page-id'); // Use page ID from body attribute
-    let savedSelections = JSON.parse(localStorage.getItem('savedSelections') || '[]');
-
-    selectedValues.forEach(selected => {
-        const groupName = selected.getAttribute('name');
-        const labelText = selected.value;
-
-        const isAlreadySaved = savedSelections.some(selection =>
-            selection.pageId === currentPageId &&
-            selection.group === groupName &&
-            selection.label === labelText
-        );
-
-        if (!isAlreadySaved) {
-            const groupData = options.Groups.find(group => group.GroupHeading === groupName);
-            if (groupData) {
-                const itemData = groupData.Items.find(item => item.LabelText === labelText);
-                if (itemData) {
-                    savedSelections.push({
-                        pageId: currentPageId,
-                        group: groupName,
-                        label: labelText,
-                        SKSnavn: itemData.SKScode || "Unknown",
-                        SKS: itemData.LabelText
-                    });
-                }
-            }
-        }
-    });
-
-    localStorage.setItem('savedSelections', JSON.stringify(savedSelections));
-
-    // Update the navigation icons
-    markPagesWithSavedData();
-}
-
-////////////////Undersøg om der er gemte data//////////////////////////////////
-function checkForSavedData() {
-    const savedSelections = JSON.parse(localStorage.getItem('savedSelections') || '[]');
-
-    // Get the saved data indicator element
-    const savedDataIndicator = document.getElementById('savedDataIndicator');
-
-    if (savedSelections.length > 0) {
-        // Show the indicator if saved data exists
-        savedDataIndicator.style.display = 'block';
-    } else {
-        // Hide the indicator if no saved data exists
-        savedDataIndicator.style.display = 'none';
-    }
-}
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////load data/////////////////////////////////////////////////////////////////
-function loadSavedData() {
-    // Retrieve saved selections from localStorage
-    const savedSelections = JSON.parse(localStorage.getItem('savedSelections') || '[]');
-
-    if (savedSelections.length === 0) {
-        console.log("No saved data to load.");
-        return;
-    }
-
-    // Loop through saved selections and pre-fill the fields
-    savedSelections.forEach(selection => {
-        // Find the input element based on group name and label text
-        const inputElement = document.querySelector(`input[name="${selection.group}"][value="${selection.label}"]`);
-        if (inputElement) {
-            inputElement.checked = true; // Pre-fill the selection
-        }
-    });
-
-    console.log("Saved data has been loaded and fields are pre-filled.");
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -416,6 +334,28 @@ function showGroupInfo(groupIndex) {
     content += '</ul>';
     modalBody.innerHTML = content;
     $('#groupInfoModal').modal('show');
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Function to add "undo" functionality to radio buttons
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function enableRadioUndo() {
+    let lastCheckedRadio = null;
+
+    document.querySelectorAll('input[type="radio"]').forEach(radio => {
+        radio.addEventListener('click', function () {
+            // If the same radio is clicked again, deselect it
+            if (lastCheckedRadio === this) {
+                this.checked = false; // Deselect
+                lastCheckedRadio = null; // Reset last checked radio
+            } else {
+                // Update the last checked radio
+                lastCheckedRadio = this;
+            }
+        });
+    });
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -508,128 +448,5 @@ function populateSelectModal(data) {
         });
     });
 }
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////Markering af sider med gemte data///////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-function markPagesWithSavedData() {
-    // Retrieve saved selections from localStorage
-    const savedSelections = JSON.parse(localStorage.getItem('savedSelections') || '[]');
 
-    if (savedSelections.length === 0) return; // Exit if no saved data exists
-
-    // Create a set of unique page IDs from the saved selections
-    const pagesWithSavedData = new Set(savedSelections.map(selection => selection.pageId));
-
-    // Iterate over navigation items and mark pages with saved data
-    const navigationItems = document.querySelectorAll('.navigation [data-page-id]');
-    navigationItems.forEach(item => {
-        const pageId = item.getAttribute('data-page-id');
-
-        // Check if the page has saved data
-        if (pagesWithSavedData.has(pageId)) {
-            // Add an icon if it doesn't already exist
-            if (!item.querySelector('.save-icon')) {
-                const icon = document.createElement('i');
-                icon.className = 'fas fa-save save-icon'; // FontAwesome icon
-                icon.style.color = 'green';
-                icon.style.marginLeft = '8px';
-                item.appendChild(icon);
-            }
-        } else {
-            // Remove the icon if no saved data exists for this page
-            const existingIcon = item.querySelector('.save-icon');
-            if (existingIcon) {
-                existingIcon.remove();
-            }
-        }
-    });
-}
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////Vis SKS////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-function showSummary() {
-    const summaryContent = document.getElementById('summaryContent');
-    let content = '<table class="table table-striped"><thead><tr><th>SKS-navn</th><th>SKS-kode & VPH</th></tr></thead><tbody>';
-
-    const selectedValues = document.querySelectorAll('input[type="radio"]:checked, input[type="checkbox"]:checked');
-    const savedSelections = JSON.parse(localStorage.getItem('savedSelections') || '[]');
-    const vphData = JSON.parse(localStorage.getItem('vphData') || '{}'); // Load VPH data from storage
-
-    const displayedSelections = new Set();
-
-    // Log loaded VPH data
-    console.log("Loaded VPH Data:", vphData);
-
-    // Display current selections
-    selectedValues.forEach(selected => {
-        const groupName = selected.getAttribute('name');
-        const labelText = selected.value;
-
-        console.log("Processing selected item:", { groupName, labelText });
-
-        if (!displayedSelections.has(`${groupName}-${labelText}`)) {
-            const groupData = options.Groups.find(group => group.GroupHeading === groupName);
-            if (groupData) {
-                console.log("Found group data:", groupData);
-                const itemData = groupData.Items.find(item => item.LabelText === labelText);
-                if (itemData) {
-                    console.log("Found item data:", itemData);
-                    const SKScode = itemData.SKScode || "Unknown";
-                    const SKSnavn = itemData.LabelText;
-
-                    // Combine SKScode with VPH data if available
-                    const sksAndVph = vphData[labelText] ? `${SKScode} + VPH${vphData[labelText]}` : SKScode;
-
-                    content += `<tr><td>${SKSnavn}</td><td>${sksAndVph}</td></tr>`;
-                    displayedSelections.add(`${groupName}-${labelText}`);
-                } else {
-                    console.warn("Item data not found for label:", labelText);
-                }
-            } else {
-                console.warn("Group data not found for group name:", groupName);
-            }
-        }
-    });
-
-    // Display saved selections (if not already displayed)
-    savedSelections.forEach(selection => {
-        console.log("Processing saved selection:", selection);
-        if (!displayedSelections.has(`${selection.group}-${selection.label}`)) {
-            const sksAndVph = vphData[selection.label] ? `${selection.SKS} + VPH${vphData[selection.label]}` : selection.SKS;
-            content += `<tr><td>${selection.SKSnavn}</td><td>${sksAndVph}</td></tr>`;
-            displayedSelections.add(`${selection.group}-${selection.label}`);
-        }
-    });
-
-    content += '</tbody></table>';
-    summaryContent.innerHTML = content;
-    $('#summaryModal').modal('show');
-
-    // Log final summary content
-    console.log("Final Summary Content:", content);
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////Vejledning//////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-function showVejledning() {
-    const currentPage = window.location.pathname.split('/').pop();
-    const modalContentFile = `/vejledninger/${currentPage.replace('.html', '')}_vejledning.html`;
-
-    fetch(modalContentFile)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Vejledning fetch failed with status: ${response.status}`);
-            }
-            return response.text();
-        })
-        .then(data => {
-            document.getElementById('vejledningModalContent').innerHTML = data;
-            $('#vejledningModal').modal('show');
-        })
-        .catch(error => {
-            console.error('Error fetching vejledning content:', error);
-            alert("Could not load the vejledning. Please try again later.");
-        });
-}
 

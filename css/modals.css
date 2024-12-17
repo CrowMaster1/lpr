@@ -1,0 +1,75 @@
+/* ======================================== */
+/* Styling for Modals */
+/* ======================================== */
+.modal-dialog {
+    max-width: 75%; /* Default size: 75% of the screen width */
+    margin: auto; /* Center the modal */
+    height: auto; /* Adjust height based on content */
+}
+
+/* Larger modals for smaller screens (tablets) */
+@media (max-width: 768px) {
+    .modal-dialog {
+        max-width: 85%; /* Use more screen width */
+        margin: 20px auto; /* Reduce vertical margins */
+    }
+}
+
+/* Full-screen style for very small screens (mobile) */
+@media (max-width: 480px) {
+    .modal-dialog {
+        max-width: 95%; /* Fill almost the entire screen */
+        height: 90%; /* Use 90% of the screen height */
+        margin: 10px auto; /* Minimal vertical margin */
+        border-radius: 10px; /* Slight rounding for aesthetic */
+    }
+
+    .modal-content {
+        height: 100%; /* Ensure the modal content fills the height */
+        overflow-y: auto; /* Allow scrolling if content exceeds screen */
+    }
+}
+
+/* Default modal size for larger screens */
+#selectModal .modal-dialog,
+#cprModal .modal-dialog {
+    max-width: 25%; /* Use at most 25% of the screen width */
+    margin: auto; /* Center the modal */
+    height: auto; /* Adjust height based on content */
+    overflow: hidden; /* Prevent overflowing content */
+    white-space: nowrap; /* Ensure no line breaks */
+}
+
+/* Ensure modal-content fits */
+#selectModal .modal-content,
+#cprModal .modal-content {
+    overflow-y: auto; /* Allow scrolling for overflowing content */
+    padding: 10px; /* Add padding for better spacing */
+}
+
+/* Modals for smaller screens (tablets and mobile) */
+@media (max-width: 768px) {
+    #selectModal .modal-dialog,
+    #cprModal .modal-dialog {
+        max-width: 85%; /* Expand to 85% width on tablets */
+        height: auto; /* Content height adjusts dynamically */
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #selectModal .modal-dialog,
+    #cprModal .modal-dialog {
+        max-width: 100%; /* Full width for mobile */
+        height: 100%; /* Use full height of the screen */
+        margin: 0; /* No margins for full-screen effect */
+        border-radius: 0; /* Remove rounding for a clean look */
+    }
+
+    #selectModal .modal-content,
+    #cprModal .modal-content {
+        height: 100%; /* Fill available height */
+        overflow-y: auto; /* Enable scrolling for larger content */
+        white-space: normal; /* Allow line breaks on smaller devices */
+    }
+}

@@ -1,0 +1,51 @@
+/* ======================================== */
+/* Navigation Bar */
+/* ======================================== */
+.navigation {
+    background-color: #f0f0f0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap; /* Wrap links on smaller screens */
+    justify-content: space-around; /* Space links evenly */
+    padding: 5px; /* Reduced overall padding */
+    border-bottom: 1px solid #ccc; /* Subtle border for visual separation */
+}
+
+.navigation a {
+    flex: 1 1 auto; /* Allow links to adjust width dynamically */
+    display: block;
+    color: black;
+    text-align: center; /* Center-align text */
+    padding: 8px 10px; /* Reduced padding for a compact look */
+    text-decoration: none;
+    font-family: Arial, sans-serif; /* Set a clean, modern font */
+    font-size: 14px; /* Adjust text size for compactness */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
+    border-radius: 3px; /* Subtle rounded corners */
+}
+
+.navigation a:hover, 
+.navigation a:focus {
+    background-color: #ddd; /* Subtle highlight on hover and focus */
+    color: #333; /* Slightly darker text color for contrast */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.navigation a.active {
+    background-color: #333; /* Highlight active link */
+    color: white; /* Contrasting text color */
+    font-weight: bold; /* Emphasize active link */
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column; /* Stack links vertically */
+        align-items: stretch; /* Make links span full width */
+    }
+
+    .navigation a {
+        text-align: center; /* Keep text centered */
+        padding: 10px; /* Slightly more padding for better usability on small screens */
+    }
+}

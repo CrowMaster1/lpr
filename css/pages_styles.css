@@ -1,323 +1,228 @@
-/* Navigation Bar */
-.navigation {
-    background-color: #f0f0f0;
-    overflow: hidden;
+/* ============================ */
+/* MODERN NORDIC COLOR PALETTE */
+/* ============================ */
+:root {
+    --primary-color: #4F6F52;       /* Deep Nordic Green */
+    --primary-hover: #A9B4A6;       /* Soft Muted Sage Green */
+    --secondary-color: white;     /* Calm Slate Blue */
+    --secondary-hover: #5E8CA5;     /* Soft Sky Blue */
+    --border-color: #4C566A;       /* Dark Gray Border for Contrast */
+    --background-color: #ECEFF4;   /* Snow White Background */
+    --group-heading-bg: #2E3C40;    /* Charcoal Grey */
+    --group-heading-text: #FDFDFD;  /* Clean White */
+    --info-button-color: white;   /* Soft Steely Blue-Grey */
+    --info-button-hover: #A7BBC7;   /* Light Misty Blue */
+    --text-color: #2E3440;         /* Deep Charcoal Text */
+    --box-shadow: rgba(0, 0, 0, 0.05); /* Soft Subtle Shadow */
+}
+
+/* ============================ */
+/* CUSTOM RADIO BUTTONS & CHECKBOXES */
+/* ============================ */
+
+
+/* Wrapper for Radio Buttons and Checkboxes */
+.customRadioButtonWrapper, 
+.customCheckboxWrapper {
+    margin: 1px 0; /* Less vertical spacing */
+    padding: 2px; /* Reduced padding for tighter layout */
     display: flex;
-    flex-wrap: wrap; /* Wrap links on smaller screens */
-    justify-content: space-around; /* Space links evenly */
+    align-items: center;
 }
 
-.navigation a {
-    flex: 1 1 auto; /* Allow links to adjust width dynamically */
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.navigation a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Table Styles */
-table {
-    width: 100%; /* Adjust width for responsiveness */
-    table-layout: auto; /* Allow flexible column sizes */
-    border-collapse: collapse;
-    border-spacing: 0;
-    border: 1px solid #ccc;
-}
-
-th, td {
-    padding: 8px;
-    font-size: 16px;
-    text-align: left;
-    border: 1px solid #ccc;
-}
-
-@media (max-width: 768px) {
-    th, td {
-        font-size: 14px; /* Smaller font size for tablets */
-    }
-}
-
-@media (max-width: 480px) {
-    table {
-        font-size: 12px; /* Smaller size for mobile */
-    }
-
-    th:nth-child(1), td:nth-child(1),
-    th:nth-child(2), td:nth-child(2) {
-        width: auto; /* Allow flexibility */
-    }
-}
-
-/* Custom Radio Buttons */
-.customRadioButtonWrapper {
-    display: inline-block;
-    margin-right: 0.1rem;
-}
-
+/* Hidden Inputs */
+.customCheckboxInput,
 .customRadioButtonInput {
     display: none;
 }
 
-.customRadioButton {
-    display: inline-block;
-    cursor: pointer;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.customRadioButton:hover {
-    background-color: #f0f0f0;
-}
-
-.customRadioButtonInput:checked + .customRadioButton {
-    background-color: #4caf50;
-    color: white;
-}
-
-/* Custom Checkboxes */
-.customCheckboxWrapper {
-    display: inline-block;
-    margin-right: 0.5rem;
-}
-
-.customCheckboxInput {
-    display: none;
-}
-
+/* Styled Radio Buttons and Checkboxes */
+.customRadioButton, 
 .customCheckbox {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     cursor: pointer;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    padding: 4px 8px; /* Minimal inner padding for tight spacing */
+    border: 2px solid var(--primary-color); /* Stronger contrast border */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+    min-height: 30px; /* Slightly smaller height */
+    min-width: 120px; /* Reduced minimum width for compact layout */
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold; /* Bold text for better visibility */
+    color: var(--text-color); /* High-contrast text */
+    background-color: var(--background-color); /* Light background */
+    margin: 0; /* Remove extra margins */
 }
 
+/* Hover Effect for Radio Buttons and Checkboxes */
+.customRadioButton:hover, 
 .customCheckbox:hover {
-    background-color: #f0f0f0;
+    background-color: var(--primary-hover); /* Light blue for hover */
+    border-color: var(--primary-hover); /* Matching border on hover */
 }
 
+/* Checked State for Radio Buttons and Checkboxes */
+.customRadioButtonInput:checked + .customRadioButton,
 .customCheckboxInput:checked + .customCheckbox {
-    background-color: #4caf50;
-    color: white;
+    background-color: var(--primary-color); /* Strong blue for checked state */
+    color: var(--background-color); /* White text for contrast */
+    border-color: var(--primary-color); /* Matching border color */
 }
 
-/* VPH setup */
-#vphModal .modal-dialog {
-    max-width: 300px; /* Limit the modal width */
-    margin: auto; /* Center the modal */
+/* ============================ */
+/* GROUP HEADINGS */
+/* ============================ */
+
+.group-heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--group-heading-bg);
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 4px var(--box-shadow);
+    min-height: 60px;
 }
 
-#vphModal .modal-content {
-    padding: 15px; /* Add some padding for better spacing */
-    border-radius: 8px; /* Add slight rounding for a modern look */
+.group-heading {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--group-heading-text);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
+/* ============================ */
+/* CONTAINER AND ITEMS */
+/* ============================ */
 
-/* Container for group items */
+/* Wrapper Styling */
+.wrapper {
+    display: grid;
+    grid-gap: 5px; /* Slight spacing between items */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Flexible layout */
+    background-color: var(--background-color); /* Snow white background */
+    color: var(--text-color); /* Charcoal text color */
+    margin: 10px; /* Outer margin */
+    padding: 5px; /* Inner padding for consistency */
+}
+
+/* Individual Box Styling */
+.box {
+    background-color: var(--group-heading-bg); /* Dark Slate Gray background */
+    color: var(--group-heading-text); /* Snow White text */
+    border: 1px solid var(--border-color); /* Light gray border */
+    border-radius: 4px; /* Subtle rounded corners */
+    padding: 15px; /* Inner spacing */
+    font-size: 100%; /* Base font size */
+    box-shadow: 0 2px 4px var(--box-shadow); /* Soft shadow for depth */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for Boxes */
+.box:hover {
+    transform: translateY(-3px); /* Lift slightly on hover */
+    box-shadow: 0 4px 8px var(--box-shadow); /* Enhanced shadow on hover */
+}
+
+/* Container for Group Items */
 .item-container {
-    display: flex; /* Use flexbox for horizontal alignment */
-    flex-wrap: wrap; /* Allow items to wrap onto new rows if necessary */
-    gap: 15px; /* Space between items */
-    margin-top: 10px; /* Space between heading and items */
-    justify-content: flex-start; /* Align items to the left */
-    width: 100%; /* Ensure the container takes up the full width */
-}
-
-/* Individual group box items */
-.group-box-item {
-    flex: 1 1 auto; /* Allow items to grow and shrink */
-    min-width: 200px; /* Minimum width for each item */
-    max-width: 300px; /* Restrict maximum width */
-    box-sizing: border-box; /* Include padding and border in size */
-}
-
-@media (max-width: 768px) {
-    .group-box-item {
-        flex: 1 1 calc(50% - 15px); /* Two columns for tablets */
-    }
-}
-
-@media (max-width: 480px) {
-    .group-box-item {
-        flex: 1 1 100%; /* Single column for mobile */
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 5px; /* Consistent spacing between items */
+    align-items: center; /* Align items vertically */
+    justify-items: stretch; /* Stretch items to fit grid */
+    margin-bottom: 5px; /* Spacing below container */
+    padding: 5px; /* Add slight padding for consistency */
+    background-color: var(--background-color); /* Light background */
+    border: 1px solid var(--border-color); /* Subtle border */
+    border-radius: 4px; /* Slightly rounded corners */
 }
 
 /* Group Box */
 .group-box {
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    padding: 10px;
-    margin-bottom: 15px;
-    background-color: #f5fbff;
+    border: 1px solid var(--border-color); /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px; /* Inner padding for uniformity */
+    margin: 5px 0; /* Vertical spacing between group boxes */
+    background-color: var(--background-color); /* Light background */
+    box-shadow: 0 1px 3px var(--box-shadow); /* Soft shadow for subtle depth */
     display: flex;
-    flex-direction: column; /* Ensure independent stacking */
-    align-items: flex-start; /* Align contents to the start */
+    flex-direction: column; /* Stack content vertically */
+    align-items: stretch; /* Align items uniformly */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
 }
 
-/* Tooltips */
-.customTooltip {
-    position: relative;
-    display: inline-block;
+/* Group Box Hover Effect */
+.group-box:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 3px 6px var(--box-shadow); /* Enhanced shadow on hover */
 }
 
-.customTooltip .tooltipText {
-    visibility: hidden;
-    width: auto;
-    max-width: 300px;
-    background-color: black;
-    color: white;
-    text-align: center;
-    border-radius: 5px;
-    padding: 10px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
+
+/* ============================ */
+/* BUTTONS */
+/* ============================ */
+/* Info Button */
+.info-button {
+    background: none; /* Transparent background */
+    border: none;
+    color: var(--info-button-color); /* Aqua blue for visibility */
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease;
 }
 
-.customTooltip:hover .tooltipText {
-    visibility: visible;
-    opacity: 1;
+.info-button:hover {
+    color: var(--info-button-hover); /* Nordic blue on hover */
 }
 
-/* Toggle Button Styling */
+/* Primary Button */
 .btn-outline-primary {
-    margin-left: 10px;
-    font-size: 0.9rem;
-    border-radius: 5px;
+    margin: 0;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    border: 1px solid var(--primary-color); /* Primary border color */
+    background-color: var(--background-color); /* Light background for visibility */
+    color: var(--primary-color); /* Nordic blue text color */
+    padding: 5px 10px;
+    cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-outline-primary:hover {
-    background-color: #007bff;
-    color: white;
+    background-color: var(--primary-color); /* Primary color on hover */
+    color: var(--background-color); /* Light text on hover */
 }
 
-/* Responsive Modal */
-@media (max-width: 768px) {
-    .modal-dialog {
-        max-width: 90%;
-        margin: 10px auto;
-    }
+/* Secondary Button */
+.btn-secondary {
+    background-color: var(--secondary-color); /* Soft green */
+    border: 1px solid var(--secondary-color);
+    color: var(--background-color); /* Light text */
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-@media print {
-    .modal-dialog {
-        max-width: 1200px;
-    }
-    #summaryContent table td {
-        white-space: nowrap;
-    }
+.btn-secondary:hover {
+    background-color: var(--secondary-hover); /* Light green on hover */
+    color: var(--text-color); /* Dark text for readability */
 }
 
-/* Question Mark Styling */
-.info-button {
-    background: none;
+/* Button Reset (General) */
+button {
     border: none;
-    cursor: pointer;
-    margin-left: 10px;
-    font-size: 1.5rem;
-    color: #007bff;
-    padding: 0;
-    line-height: 1;
-    vertical-align: middle;
-}
-
-.info-button:hover {
-    color: #0056b3;
-}
-
-.info-button i {
-    pointer-events: none;
-}
-
-.info-button:focus {
     outline: none;
-}
-
-/* Default modal size */
-.modal-dialog {
-    max-width: 75%; /* Default size: 75% of the screen width */
-    margin: auto; /* Center the modal */
-    height: auto; /* Adjust height based on content */
-}
-
-/* Larger modals for smaller screens (tablets) */
-@media (max-width: 768px) {
-    .modal-dialog {
-        max-width: 85%; /* Use more screen width */
-        margin: 20px auto; /* Reduce vertical margins */
-    }
-}
-
-/* Full-screen style for very small screens (mobile) */
-@media (max-width: 480px) {
-    .modal-dialog {
-        max-width: 95%; /* Fill almost the entire screen */
-        height: 90%; /* Use 90% of the screen height */
-        margin: 10px auto; /* Minimal vertical margin */
-        border-radius: 10px; /* Slight rounding for aesthetic */
-    }
-
-    .modal-content {
-        height: 100%; /* Ensure the modal content fills the height */
-        overflow-y: auto; /* Allow scrolling if content exceeds screen */
-    }
-}
-
-/* Default modal size for larger screens */
-#selectModal .modal-dialog,
-#cprModal .modal-dialog {
-    max-width: 25%; /* Use at most 25% of the screen width */
-    margin: auto; /* Center the modal */
-    height: auto; /* Adjust height based on content */
-    overflow: hidden; /* Prevent overflowing content */
-    white-space: nowrap; /* Ensure no line breaks */
-}
-
-/* Ensure modal-content fits */
-#selectModal .modal-content,
-#cprModal .modal-content {
-    overflow-y: auto; /* Allow scrolling for overflowing content */
-    padding: 10px; /* Add padding for better spacing */
-}
-
-/* Modals for smaller screens (tablets and mobile) */
-@media (max-width: 768px) {
-    #selectModal .modal-dialog,
-    #cprModal .modal-dialog {
-        max-width: 85%; /* Expand to 85% width on tablets */
-        height: auto; /* Content height adjusts dynamically */
-        padding: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    #selectModal .modal-dialog,
-    #cprModal .modal-dialog {
-        max-width: 100%; /* Full width for mobile */
-        height: 100%; /* Use full height of the screen */
-        margin: 0; /* No margins for full-screen effect */
-        border-radius: 0; /* Remove rounding for a clean look */
-    }
-
-    #selectModal .modal-content,
-    #cprModal .modal-content {
-        height: 100%; /* Fill available height */
-        overflow-y: auto; /* Enable scrolling for larger content */
-        white-space: normal; /* Allow line breaks on smaller devices */
-    }
 }
