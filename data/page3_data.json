@@ -33,7 +33,7 @@
                     "SKSnavn": "Clavien grad 1",
                     "SKScode": "ZDA03A1",
                     "Vejledning": "Enhver afvigelse fra det normale postoperative forløb uden kirurgisk, endoskopisk, radiologisk eller farmakologisk intervention med undtagelse af væskebehandling, behandling med antiemetika, febernedsættende medicin, smertestillende medicin eller diuretika og fysioterapi.",
-                    "DisplayType": "udvidet",
+                    "DisplayType": "simple",
                     "Show": true
                 },
                 {
@@ -41,7 +41,7 @@
                     "SKSnavn": "Clavien grad 2",
                     "SKScode": "ZDA03A2",
                     "Vejledning": "Medicinsk behandling inkl. blodtransfusion eller parenteral ernæring, men eksklusiv væskebehandling og behandling med antiemetika, febernedsættende medicin, smertestillende medicin eller diuretika.",
-                    "DisplayType": "udvidet",
+                    "DisplayType": "simple",
                     "Show": true
                 },
                 {
@@ -49,7 +49,7 @@
                     "SKSnavn": "Clavien grad 3a",
                     "SKScode": "ZDA03A3A",
                     "Vejledning": "Komplikation som er behandlet kirurgisk, endoskopisk eller radiologisk (perkutan drænage) behandling uden narkose, men inkl. eventuel rus.",
-                    "DisplayType": "udvidet",
+                    "DisplayType": "simple",
                     "Show": true
                 },
                 {
@@ -57,7 +57,7 @@
                     "SKSnavn": "Clavien grad 3b",
                     "SKScode": "ZDA03A3B",
                     "Vejledning": "Komplikation som er behandlet kirurgisk, endoskopisk eller radiologisk (perkutan drænage) behandling i narkose ekskl. rus.",
-                    "DisplayType": "udvidet",
+                    "DisplayType": "simple",
                     "Show": true
                 },
                 {
@@ -65,7 +65,7 @@
                     "SKSnavn": "Clavien grad 4",
                     "SKScode": "ZDA03A4A",
                     "Vejledning": "Livstruende komplikation (inkl. CNS) som krævede indlæggelse på en intensiv afdeling, med svigt af et organ (inkl. dialyse).",
-                    "DisplayType": "udvidet",
+                    "DisplayType": "simple",
                     "Show": true
                 },
                 {
@@ -73,7 +73,7 @@
                     "SKSnavn": "Clavien grad 4",
                     "SKScode": "ZDA03A4B",
                     "Vejledning": "Livstruende komplikation (inkl. CNS) som krævede indlæggelse på en intensiv afdeling med multiorgansvigt.",
-                    "DisplayType": "udvidet",
+                    "DisplayType": "simple",
                     "Show": true
                 },
                 {
@@ -81,7 +81,7 @@
                     "SKSnavn": "Clavien grad 5",
                     "SKScode": "ZDA03A5",
                     "Vejledning": "Død",
-                    "DisplayType": "udvidet",
+                    "DisplayType": "simple",
                     "Show": true
                 }
             ]

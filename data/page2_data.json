@@ -46,8 +46,8 @@
 					"SKSnavn": "metastasebehandling",
 					"SKScode": "ZPZA02D",
 					"Vejledning": "Procedure for metastasis treatment.",
-					"DisplayType": "udvidet",
-					"Show": true
+					"DisplayType": "simple",
+					"Show": false
 				}
 			]
 		},
@@ -157,7 +157,7 @@
 			]
 		},
 		{	
-			"GroupHeading": "Procedure, Kolon",
+			"GroupHeading": "Procedure, Kolon, åben",
 			"Description": [
 				"-",
 				""
@@ -287,8 +287,22 @@
                     "Vejledning": "-",
                     "DisplayType": "udvidet",
                     "Show": true
-                },
-                {
+                }                
+            ]
+        },
+		{	
+			"GroupHeading": "Procedure, Kolon, lap",
+			"Description": [
+				"-",
+				""
+			],
+			"AllowsMultipleSelections": true,
+			"SeeAlso": {
+				"URL": "https://dccg.dk/wp-content/uploads/2023/07/Definition-af-resektioner-ved-cancer-coli-i-DCCG-databasen-20211220.pdf",
+				"LinkText": "DCCG definitioner"
+			},
+			"Items": [
+				{
                     "LabelText": "Ileocaekal resektion - laparoskopisk",
                     "SKSnavn": "Ileocaekal resektion - laparoskopisk",
                     "SKScode": "KJFB21",
@@ -419,7 +433,7 @@
             ]
         },
 		{	
-			"GroupHeading": "Procedure, Rektum",
+			"GroupHeading": "Procedure, Rektum, åben",
 			"Description": [
 				"-",
 				""
@@ -430,70 +444,6 @@
 				"LinkText": ""
 			},
             "Items": [
-                {
-                    "LabelText": "Resektion af endetarm - laparoskopisk",
-                    "SKSnavn": "Resektion af endetarm - laparoskopisk",
-                    "SKScode": "KJGB01",
-                    "Vejledning": "-",
-                    "DisplayType": "udvidet",
-                    "Show": true
-                },
-                {
-                    "LabelText": "Resektion af endetarm + kolostomi - laparoskopisk",
-                    "SKSnavn": "Resektion af endetarm + kolostomi - laparoskopisk",
-                    "SKScode": "KJGB11",
-                    "Vejledning": "-",
-                    "DisplayType": "udvidet",
-                    "Show": true
-                },
-                {
-                    "LabelText": "APE, ischioanal - laparoskopisk",
-                    "SKSnavn": "APE, ischioanal - laparoskopisk",
-                    "SKScode": "KJGB37",
-                    "Vejledning": "-",
-                    "DisplayType": "udvidet",
-                    "Show": true
-                },
-                {
-                    "LabelText": "APE, ekstralevatorisk (ELAPE) - laparoskopisk",
-                    "SKSnavn": "APE, ekstralevatorisk (ELAPE) - laparoskopisk",
-                    "SKScode": "KJGB34",
-                    "Vejledning": "-",
-                    "DisplayType": "udvidet",
-                    "Show": true
-                },
-                {
-                    "LabelText": "APE, konventionel - laparoskopisk",
-                    "SKSnavn": "APE, konventionel - laparoskopisk",
-                    "SKScode": "KJGB31",
-                    "Vejledning": "-",
-                    "DisplayType": "udvidet",
-                    "Show": true
-                },
-                {
-                    "LabelText": "APE, interspincterisk - laparoskopisk",
-                    "SKSnavn": "APE, interspincterisk - laparoskopisk",
-                    "SKScode": "KJGB33",
-                    "Vejledning": "-",
-                    "DisplayType": "udvidet",
-                    "Show": true
-                },
-                {
-                    "LabelText": "TaTME - laparoskopisk",
-                    "SKSnavn": "TaTME - laparoskopisk",
-                    "SKScode": "KJGB04",
-                    "Vejledning": "-",
-                    "DisplayType": "udvidet",
-                    "Show": true
-                },
-                {
-                    "LabelText": "Proktokolektomi og ileostomi - laparoskopisk",
-                    "SKSnavn": "Proktokolektomi og ileostomi - laparoskopisk",
-                    "SKScode": "KJFH21",
-                    "Vejledning": "-",
-                    "DisplayType": "udvidet",
-                    "Show": true
-                },
                 {
                     "LabelText": "Total bækkenrømning",
                     "SKSnavn": "Total bækkenrømning",
@@ -573,7 +523,85 @@
                     "Vejledning": "-",
                     "DisplayType": "udvidet",
                     "Show": true
+                }
+            ]
+        },
+		{	
+			"GroupHeading": "Procedure, Rektum, lap",
+			"Description": [
+				"-",
+				""
+			],
+			"AllowsMultipleSelections": true,
+			"SeeAlso": {
+				"URL": "",
+				"LinkText": ""
+			},
+            "Items": [
+                {
+                    "LabelText": "Resektion af endetarm - laparoskopisk",
+                    "SKSnavn": "Resektion af endetarm - laparoskopisk",
+                    "SKScode": "KJGB01",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
                 },
+                {
+                    "LabelText": "Resektion af endetarm + kolostomi - laparoskopisk",
+                    "SKSnavn": "Resektion af endetarm + kolostomi - laparoskopisk",
+                    "SKScode": "KJGB11",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "APE, ischioanal - laparoskopisk",
+                    "SKSnavn": "APE, ischioanal - laparoskopisk",
+                    "SKScode": "KJGB37",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "APE, ekstralevatorisk (ELAPE) - laparoskopisk",
+                    "SKSnavn": "APE, ekstralevatorisk (ELAPE) - laparoskopisk",
+                    "SKScode": "KJGB34",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "APE, konventionel - laparoskopisk",
+                    "SKSnavn": "APE, konventionel - laparoskopisk",
+                    "SKScode": "KJGB31",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "APE, interspincterisk - laparoskopisk",
+                    "SKSnavn": "APE, interspincterisk - laparoskopisk",
+                    "SKScode": "KJGB33",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "TaTME - laparoskopisk",
+                    "SKSnavn": "TaTME - laparoskopisk",
+                    "SKScode": "KJGB04",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+                {
+                    "LabelText": "Proktokolektomi og ileostomi - laparoskopisk",
+                    "SKSnavn": "Proktokolektomi og ileostomi - laparoskopisk",
+                    "SKScode": "KJFH21",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },                
                 {
                     "LabelText": "Lap. transperineal excision af endetarm",
                     "SKSnavn": "Lap. transperineal excision af endetarm",
@@ -583,7 +611,7 @@
                     "Show": true
                 }
             ]
-        },			
+        },		
 		{	
 			"GroupHeading": "Procedure, Diverse",
 			"Description": [
@@ -597,49 +625,9 @@
 			},
 			"Items": [
 				{
-					"LabelText": "Endoskopisk indsættelse af stent i tyktarm",
-					"SKSnavn": "Endoskopisk indsættelse af stent i tyktarm",
-					"SKScode": "KJFA68",
-					"Vejledning": "-",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "loop enterostomi",
-					"SKSnavn": "loop enterostomi",
-					"SKScode": "KJFF10",
-					"Vejledning": "-",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Terminal enterostomi",
-					"SKSnavn": "Terminal enterostomi",
-					"SKScode": "KJFF13",
-					"Vejledning": "-",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Transverstomi",
-					"SKSnavn": "Transverstomi",
-					"SKScode": "KJFF23",
-					"Vejledning": "-",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Sigmoideostomi",
-					"SKSnavn": "Sigmoideostomi",
-					"SKScode": "KJFF26",
-					"Vejledning": "-",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Ileotransversostomi",
-					"SKSnavn": "Ileotransversostomi",
-					"SKScode": "KJFC10",
+					"LabelText": "Eksplorativ laparoskopi",
+					"SKSnavn": "Eksplorativ laparoskopi",
+					"SKScode": "KJAH01",
 					"Vejledning": "-",
 					"DisplayType": "udvidet",
 					"Show": true
@@ -653,9 +641,25 @@
 					"Show": true
 				},
 				{
+					"LabelText": "Endoskopisk indsættelse af stent i tyktarm",
+					"SKSnavn": "Endoskopisk indsættelse af stent i tyktarm",
+					"SKScode": "KJFA68",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
 					"LabelText": "Endoskopisk indsættelse af stent i rektum",
 					"SKSnavn": "Endoskopisk indsættelse af stent i rektum",
 					"SKScode": "KJGA58A",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "loop enterostomi",
+					"SKSnavn": "loop enterostomi",
+					"SKScode": "KJFF10",
 					"Vejledning": "-",
 					"DisplayType": "udvidet",
 					"Show": true
@@ -669,9 +673,25 @@
 					"Show": true
 				},
 				{
+					"LabelText": "Transverstomi",
+					"SKSnavn": "Transverstomi",
+					"SKScode": "KJFF23",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
 					"LabelText": "Transverstomi - laparoskopisk",
 					"SKSnavn": "Transverstomi - laparoskopisk",
 					"SKScode": "KJFF24",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Sigmoideostomi",
+					"SKSnavn": "Sigmoideostomi",
+					"SKScode": "KJFF26",
 					"Vejledning": "-",
 					"DisplayType": "udvidet",
 					"Show": true
@@ -683,11 +703,19 @@
 					"Vejledning": "-",
 					"DisplayType": "udvidet",
 					"Show": true
+				},	
+				{
+					"LabelText": "Terminal enterostomi",
+					"SKSnavn": "Terminal enterostomi",
+					"SKScode": "KJFF13",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
 				},
-					{
-					"LabelText": "Eksplorativ laparoskopi",
-					"SKSnavn": "Eksplorativ laparoskopi",
-					"SKScode": "KJAH01",
+				{
+					"LabelText": "Ileotransversostomi",
+					"SKSnavn": "Ileotransversostomi",
+					"SKScode": "KJFC10",
 					"Vejledning": "-",
 					"DisplayType": "udvidet",
 					"Show": true
@@ -837,7 +865,7 @@
           			"SKScode": "DS364A",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				},
 				{
           			"LabelText": "Læsion af galdeblæren",
@@ -845,7 +873,7 @@
           			"SKScode": "DS361B",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-					"Show": true
+					"Show": false
         		},
 				{
           			"LabelText": "Læsion af galdegang",
@@ -853,7 +881,7 @@
           			"SKScode": "DS361C",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				},
 				{
           			"LabelText": "Læsion af tyktarmen",
@@ -861,7 +889,7 @@
           			"SKScode": "DS365",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				},
 				{
           			"LabelText": "Læsion af leveren",
@@ -869,7 +897,7 @@
           			"SKScode": "DS361D",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				},
 				{
           			"LabelText": "Læsion af milten",
@@ -877,7 +905,7 @@
           			"SKScode": "DS360",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				},
 				{	
           			"LabelText": "Læsion af pancreas",
@@ -885,7 +913,7 @@
           			"SKScode": "DS362",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				},
 				{
           			"LabelText": "Læsion af tyndtarmen",
@@ -893,7 +921,7 @@
           			"SKScode": "DS364",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				},
 				{
 					"LabelText": "Læsion af mavesækken",
@@ -901,7 +929,7 @@
           			"SKScode": "DS363",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				},
 				{
           			"LabelText": "Læsion af ovarie",
@@ -909,7 +937,7 @@
           			"SKScode": "DS374",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				},
 				{
           			"LabelText": "Læsion af æggeleder",
@@ -917,7 +945,7 @@
           			"SKScode": "DS375",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				},
 				{
           			"LabelText": "Læsion af livmoderen",
@@ -925,7 +953,7 @@
           			"SKScode": "DS376",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				}				
 			]
 		},
@@ -1052,6 +1080,22 @@
 					"Show": true
 				},
 				{
+					"LabelText": "Excision Lever",
+					"SKSnavn": "Excision af patologisk væv i lever",
+					"SKScode": "KJJA40",
+					"Vejledning": "Forklar-Txt",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Lap. Excision Lever",
+					"SKSnavn": "Laparoskopisk excision af patologisk væv i lever",
+					"SKScode": "KJJA41",
+					"Vejledning": "Forklar-Txt",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
 					"LabelText": "Excision binyre",
 					"SKSnavn": "Excision af patologisk væv i binyre",
 					"SKScode": "KBCA20",
@@ -1074,24 +1118,7 @@
 					"Vejledning": "Forklar-Txt",
 					"DisplayType": "udvidet",
 					"Show": true
-				},
-				{
-					"LabelText": "Excision Lever",
-					"SKSnavn": "Excision af patologisk væv i lever",
-					"SKScode": "KJJA40",
-					"Vejledning": "Forklar-Txt",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Lap. Excision Lever",
-					"SKSnavn": "Laparoskopisk excision af patologisk væv i lever",
-					"SKScode": "KJJA41",
-					"Vejledning": "Forklar-Txt",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
+				},{
 					"LabelText": "Excision retroperitoneum",
 					"SKSnavn": "Excision af retroperitonealt patologisk væv",
 					"SKScode": "KKKB10",

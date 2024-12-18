@@ -430,87 +430,6 @@
             ]
         },
         {
-            "GroupHeading": "Patient ikke modtaget behandling/Behandlet på anden afdeling",
-            "Description": "Denne kode tilføjes behandlingsforløb såfremt pt ikke har modtaget behandling/DCCG procedure. ZWCM7 anvendes hvis pt. Er henvist og har modtaget anden behandling på kirurgisk afdeling – dvs ikke fra kirurgisk til onkologisk afd.",
-            "AllowsMultipleSelections": false,
-            "SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
-            },
-            "Items": [
-                {
-                    "LabelText": "Alternativ Beh.",
-                    "SKSnavn": "Alternativ cancerbehandling",
-                    "SKScode": "ZWCM0",
-                    "Vejledning": "-",
-                    "DisplayType": "udvidet",
-                    "Show": true,
-                    "VPH": false,
-                    "SKScodestatus": "Godkendt"
-                },
-                {
-                    "LabelText": "Ingen udredning",
-                    "SKSnavn": "Klinisk beslutning om ingen udredning",
-                    "SKScode": "ZWCM1",
-                    "Vejledning": "-",
-                    "DisplayType": "udvidet",
-                    "Show": true,
-                    "VPH": false,
-                    "SKScodestatus": "Godkendt"
-                },
-                {
-                    "LabelText": "Beh. i anden afdeling",
-                    "SKSnavn": "Klinisk beslutning om behandling i anden afdeling",
-                    "SKScode": "ZWCM7",
-                    "Vejledning": "-",
-                    "DisplayType": "simple",
-                    "Show": true,
-                    "VPH": false,
-                    "SKScodestatus": "Godkendt"
-                },
-                {
-                    "LabelText": "Ingen Behandling",
-                    "SKSnavn": "Klinisk beslutning om ingen behandling",
-                    "SKScode": "ZWCM8",
-                    "Vejledning": "-",
-                    "DisplayType": "simple",
-                    "Show": true,
-                    "VPH": false,
-                    "SKScodestatus": "Godkendt"
-                },
-                {
-                    "LabelText": "Pt. ønsker ikke udredning",
-                    "SKSnavn": "Patienten ønsker ikke udredning",
-                    "SKScode": "ZWCM9A",
-                    "Vejledning": "-",
-                    "DisplayType": "udvidet",
-                    "Show": true,
-                    "VPH": false,
-                    "SKScodestatus": "Godkendt"
-                },
-                {
-                    "LabelText": "Pt. ønsker ikke behandling",
-                    "SKSnavn": "Patienten ønsker ikke behandling",
-                    "SKScode": "ZWCM9B",
-                    "Vejledning": "-",
-                    "DisplayType": "udvidet",
-                    "Show": true,
-                    "VPH": false,
-                    "SKScodestatus": "Godkendt"
-                },
-                {
-                    "LabelText": "Pt. ønsker ikke kontrol",
-                    "SKSnavn": "Patienten ønsker ikke kontrol",
-                    "SKScode": "ZWCM9C",
-                    "Vejledning": "-",
-                    "DisplayType": "udvidet",
-                    "Show": true,
-                    "VPH": false,
-                    "SKScodestatus": "Godkendt"
-                }
-            ]
-        },
-        {
             "GroupHeading": "Performance Status",
             "Description": "Performance status oplyses som den der danner grundlag for behandlingsbeslutningen. Ved flere opgivne vælges sidste inden proceduren. Der bør ikke foretages vurdering ihft journal vurdering. Her bør anvendes PS ukendt.",
             "AllowsMultipleSelections": false,
@@ -728,7 +647,7 @@
                     "SKSnavn": "Rygestopper",
                     "SKScode": "ZZP01A1B2",
                     "Vejledning": "-",
-                    "DisplayType": "udvidet",
+                    "DisplayType": "simple",
                     "Show": false,
                     "VPH": false,
                     "SKScodestatus": "Godkendt"
@@ -827,7 +746,7 @@
             ]
         },
         {
-            "GroupHeading": "Jernmangelanæmi UNS",
+            "GroupHeading": "Anæmi UNS",
             "Description": "Aktuelt er fokus på anæmi, husk andre komorbiditeter også",
             "AllowsMultipleSelections": false,
             "SeeAlso": {
@@ -836,9 +755,9 @@
             },
             "Items": [
                 {
-                    "LabelText": "Jernmangelanæmi UNS",
-                    "SKSnavn": "Jernmangelanæmi UNS",
-                    "SKScode": "DD509",
+                    "LabelText": "Anæmi UNS",
+                    "SKSnavn": "Anæmi UNS",
+                    "SKScode": "DD649",
                     "Vejledning": "Se DCCG retningslinjer",
                     "DisplayType": "simple",
                     "Show": true,
@@ -1027,6 +946,87 @@
                     "SKScode": "Ønskes",
                     "Vejledning": "-",
                     "DisplayType": "simple",
+                    "Show": true,
+                    "VPH": false,
+                    "SKScodestatus": "Godkendt"
+                }
+            ]
+        },
+		        {
+            "GroupHeading": "Patient ikke behandlet/eller på anden afdeling",
+            "Description": "Denne kode tilføjes behandlingsforløb såfremt pt ikke har modtaget behandling/DCCG procedure. ZWCM7 anvendes hvis pt. Er henvist og har modtaget anden behandling på kirurgisk afdeling – dvs ikke fra kirurgisk til onkologisk afd.",
+            "AllowsMultipleSelections": false,
+            "SeeAlso": {
+                "URL": "https://dccg.dk",
+                "LinkText": "Link til DCCG-1"
+            },
+            "Items": [
+                {
+                    "LabelText": "Alternativ Beh.",
+                    "SKSnavn": "Alternativ cancerbehandling",
+                    "SKScode": "ZWCM0",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true,
+                    "VPH": false,
+                    "SKScodestatus": "Godkendt"
+                },
+                {
+                    "LabelText": "Ingen udredning",
+                    "SKSnavn": "Klinisk beslutning om ingen udredning",
+                    "SKScode": "ZWCM1",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true,
+                    "VPH": false,
+                    "SKScodestatus": "Godkendt"
+                },
+                {
+                    "LabelText": "Beh. i anden afdeling",
+                    "SKSnavn": "Klinisk beslutning om behandling i anden afdeling",
+                    "SKScode": "ZWCM7",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true,
+                    "VPH": false,
+                    "SKScodestatus": "Godkendt"
+                },
+                {
+                    "LabelText": "Ingen Behandling",
+                    "SKSnavn": "Klinisk beslutning om ingen behandling",
+                    "SKScode": "ZWCM8",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true,
+                    "VPH": false,
+                    "SKScodestatus": "Godkendt"
+                },
+                {
+                    "LabelText": "Pt. ønsker ikke udredning",
+                    "SKSnavn": "Patienten ønsker ikke udredning",
+                    "SKScode": "ZWCM9A",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true,
+                    "VPH": false,
+                    "SKScodestatus": "Godkendt"
+                },
+                {
+                    "LabelText": "Pt. ønsker ikke behandling",
+                    "SKSnavn": "Patienten ønsker ikke behandling",
+                    "SKScode": "ZWCM9B",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true,
+                    "VPH": false,
+                    "SKScodestatus": "Godkendt"
+                },
+                {
+                    "LabelText": "Pt. ønsker ikke kontrol",
+                    "SKSnavn": "Patienten ønsker ikke kontrol",
+                    "SKScode": "ZWCM9C",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
                     "Show": true,
                     "VPH": false,
                     "SKScodestatus": "Godkendt"

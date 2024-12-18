@@ -1,6 +1,57 @@
 {
     "Groups": [
         {
+			"GroupHeading": "Proceduresigte",
+			"Description": "Det endelige formål med proceduren",
+			"AllowsMultipleSelections": false,
+			"SeeAlso": {
+				"URL": "https://dccg.dk",
+				"LinkText": "Link til DCCG-1"
+			},
+			"Items": [
+				{
+					"LabelText": "Diagnostisk",
+					"SKSnavn": "diagnostisk",
+					"SKScode": "ZPZA01",
+					"Vejledning": "Procedure aimed at diagnosis.",
+					"DisplayType": "simple",
+					"Show": true
+				},
+				{
+					"LabelText": "Kurativt",
+					"SKSnavn": "intenderet kurativ behandling",
+					"SKScode": "ZPZA02C",
+					"Vejledning": "Procedure intended for curative treatment.",
+					"DisplayType": "simple",
+					"Show": true
+				},
+				{
+					"LabelText": "Neoadjuverende",
+					"SKSnavn": "neoadjuverende behandling",
+					"SKScode": "ZPZA02B",
+					"Vejledning": "Procedure for neoadjuvant treatment.",
+					"DisplayType": "udvidet",
+					"Show": false
+				},
+				{
+					"LabelText": "Palliativt",
+					"SKSnavn": "palliativ",
+					"SKScode": "ZPZA05",
+					"Vejledning": "Procedure aimed at palliation.",
+					"DisplayType": "simple",
+					"Show": true
+				},
+				{
+					"LabelText": "Metastasebehandling",
+					"SKSnavn": "metastasebehandling",
+					"SKScode": "ZPZA02D",
+					"Vejledning": "Procedure for metastasis treatment.",
+					"DisplayType": "simple",
+					"Show": false
+				}
+			]
+		},
+		{
             "GroupHeading": "Endoskopiske og Kirurgiske Procedurer",
             "Description": "Procedurer i endetarm og tyktarm, herunder endoskopiske og kirurgiske teknikker.",
             "AllowsMultipleSelections": true,

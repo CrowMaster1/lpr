@@ -31,15 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
-
-
-
-
-
-
-
-
 /**
  * Attaches click handlers to items with "VPH": true.
  */

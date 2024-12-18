@@ -44,18 +44,20 @@ function saveData() {
 ////////////////Undersøg om der er gemte data//////////////////////////////////
 function checkForSavedData() {
     const savedSelections = JSON.parse(localStorage.getItem('savedSelections') || '[]');
-
-    // Get the saved data indicator element
     const savedDataIndicator = document.getElementById('savedDataIndicator');
 
+    if (!savedDataIndicator) {
+        console.warn("Element with ID 'savedDataIndicator' not found.");
+        return;
+    }
+
     if (savedSelections.length > 0) {
-        // Show the indicator if saved data exists
         savedDataIndicator.style.display = 'block';
     } else {
-        // Hide the indicator if no saved data exists
         savedDataIndicator.style.display = 'none';
     }
 }
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////load data/////////////////////////////////////////////////////////////////
 function loadSavedData() {
