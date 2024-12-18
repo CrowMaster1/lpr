@@ -2,19 +2,90 @@
 /* MAIN CONTAINER */
 /* ============================ */
 .main-container {
-    padding: 20px;
+    padding: 5px;
     background-color: #f9f9f9; /* Light background for main area */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Section Heading */
+/* Base styles for the <h1> */
 .section-heading {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #2E3440; /* Dark charcoal color */
-    margin-bottom: 20px;
+    position: relative;
+    font-family: 'Playfair Display', serif; /* Use a fancy font */
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    margin: 10px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    overflow: hidden;
 }
+
+/* Horizontal lines */
+.section-heading::before,
+.section-heading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 25%;
+    height: 2px;
+    background: #999;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Line positioning */
+.section-heading::before {
+    left: 0;
+    transform: translateY(-50%) translateX(-10px);
+}
+
+.section-heading::after {
+    right: 0;
+    transform: translateY(-50%) translateX(10px);
+}
+
+/* Hover effect: Line expansion and text color */
+.section-heading:hover {
+    color: #000;
+}
+
+.section-heading:hover::before,
+.section-heading:hover::after {
+    background: #000;
+    width: 30%;
+}
+
+/* Subtle text animation */
+.section-heading span {
+    display: inline-block;
+    animation: fade-in 0.8s ease forwards;
+    opacity: 0;
+}
+
+.section-heading span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.section-heading span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.section-heading span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+/* Fade-in keyframes */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* ============================ */
 /* DATA ENTRY CONTAINER */
@@ -34,7 +105,7 @@
 .button-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* Even spacing between buttons */
+    gap: 5px; /* Even spacing between buttons */
     justify-content: left; /* Center-align buttons */
     margin-top: 20px;
 }
@@ -97,11 +168,11 @@
 /* OUTPUT CONTAINER */
 /* ============================ */
 .output-container {
-    margin-top: 20px;
-    padding: 15px;
+    margin-top: 10px;
+    padding: 10px;
     background-color: #ECEFF4; /* Light gray */
     border: 1px solid #D8DEE9; /* Border color */
     border-radius: 4px;
     color: #2E3440; /* Text color */
-    min-height: 50px;
+    min-height: 40px;
 }

@@ -1,0 +1,166 @@
+/* =============================
+   Global Styles
+============================= */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    box-sizing: border-box;
+}
+
+/* =============================
+   Main Container
+============================= */
+.main-container {
+    flex: 1; /* Grow to fill available space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Add spacing */
+    background: linear-gradient(to bottom, #f9f9f9, #ececec);
+    text-align: center;
+}
+
+/* =============================
+   Headings
+============================= */
+
+/* Fancy Heading */
+.fancy-heading {
+    font-family: 'Playfair Display', serif; /* Use a fancy font */
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-bottom: 3px solid #333;
+    display: inline-block;
+	overflow: hidden;
+    padding-bottom: 10px;
+	position: relative;
+}
+
+/* Sub-heading styles */
+.sub-heading {
+    font-family: 'Playfair Display', serif; /* Use a fancy font */
+    font-size: 1.0rem;
+    font-weight: 300;
+    color: #555;
+    text-align: center;
+    margin: 5px 0;
+    letter-spacing: 2px;
+}
+
+/* Professional Heading */
+.professional-heading {
+    margin: 10px 0;
+    color: #333;
+    font-weight: bold;
+    font-size: 32px;
+    text-align: center;
+    word-wrap: break-word; /* Prevent overflow */
+}
+
+/* Responsive adjustments for Professional Heading */
+@media (max-width: 768px) {
+    .professional-heading {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .professional-heading {
+        font-size: 24px;
+    }
+}
+
+/* =============================
+   Logo Styles
+============================= */
+
+/* General Logo Styling */
+.logo, .logo-left, .logo-right {
+    display: block;
+    max-width: 100%; /* Ensure logos do not exceed container width */
+    height: auto; /* Preserve aspect ratio */
+    margin: 10px auto; /* Center logos with some spacing */
+    object-fit: contain; /* Prevent distortion */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for logos */
+.logo:hover, .logo-left:hover, .logo-right:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments for Logos */
+@media (max-width: 768px) {
+    .logo-left, .logo-right {
+        max-width: 60%; /* Adjust for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-left, .logo-right {
+        max-width: 80%; /* Adjust for mobile */
+    }
+}
+
+@media (min-width: 1200px) {
+    .logo-left, .logo-right {
+        max-width: 40%; /* Restrict size on large screens */
+    }
+}
+
+/* =============================
+   Footer Styles
+============================= */
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px; /* Increased padding for more space */
+    text-align: center;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    width: 100%;
+    overflow: visible; /* Allow content like the hamster animation to overflow */
+    position: relative; /* Position relative to adjust internal elements */
+}
+
+.footer p {
+    margin: 0;
+    font-weight: 300;
+}
+
+/* =============================
+   Animations & Hamster Wheel
+============================= */
+.wheel-and-hamster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto; /* Centered and spaced within the footer */
+    overflow: visible; /* Ensure the hamster animation isn't clipped */    
+}
+
+
+/* Responsive adjustments for Hamster Wheel */
+@media (max-width: 768px) {
+    .wheel-and-hamster {
+        max-width: 120px; /* Scale down for smaller screens */
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wheel-and-hamster {
+        max-width: 100px; /* Further reduce size for mobile */
+        height: 100px;
+    }
+}

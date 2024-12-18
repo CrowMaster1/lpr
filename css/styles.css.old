@@ -1,0 +1,135 @@
+/* Professional Heading */
+.professional-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #333;
+    font-weight: bold;
+    font-size: 32px;
+    word-wrap: break-word; /* Ensure text doesn't overflow */
+}
+
+@media (max-width: 768px) {
+    .professional-heading {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .professional-heading {
+        font-size: 24px;
+    }
+}
+
+/* Logos */
+.logo-left, .logo-right {
+    display: block;
+    max-width: 100%; /* Ensure logos always fit */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .logo-left, .logo-right {
+        max-width: 80%; /* Reduce size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-left, .logo-right {
+        max-width: 70%; /* Further reduce size for mobile */
+    }
+}
+
+/* Animations and Hamster Wheel */
+.wheel-and-hamster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .wheel-and-hamster {
+        max-width: 300px; /* Scale down for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .wheel-and-hamster {
+        max-width: 200px; /* Scale down further for mobile */
+    }
+}
+
+
+/* Reduce white space above text */
+.professional-heading {
+    margin-top: 10px; /* Reduce top margin */
+    margin-bottom: 10px; /* Adjust bottom margin */
+    font-size: 32px; /* Ensure heading remains prominent */
+    text-align: center;
+}
+
+
+
+/* Ensure the body and html take up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+}
+
+/* Main container takes the remaining space */
+.main-container {
+    flex: 1; /* Grow to fill available space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Add spacing */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Footer always stays visible */
+.footer {
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* Prevent footer from shrinking */
+    width: 100%; /* Full width */
+}
+
+/* Logos: Default styling */
+.logo-left, .logo-right {
+    display: block;
+    max-width: 100%; /* Ensure logos do not exceed container width */
+    height: auto; /* Preserve aspect ratio */
+    margin: 10px auto; /* Center logos with some spacing */
+    object-fit: contain; /* Ensure logos are fully visible without distortion */
+}
+
+/* Prevent logos from becoming too small on large screens */
+@media (min-width: 1200px) {
+    .logo-left, .logo-right {
+        max-width: 40%; /* Restrict maximum size on large screens */
+    }
+}
+
+/* Medium screens (e.g., tablets) */
+@media (max-width: 768px) {
+    .logo-left, .logo-right {
+        max-width: 60%; /* Adjust to fit smaller screens */
+    }
+}
+
+/* Small screens (e.g., mobile) */
+@media (max-width: 480px) {
+    .logo-left, .logo-right {
+        max-width: 80%; /* Further reduce size on mobile */
+    }
+}

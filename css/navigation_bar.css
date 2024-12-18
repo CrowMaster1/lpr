@@ -7,7 +7,7 @@
     display: flex;
     flex-wrap: wrap; /* Wrap links on smaller screens */
     justify-content: space-around; /* Space links evenly */
-    padding: 5px; /* Reduced overall padding */
+    padding: 2px; /* Reduced overall padding */
     border-bottom: 1px solid #ccc; /* Subtle border for visual separation */
 }
 
@@ -16,7 +16,7 @@
     display: block;
     color: black;
     text-align: center; /* Center-align text */
-    padding: 8px 10px; /* Reduced padding for a compact look */
+    padding: 3px 5px; /* Reduced padding for a compact look */
     text-decoration: none;
     font-family: Arial, sans-serif; /* Set a clean, modern font */
     font-size: 14px; /* Adjust text size for compactness */
@@ -46,6 +46,7 @@
 
     .navigation a {
         text-align: center; /* Keep text centered */
-        padding: 10px; /* Slightly more padding for better usability on small screens */
+        padding: 5px; /* Slightly more padding for better usability on small screens */
     }
 }
+
