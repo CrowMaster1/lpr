@@ -131,6 +131,14 @@
 			},
 			"Items": [
 				{
+					"LabelText": "D0",
+					"SKSnavn": "D0",
+					"SKScode": "Mangler",
+					"Vejledning": "afventer",
+					"DisplayType": "simple",
+					"Show": true
+				},
+				{
 					"LabelText": "D1",
 					"SKSnavn": "D1",
 					"SKScode": "Mangler",

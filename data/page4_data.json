@@ -139,7 +139,23 @@
                     "Vejledning": "Skal kodes med tillægskoder som resektioner",
                     "DisplayType": "simple",
                     "Show": true
-                }
+                },
+				{
+					"LabelText": "Endoskopisk indsættelse af stent i tyktarm",
+					"SKSnavn": "Endoskopisk indsættelse af stent i tyktarm",
+					"SKScode": "KJFA68",
+					"Vejledning": "-",
+					"DisplayType": "simple",
+					"Show": true
+				},
+				{
+					"LabelText": "Endoskopisk indsættelse af stent i rektum",
+					"SKSnavn": "Endoskopisk indsættelse af stent i rektum",
+					"SKScode": "KJGA58A",
+					"Vejledning": "-",
+					"DisplayType": "simple",
+					"Show": true
+				}
             ]
         }
     ]
