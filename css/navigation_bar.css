@@ -1,52 +1,68 @@
-/* ======================================== */
-/* Navigation Bar */
-/* ======================================== */
+/* ============================ */
+/* NAVIGATION STYLES */
+/* ============================ */
+
 .navigation {
-    background-color: #f0f0f0;
-    overflow: hidden;
+    background-color: #2E3440; /* Dark background for navigation */
+    padding: 10px 0; /* Top and bottom padding */
     display: flex;
-    flex-wrap: wrap; /* Wrap links on smaller screens */
-    justify-content: space-around; /* Space links evenly */
-    padding: 2px; /* Reduced overall padding */
-    border-bottom: 1px solid #ccc; /* Subtle border for visual separation */
+    justify-content: center; /* Center links horizontally */
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 10px; /* Space between links */
+    text-align: center;
 }
 
+/* Navigation Links */
 .navigation a {
-    flex: 1 1 auto; /* Allow links to adjust width dynamically */
-    display: block;
-    color: black;
-    text-align: center; /* Center-align text */
-    padding: 3px 5px; /* Reduced padding for a compact look */
     text-decoration: none;
-    font-family: Arial, sans-serif; /* Set a clean, modern font */
-    font-size: 14px; /* Adjust text size for compactness */
-    transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
-    border-radius: 3px; /* Subtle rounded corners */
+    color: #ECEFF4; /* Light text color */
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap; /* Prevent text from breaking into multiple lines */
 }
 
-.navigation a:hover, 
-.navigation a:focus {
-    background-color: #ddd; /* Subtle highlight on hover and focus */
-    color: #333; /* Slightly darker text color for contrast */
-    outline: none; /* Remove default outline */
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+/* Hover Effect */
+.navigation a:hover {
+    background-color: #4C566A; /* Slightly lighter hover color */
+    color: #fff;
 }
 
+/* Active Link */
 .navigation a.active {
-    background-color: #333; /* Highlight active link */
-    color: white; /* Contrasting text color */
-    font-weight: bold; /* Emphasize active link */
+    background-color: #5E81AC; /* Highlight active link */
+    color: #fff;
 }
 
+/* ============================ */
+/* RESPONSIVE DESIGN */
+/* ============================ */
+
+/* Tablets */
 @media (max-width: 768px) {
     .navigation {
-        flex-direction: column; /* Stack links vertically */
-        align-items: stretch; /* Make links span full width */
+        padding: 8px 0; /* Slightly reduce padding */
+        gap: 8px; /* Reduce spacing between links */
     }
 
     .navigation a {
-        text-align: center; /* Keep text centered */
-        padding: 5px; /* Slightly more padding for better usability on small screens */
+        font-size: 0.9rem; /* Slightly smaller font */
+        padding: 6px 10px; /* Adjust padding */
     }
 }
 
+/* Mobile */
+@media (max-width: 480px) {
+    .navigation {
+        justify-content: space-around; /* Spread links evenly */
+        gap: 5px; /* Tighten spacing */
+    }
+
+    .navigation a {
+        font-size: 0.85rem; /* Smaller font for tight spaces */
+        padding: 4px 8px; /* Compact padding */
+    }
+}

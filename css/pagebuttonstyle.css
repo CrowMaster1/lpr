@@ -1,4 +1,14 @@
 /* ============================ */
+/* GLOBAL STYLES */
+/* ============================ */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* ============================ */
 /* MAIN CONTAINER */
 /* ============================ */
 .main-container {
@@ -8,73 +18,69 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Base styles for the <h1> */
+/* ============================ */
+/* HEADINGS */
+/* ============================ */
+
+/* Section Heading */
 .section-heading {
     position: relative;
-    font-family: 'Playfair Display', serif; /* Use a fancy font */
+    font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
+    font-weight: bold;
     color: #333;
     text-align: center;
-    margin: 10px 0;
+    margin: 20px 0;
     letter-spacing: 2px;
     text-transform: uppercase;
+    padding-bottom: 8px; /* Space for underline */
     overflow: hidden;
 }
 
-/* Horizontal lines */
+/* Animated Underline */
 .section-heading::before,
 .section-heading::after {
     content: '';
     position: absolute;
-    top: 50%;
-    width: 25%;
+    bottom: 0;
+    width: 0;
     height: 2px;
-    background: #999;
-    transition: all 0.3s ease-in-out;
+    background-color: #5E81AC; /* Underline color */
+    transition: width 0.4s ease-in-out;
 }
 
-/* Line positioning */
+/* Left Side Underline */
 .section-heading::before {
-    left: 0;
-    transform: translateY(-50%) translateX(-10px);
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: left;
 }
 
+/* Right Side Underline */
 .section-heading::after {
-    right: 0;
-    transform: translateY(-50%) translateX(10px);
+    right: 50%;
+    transform: translateX(50%);
+    transform-origin: right;
 }
 
-/* Hover effect: Line expansion and text color */
-.section-heading:hover {
-    color: #000;
-}
-
+/* Hover Effect */
 .section-heading:hover::before,
 .section-heading:hover::after {
-    background: #000;
-    width: 30%;
+    width: 50%; /* Expand from both sides */
 }
 
-/* Subtle text animation */
+/* Text Animation */
 .section-heading span {
     display: inline-block;
     animation: fade-in 0.8s ease forwards;
     opacity: 0;
 }
 
-.section-heading span:nth-child(1) {
-    animation-delay: 0s;
-}
+.section-heading span:nth-child(1) { animation-delay: 0s; }
+.section-heading span:nth-child(2) { animation-delay: 0.1s; }
+.section-heading span:nth-child(3) { animation-delay: 0.2s; }
 
-.section-heading span:nth-child(2) {
-    animation-delay: 0.1s;
-}
-
-.section-heading span:nth-child(3) {
-    animation-delay: 0.2s;
-}
-
-/* Fade-in keyframes */
+/* Fade-in Animation */
 @keyframes fade-in {
     from {
         opacity: 0;
@@ -83,6 +89,34 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* ============================ */
+/* RESPONSIVE DESIGN */
+/* ============================ */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .section-heading {
+        font-size: 1.3rem;
+        padding-bottom: 6px;
+    }
+    .section-heading::before,
+    .section-heading::after {
+        height: 2px; /* Keep the underline thin */
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .section-heading {
+        font-size: 1.2rem;
+        padding-bottom: 5px;
+    }
+    .section-heading::before,
+    .section-heading::after {
+        height: 2px; /* Keep consistency */
     }
 }
 
@@ -105,11 +139,12 @@
 .button-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px; /* Even spacing between buttons */
-    justify-content: left; /* Center-align buttons */
+    gap: 5px;
+    justify-content: flex-start; /* Align buttons to the left */
     margin-top: 20px;
 }
 
+/* General Button Styles */
 .custom-btn {
     font-size: 0.95rem;
     font-weight: bold;
@@ -119,49 +154,45 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Button Variants */
 .custom-btn-primary {
-    background-color: #5E81AC; /* Nordic Blue */
+    background-color: #5E81AC;
     color: #fff;
 }
-
 .custom-btn-primary:hover {
-    background-color: #4C566A; /* Darker hover */
+    background-color: #4C566A;
 }
 
 .custom-btn-success {
-    background-color: #A3BE8C; /* Soft Green */
+    background-color: #A3BE8C;
     color: #fff;
 }
-
 .custom-btn-success:hover {
-    background-color: #8FBC8F; /* Darker Green Hover */
+    background-color: #8FBC8F;
 }
 
 .custom-btn-danger {
-    background-color: #BF616A; /* Soft Red */
+    background-color: #BF616A;
     color: #fff;
 }
-
 .custom-btn-danger:hover {
-    background-color: #B04B56; /* Darker Red Hover */
+    background-color: #B04B56;
 }
 
 .custom-btn-secondary {
-    background-color: #4C566A; /* Slate Gray */
-    color: #ECEFF4; /* Snow White */
+    background-color: #4C566A;
+    color: #ECEFF4;
 }
-
 .custom-btn-secondary:hover {
-    background-color: #434C5E; /* Darker Slate Gray Hover */
+    background-color: #434C5E;
 }
 
 .custom-btn-info {
-    background-color: #81A1C1; /* Light Blue */
+    background-color: #81A1C1;
     color: #fff;
 }
-
 .custom-btn-info:hover {
-    background-color: #5E81AC; /* Nordic Blue Hover */
+    background-color: #5E81AC;
 }
 
 /* ============================ */
@@ -170,9 +201,54 @@
 .output-container {
     margin-top: 10px;
     padding: 10px;
-    background-color: #ECEFF4; /* Light gray */
-    border: 1px solid #D8DEE9; /* Border color */
+    background-color: #ECEFF4;
+    border: 1px solid #D8DEE9;
     border-radius: 4px;
-    color: #2E3440; /* Text color */
+    color: #2E3440;
     min-height: 40px;
+}
+
+/* ============================ */
+/* RESPONSIVE DESIGN */
+/* ============================ */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .button-group {
+        justify-content: center; /* Center buttons on smaller screens */
+    }
+
+    .data-entry {
+        padding: 10px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .button-group {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .data-entry {
+        padding: 8px;
+    }
+}
+
+/* ============================ */
+/* UTILITY CLASSES */
+/* ============================ */
+.text-center {
+    text-align: center;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.padding-15 {
+    padding: 15px;
 }
