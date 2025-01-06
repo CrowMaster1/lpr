@@ -3,39 +3,57 @@
  */
 let vphData = {};
 
+/**
+ * Initialize event listeners and modal setup on DOMContentLoaded
+ */
 document.addEventListener('DOMContentLoaded', () => {
     const vphModal = document.getElementById('vphModal');
     const vphInput = document.getElementById('vphInput');
     const saveVphButton = document.getElementById('saveVphButton');
 
     if (vphModal && vphInput && saveVphButton) {
-        saveVphButton.addEventListener('click', () => {
-            const vphCode = vphInput.value.trim();
-            
+        // Reset modal input when shown
+        $('#vphModal').on('show.bs.modal', () => {
+            vphInput.value = '';
+        });
+
+        // Save button click handler
+        saveVphButton.onclick = function () {
+            var vphCode = vphInput.value.trim();
+
             // Validate VPH code (must be 4 digits)
             if (!/^\d{4}$/.test(vphCode)) {
-                console.error("Invalid VPH code. Must be 4 digits.");
+                console.error("VPH kode. Skal være minimum 4 tal");
+                document.getElementById('vphError').style.display = 'block';
                 return;
             }
 
-            // Save VPH code logic
-            console.log(`VPH Code saved: ${vphCode}`);
-            $('#vphModal').modal('hide');
-        });
+            // Save VPH code and update UI
+            const labelText = vphInput.dataset.labelText;
+            const sksCode = vphInput.dataset.sksCode;
 
-        $('#vphModal').on('show.bs.modal', () => {
-            vphInput.value = ''; // Reset the input value when the modal is shown
-        });
+            vphData[labelText] = vphCode;
+            saveVphData();
+
+            const labelElement = document.querySelector(`label[data-label-text="${labelText}"]`);
+            if (labelElement) {
+                labelElement.innerHTML = `${sksCode} + VPH${vphCode}`;
+            }
+
+            $('#vphModal').modal('hide');
+        };
     } else {
         console.warn("VPH Modal components not found in the DOM.");
     }
+
+    // Load saved VPH data
+    loadVphData();
 });
 
 /**
  * Attaches click handlers to items with "VPH": true.
  */
 function addVphCodeHandler() {
-    // Attach handler to each "VPH": true item
     document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(input => {
         const groupName = input.name;
         const labelText = input.value;
@@ -60,40 +78,39 @@ function addVphCodeHandler() {
 function openVphModal(labelText, sksCode) {
     const vphInput = document.getElementById('vphInput');
     const vphError = document.getElementById('vphError');
+    const saveButton = document.getElementById('saveVphButton');
+    const modalTitle = document.getElementById('vphModalLabel');
+
+    // Retrieve the VPHtext for the item from the JSON data
+    const group = options.Groups.find(group => group.Items.some(item => item.LabelText === labelText));
+    const item = group?.Items.find(item => item.LabelText === labelText);
+
+    modalTitle.textContent = item?.VPHtext || "Enter VPH Code";
 
     // Pre-fill modal input
-    vphInput.value = vphData[labelText] || '';
+    vphInput.value = vphData[labelText] || '0000';
     vphInput.dataset.labelText = labelText;
     vphInput.dataset.sksCode = sksCode;
 
     // Show modal
     $('#vphModal').modal('show');
-
-    // Reset error state
     vphError.style.display = 'none';
 
-    // Save button handler
-    document.getElementById('saveVphButton').onclick = () => {
-        const vphCode = vphInput.value.trim();
+    // Focus on the input field when the modal is shown
+    $('#vphModal').on('shown.bs.modal', () => {
+        vphInput.focus();
+    });
 
-        // Validate input
-        if (!/^\d{4}$/.test(vphCode)) {
-            vphError.style.display = 'block';
-            return;
-        }
+    // Input behavior: Replace digits from the right
+	vphInput.addEventListener('input', () => {
+		// Remove non-numeric characters
+		let inputVal = vphInput.value.replace(/\D/g, '');
 
-        // Save VPH code and update UI
-        vphData[labelText] = vphCode;
-        saveVphData(); // Persist updated VPH data to localStorage
+    // Limit to 4 digits and pad from the left
+		inputVal = inputVal.slice(-4); // Take the last 4 digits
+		vphInput.value = inputVal.padStart(4, '0');
+});
 
-        const labelElement = document.querySelector(`label[data-label-text="${labelText}"]`);
-        if (labelElement) {
-            labelElement.innerHTML = `${sksCode} + VPH${vphCode}`;
-        }
-
-        // Close modal
-        $('#vphModal').modal('hide');
-    };
 }
 
 /**
@@ -109,74 +126,3 @@ function saveVphData() {
 function loadVphData() {
     vphData = JSON.parse(localStorage.getItem('vphData') || '{}');
 }
-
-// Load VPH data on
-
-//////////////////////////////////////////////////////
-//////////////////////////////////////////////////////
-//Modal functionallity
-/////////////////////////////
-function openVphModal(labelText, sksCode) {
-    const vphInput = document.getElementById('vphInput');
-    const vphError = document.getElementById('vphError');
-    const saveButton = document.getElementById('saveVphButton');
-    const modalTitle = document.getElementById('vphModalLabel');
-
-    // Retrieve the VPHtext for the item from the JSON data
-    const group = options.Groups.find(group => group.Items.some(item => item.LabelText === labelText));
-    const item = group?.Items.find(item => item.LabelText === labelText);
-
-    // Update the modal title with the VPHtext
-    if (item?.VPHtext) {
-        modalTitle.textContent = item.VPHtext;
-    } else {
-        modalTitle.textContent = "Enter VPH Code"; // Default if VPHtext is not found
-    }
-
-    // Pre-fill modal input
-    vphInput.value = vphData[labelText] || '';
-    vphInput.dataset.labelText = labelText;
-    vphInput.dataset.sksCode = sksCode;
-
-    // Show modal
-    $('#vphModal').modal('show');
-
-    // Reset error state
-    vphError.style.display = 'none';
-
-    // Focus on the input field when the modal is shown
-    $('#vphModal').on('shown.bs.modal', () => {
-        vphInput.focus();
-    });
-
-    // Move focus to save button when 4 digits are entered
-    vphInput.addEventListener('input', () => {
-        if (vphInput.value.trim().length === 4) {
-            saveButton.focus();
-        }
-    });
-
-    // Save button handler
-    saveButton.onclick = () => {
-        const vphCode = vphInput.value.trim();
-
-        // Validate input
-        if (!/^\d{4}$/.test(vphCode)) {
-            vphError.style.display = 'block';
-            return;
-        }
-
-        // Save VPH code and update UI
-        vphData[labelText] = vphCode;
-        saveVphData(); // Persist updated VPH data to localStorage
-
-        const labelElement = document.querySelector(`label[data-label-text="${labelText}"]`);
-        if (labelElement) {
-            labelElement.innerHTML = `${sksCode} + VPH${vphCode}`;
-        }
-
-        // Close modal
-        $('#vphModal').modal('hide');
-    };
-}
-

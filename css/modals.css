@@ -73,3 +73,53 @@
         white-space: normal; /* Allow line breaks on smaller devices */
     }
 }
+
+
+/* Specific Styles for #vphModal */
+
+/* Limit modal width */
+#vphModal .modal-dialog {
+    max-width: 400px; /* Set a smaller max width */
+    margin: 1.75rem auto; /* Center modal with reduced margin */
+}
+
+/* Adjust modal content */
+#vphModal .modal-content {
+    padding: 10px; /* Reduce padding inside the modal */
+    border-radius: 8px; /* Slight rounding for a cleaner look */
+}
+
+/* Adjust modal header */
+#vphModal .modal-header {
+    padding: 10px 15px; /* Reduce padding in the header */
+    font-size: 1rem; /* Adjust font size if necessary */
+}
+
+/* Adjust modal body */
+#vphModal .modal-body {
+    padding: 10px 15px; /* Reduce padding in the body */
+    font-size: 0.9rem; /* Slightly smaller font */
+}
+
+/* Adjust modal footer */
+#vphModal .modal-footer {
+    padding: 10px 15px; /* Reduce footer padding */
+    justify-content: center; /* Center the buttons */
+}
+
+/* Style input field specifically */
+#vphModal #vphInput {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem; /* Keep input readable */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style save button */
+#vphModal #saveVphButton {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
