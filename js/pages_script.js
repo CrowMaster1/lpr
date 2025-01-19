@@ -1,4 +1,6 @@
-var options; // Declare options globally to make it accessible across functions
+if (typeof options === 'undefined') {
+    var options;
+} // Declare options globally to make it accessible across functions
 
 document.addEventListener("DOMContentLoaded", async () => {
     // Fetch the page ID dynamically from the <body> attribute
@@ -77,7 +79,6 @@ if (saveDataButton) {
 } else {
     console.warn("#saveDataButton not found in the DOM.");
 }
-
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////Hent data til siden/////////////////////////////////////////////////////////////////
@@ -359,7 +360,3 @@ function clearSelections() {
 
     console.log("All selections and saved data have been cleared.");
 }
-
-
-
-
