@@ -2,7 +2,7 @@
 	"Groups": [			
 		{
 			"GroupHeading": "Kontrol undersøgelse – uden recidiv",
-			"Description": "Et kontrol besøg uden recidiv tilføjes koder – Begge tilføjes",
+			"Description": "Et kontrol besøg uden recidiv tilføjes kode",
 			"AllowsMultipleSelections": true,
 			"SeeAlso": {
 				"URL": "https://dccg.dk",
@@ -10,17 +10,9 @@
 			},
 			"Items": [
 				{
-					"LabelText": "Intet lokalrecidiv",
-					"SKSnavn": "Intet lokalrecidiv",
-					"SKScode": "DZ063A",
-					"Vejledning": "-",
-					"DisplayType": "simple",
-					"Show": true
-				},				
-				{
-					"LabelText": "Ingen fjernmetastaser",
-					"SKSnavn": "Ingen fjernmetastaser",
-					"SKScode": "DZ061A",
+					"LabelText": "Bestået",
+					"SKSnavn": "Bestået",
+					"SKScode": "ZPR01A",
 					"Vejledning": "-",
 					"DisplayType": "simple",
 					"Show": true
@@ -102,9 +94,9 @@
 			},
 			"Items": [
 				{
-					"LabelText": "Intet lokalrecidiv",
-					"SKSnavn": "Intet lokalrecidiv",
-					"SKScode": "DZ063A",
+					"LabelText": "Bestået",
+					"SKSnavn": "Bestået",
+					"SKScode": "ZPR01A",
 					"Vejledning": "-",
 					"DisplayType": "simple",
 					"Show": true
