@@ -64,16 +64,9 @@
 			},	
 			"Items": [
 				{
-					"LabelText": "Elektiv",
-					"SKSnavn": "Elektiv procedure",
-					"SKScode": "ATA3",
-					"Vejledning": "Forklar-Txt",
-					"Show": true
-				},
-				{
 					"LabelText": "Akut",
-					"SKSnavn": "Akut procedure",
-					"SKScode": "ATA1",
+					"SKSnavn": "Udført akut",
+					"SKScode": "ZPTP01",
 					"Vejledning": "Forklar-Txt",
 					"Show": true
 				}
