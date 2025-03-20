@@ -133,32 +133,40 @@
 				{
 					"LabelText": "D0",
 					"SKSnavn": "D0",
-					"SKScode": "Mangler",
-					"Vejledning": "afventer",
+					"SKScode": "KZLG00D0",
+					"Vejledning": "D0: inkomplet excision af tumornære lymfeknuder",
 					"DisplayType": "simple",
 					"Show": true
 				},
 				{
 					"LabelText": "D1",
 					"SKSnavn": "D1",
-					"SKScode": "Mangler",
-					"Vejledning": "fjernelse af colon segment med tilhørende tarmnære lymfeknuder",
+					"SKScode": "KZLG00D1",
+					"Vejledning": "D1: komplet excision af tumornære lymfeknuder",
 					"DisplayType": "simple",
 					"Show": true
 				},
 				{
 					"LabelText": "D2",
 					"SKSnavn": "D2",
-					"SKScode": "Mangler",
-					"Vejledning": "fjernelse af colon segment med tilhørende segment lymfeknuder ",
+					"SKScode": "KZLG00D2",
+					"Vejledning": "D2: komplet excision af tumornære lymfeknuder og intermediære lymfeknuder",
 					"DisplayType": "simple",
 					"Show": true
 				},
 				{
 					"LabelText": "D3",
 					"SKSnavn": "D3",
-					"SKScode": "Mangler",
-					"Vejledning": "fjernelse af colon segment med tilhørende segment og centrale lymfeknuder",
+					"SKScode": "KZLG00D3",
+					"Vejledning": "D3: komplet excision af tumornære lymfeknuder og alle regionale lymfeknuder",
+					"DisplayType": "simple",
+					"Show": true
+				},
+				{
+					"LabelText": "D Ukendt",
+					"SKSnavn": "D ukendt",
+					"SKScode": "KZLG00D9",
+					"Vejledning": "ingen oplysninger om excision af tumornære lymfeknuder",
 					"DisplayType": "simple",
 					"Show": true
 				}
