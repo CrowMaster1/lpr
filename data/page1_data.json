@@ -505,7 +505,7 @@
                     "SKScodestatus": "Godkendt"
                 },
                 {
-                    "LabelText": "PS9",
+                    "LabelText": "PS Ukendt",
                     "SKSnavn": "Performance Status Ukendt",
                     "SKScode": "ZZV020U9*",
                     "Vejledning": "Oplysning ikke tilgængelig i journal",
@@ -587,7 +587,7 @@
                     "SKScodestatus": "Godkendt"
                 },
                 {
-                    "LabelText": "ASA9",
+                    "LabelText": "ASA Ukendt",
                     "SKSnavn": "ASA funktionsniveau, ASA Ukendt",
                     "SKScode": "EZA9*",
                     "Vejledning": "Oplysning ikke tilgængelig i journal",
