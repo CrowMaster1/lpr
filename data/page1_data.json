@@ -2,6 +2,7 @@
     "Groups": [
         {
             "GroupHeading": "Tumor lokalisation",
+            "Index": "[P]",
             "Description": [
                 "Tumor lokalisation kodes efter bedste endoskopiske og/eller billeddiagnostiske skøn.",
                 "Uspecifik lokalisation (DC18.9) bør ikke anvendes.",
@@ -120,6 +121,7 @@
         },
         {
             "GroupHeading": "T stadie",
+            "Index": "[P]",
             "Description": [
                 "T kategori tilføjes i forbindelse med diagnosen.",
                 "• cTx klassifikation udnyttes kun, når der ikke foreligger nogen undersøgelser på patient.",
@@ -257,6 +259,7 @@
         },
         {
             "GroupHeading": "N stadie",
+            "Index": "[P]",
             "Description": [
                 "N kategori tilføjes i forbindelse med diagnosen.",
                 "• Multiple forskellige N kategorier prioriteres sådan at cN kategori, der er angivet senest forud for evt. procedure udvælges.",
@@ -312,6 +315,7 @@
         },
         {
             "GroupHeading": "M stadie",
+            "Index": "[P]",
             "Description": [
                 "M kategori tilføjes i forbindelse med diagnosen.",
                 "• Multiple forskellige M kategorir prioriteres sådan at cM kategori, der er angivet senest forud for evt. procedure udvælges.",
@@ -369,6 +373,7 @@
         },
         {
             "GroupHeading": "MDT",
+            "Index": "[P]",
             "Description": [
                 "DCCG databasen indsamler koder for",
                 "• Behandlingsbesluttende MDT",
@@ -431,6 +436,7 @@
         },
         {
             "GroupHeading": "Performance Status",
+            "Index": "[P]",
             "Description": "Performance status oplyses som den der danner grundlag for behandlingsbeslutningen. Ved flere opgivne vælges sidste inden proceduren. Der bør ikke foretages vurdering ihft journal vurdering. Her bør anvendes PS ukendt.",
             "AllowsMultipleSelections": false,
             "SeeAlso": {
@@ -512,6 +518,7 @@
         },
         {
             "GroupHeading": "ASA",
+            "Index": "[noP]",
             "Description": "ASA score oplyses, som den der danner grundlag for behandlingsbeslutningen. Ved flere opgivne vælges sidste inden proceduren. Der bør ikke foretages vurdering ihft journal vurdering. Her bør anvendes ASA ukendt.",
             "AllowsMultipleSelections": false,
             "SeeAlso": {
@@ -593,6 +600,7 @@
         },
         {
             "GroupHeading": "Alkohol",
+            "Index": "[P]",
             "Description": "Alkohol indtag vurderes over sidste måned. Ved tidligere alkohol afhængighed kodes med DF102*, Ukendt undestøttes aktuelt ikke. Værdi undlades i dette tilfælde",
             "AllowsMultipleSelections": false,
             "SeeAlso": {
@@ -603,7 +611,7 @@
                 {
                     "LabelText": "Alkohol",
                     "SKSnavn": "Alkoholforbrug, antal genstande per uge",
-                    "SKScode": "DVRB02",
+                    "SKScode": "DVRB51",
                     "VPH": true,
 					"VPHtext": "Antal genstande",
                     "Vejledning": "VPH#### = antallet af genstande (####)",
@@ -615,6 +623,7 @@
         },
         {
             "GroupHeading": "Tobak",
+            "Index": "[P]",
             "Description": "",
             "AllowsMultipleSelections": false,
             "SeeAlso": {
@@ -676,6 +685,7 @@
         },
         {
             "GroupHeading": "Vægt",
+            "Index": "[P]",
             "Description": "Ukendt understøttes ikke, undlad i dette tilfælde",
             "AllowsMultipleSelections": false,
             "SeeAlso": {
@@ -686,7 +696,7 @@
                 {
                     "LabelText": "Vægt",
                     "SKSnavn": "Legemsvægt ved udskrivelse (kg)",
-                    "SKScode": "DVRA01",
+                    "SKScode": "ZZP0004B",
                     "VPH": true,
 					"VPHtext": "vægt i kg",
                     "Vejledning": "-",
@@ -698,6 +708,7 @@
         },
         {
             "GroupHeading": "Højde",
+            "Index": "[P]",
             "Description": "Ukendt understøttes ikke, undlad i dette tilfælde",
             "AllowsMultipleSelections": false,
             "SeeAlso": {
@@ -708,7 +719,7 @@
                 {
                     "LabelText": "Højde",
                     "SKSnavn": "Legemshøjde (cm)",
-                    "SKScode": "DVRA10",
+                    "SKScode": "ZZP0004C",
                     "VPH": true,
 					"VPHtext": "højde i cm",
                     "Vejledning": "-",
@@ -720,6 +731,7 @@
         },
         {
             "GroupHeading": "Familieanamnese",
+            "Index": "[P]",
             "Description": [
                 "DCCG databasen strategi for monitorering af arvelighed:",
                 "Oplysning ovenfor suppleres med alder, MMR status.",
@@ -747,6 +759,7 @@
         },
         {
             "GroupHeading": "Anæmi UNS",
+            "Index": "[P]",
             "Description": "Aktuelt er fokus på anæmi, husk andre komorbiditeter også",
             "AllowsMultipleSelections": false,
             "SeeAlso": {
@@ -768,6 +781,7 @@
         },
         {
             "GroupHeading": "Andre interventioner",
+            "Index": "[P]",
             "Description": "Fokus interventioner, andre skal også gerne kodes",
             "AllowsMultipleSelections": true,
             "SeeAlso": {
@@ -799,18 +813,19 @@
         },
         {
             "GroupHeading": "Højde på rectumtumor-Skopi",
+            "Index": "[P]",
             "Description": "Husk at kode rektoskopi som procedure i LPR",
             "AllowsMultipleSelections": false,
             "showIf": {
-			"Condition": "DC209",
-			"GroupHeading": "Tumor lokalisation",
-			"Value": true
-			},
-			"SeeAlso": {
+            "Condition": "DC209",
+            "GroupHeading": "Tumor lokalisation",
+            "Value": true
+            },
+            "SeeAlso": {
                 "URL": "https://dccg.dk",
                 "LinkText": "Link til DCCG-1"
             },
-			
+            
             "Items": [
                 {
                     "LabelText": "Tumor Højde - Rectoskop",
@@ -838,6 +853,7 @@
         },
         {
             "GroupHeading": "MR højde på tumor",
+            "Index": "[P]",
             "Description": "-",
             "AllowsMultipleSelections": false,
             "showIf": {
@@ -875,6 +891,7 @@
         },
         {
             "GroupHeading": "Tumor nedvækst",
+            "Index": "[P]",
             "Description": "Under muscularis i mm, ukendt findes ikke, undlad i dette tilfælde",
             "AllowsMultipleSelections": false,
             "showIf": {
@@ -902,6 +919,7 @@
         },
         {
             "GroupHeading": "MR ekstramural vene indvækst",
+            "Index": "[P]",
             "Description": "ukendt findes ikke, undladelse af kodning = nej",
             "AllowsMultipleSelections": false,
             "showIf": {
@@ -928,7 +946,8 @@
         },
         {
             "GroupHeading": "Korteste afstand mellem cancervæv og den mesorektale fascie",
-            "Description": "Skal diskuters og ansøges",
+            "Index": "[P]",
+            "Description": "Ansøgt-afventer godkendelse",
             "AllowsMultipleSelections": false,
             "showIf": {
 			"Condition": "DC209",
@@ -954,6 +973,7 @@
         },
 		        {
             "GroupHeading": "Patient ikke behandlet/eller på anden afdeling",
+            "Index": "[P]",
             "Description": "Denne kode tilføjes behandlingsforløb såfremt pt ikke har modtaget behandling/DCCG procedure. ZWCM7 anvendes hvis pt. Er henvist og har modtaget anden behandling på kirurgisk afdeling – dvs ikke fra kirurgisk til onkologisk afd.",
             "AllowsMultipleSelections": false,
             "SeeAlso": {
