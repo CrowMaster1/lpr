@@ -86,6 +86,45 @@
                 }
             ]
         },
+        {
+			"GroupHeading": "Anastomose læk",
+			"Description": [
+			"Anstomose lækager kodes iht nedenstående.", 
+			"Kræver et læk re-operation, skal der kodes ifølge nedenstående.",
+			"Der kodes for evt. Stomi og ekstra resektioner også. Kan også påføres ved udskrivelsen"
+			],
+			"AllowsMultipleSelections": false,
+			"SeeAlso": {
+				"URL": "https://dccg.dk",
+				"LinkText": "Link til DCCG-1"
+			},
+			"Items": [
+                {
+                    "LabelText": "Anastomoselækage, type A",
+                    "SKSnavn": "Anastomoselækage, type A",
+                    "SKScode": "ZDA03BA",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+				{
+                    "LabelText": "Anastomoselækage, type B",
+                    "SKSnavn": "Anastomoselækage, type B",
+                    "SKScode": "ZDA03BB",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+				{
+                    "LabelText": "Anastomoselækage, type C",
+                    "SKSnavn": "Anastomoselækage, type C",
+                    "SKScode": "ZDA03BC",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                }
+			]	
+		},
 		{
 			"GroupHeading": "Per-operative komplikationer",
 			"Description": [
@@ -387,45 +426,6 @@
                     "SKSnavn": "Postoperativ tarmobstruktion",
                     "SKScode": "DK913",
                     "Vejledning": "Anvendes post operativ og ikke DK567. Denne anvendes kun ved primær symptom.",
-                    "DisplayType": "udvidet",
-                    "Show": true
-                }
-			]	
-		},
-		{
-			"GroupHeading": "Anastomose læk",
-			"Description": [
-			"Anstomose lækager kodes iht nedenstående.", 
-			"Kræver et læk re-operation, skal der kodes ifølge nedenstående.",
-			"Der kodes for evt. Stomi og ekstra resektioner også."
-			],
-			"AllowsMultipleSelections": false,
-			"SeeAlso": {
-				"URL": "https://dccg.dk",
-				"LinkText": "Link til DCCG-1"
-			},
-			"Items": [
-                {
-                    "LabelText": "Anastomoselækage, type A",
-                    "SKSnavn": "Anastomoselækage, type A",
-                    "SKScode": "ZDA03BA",
-                    "Vejledning": "-",
-                    "DisplayType": "udvidet",
-                    "Show": true
-                },
-				{
-                    "LabelText": "Anastomoselækage, type B",
-                    "SKSnavn": "Anastomoselækage, type B",
-                    "SKScode": "ZDA03BB",
-                    "Vejledning": "-",
-                    "DisplayType": "udvidet",
-                    "Show": true
-                },
-				{
-                    "LabelText": "Anastomoselækage, type C",
-                    "SKSnavn": "Anastomoselækage, type C",
-                    "SKScode": "ZDA03BC",
-                    "Vejledning": "-",
                     "DisplayType": "udvidet",
                     "Show": true
                 }
