@@ -268,7 +268,7 @@
           			"SKScode": "DS364A",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				},
 				{
           			"LabelText": "Læsion af galdeblæren",
@@ -276,7 +276,7 @@
           			"SKScode": "DS361B",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-					"Show": true
+					"Show": false
         		},
 				{
           			"LabelText": "Læsion af galdegang",
@@ -284,7 +284,7 @@
           			"SKScode": "DS361C",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				},
 				{
           			"LabelText": "Læsion af tyktarmen",
@@ -292,7 +292,7 @@
           			"SKScode": "DS365",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				},
 				{
           			"LabelText": "Læsion af leveren",
@@ -300,7 +300,7 @@
           			"SKScode": "DS361D",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				},
 				{
           			"LabelText": "Læsion af milten",
@@ -308,7 +308,7 @@
           			"SKScode": "DS360",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				},
 				{	
           			"LabelText": "Læsion af pancreas",
@@ -316,7 +316,7 @@
           			"SKScode": "DS362",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				},
 				{
           			"LabelText": "Læsion af tyndtarmen",
@@ -324,7 +324,7 @@
           			"SKScode": "DS364",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				},
 				{
 					"LabelText": "Læsion af mavesækken",
@@ -332,7 +332,7 @@
           			"SKScode": "DS363",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				},
 				{
           			"LabelText": "Læsion af ovarie",
@@ -340,7 +340,7 @@
           			"SKScode": "DS374",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				},
 				{
           			"LabelText": "Læsion af æggeleder",
@@ -348,7 +348,7 @@
           			"SKScode": "DS375",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				},
 				{
           			"LabelText": "Læsion af livmoderen",
@@ -356,7 +356,7 @@
           			"SKScode": "DS376",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": true
+          			"Show": false
 				}				
 			]
 		},
