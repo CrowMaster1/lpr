@@ -67,14 +67,14 @@
 					"LabelText": "Elektiv",
 					"SKSnavn": "Elektiv procedure",
 					"SKScode": "ATA3",
-					"Vejledning": "Forklar-Txt",
+					"Vejledning": "Kan kodes ved elektive operation",
 					"Show": true
 				},
 				{
 					"LabelText": "Akut",
 					"SKSnavn": "Akut procedure",
 					"SKScode": "ATA1",
-					"Vejledning": "Forklar-Txt",
+					"Vejledning": "Skal kodes ved akutte operationer",
 					"Show": true
 				}
 			]						
@@ -131,33 +131,41 @@
 			},
 			"Items": [
 				{
-					"LabelText": "D0",
-					"SKSnavn": "D0",
-					"SKScode": "Mangler",
+					"LabelText": "D0: inkomplet excision af tumornære lymfeknuder",
+					"SKSnavn": "D0: inkomplet excision af tumornære lymfeknuder",
+					"SKScode": "KZLG00D0",
 					"Vejledning": "afventer",
 					"DisplayType": "simple",
 					"Show": true
 				},
 				{
-					"LabelText": "D1",
-					"SKSnavn": "D1",
-					"SKScode": "Mangler",
+					"LabelText": "D1: komplet excision af tumornære lymfeknuder ",
+					"SKSnavn": "D1: komplet excision af tumornære lymfeknuder ",
+					"SKScode": "KZLG00D1",
 					"Vejledning": "fjernelse af colon segment med tilhørende tarmnære lymfeknuder",
 					"DisplayType": "simple",
 					"Show": true
 				},
 				{
-					"LabelText": "D2",
-					"SKSnavn": "D2",
-					"SKScode": "Mangler",
+					"LabelText": "D2: komplet excision af tumornære lymfeknuder og intermediære lymfeknuder",
+					"SKSnavn": "D2: komplet excision af tumornære lymfeknuder og intermediære lymfeknuder",
+					"SKScode": "KZLG00D2",
 					"Vejledning": "fjernelse af colon segment med tilhørende segment lymfeknuder ",
 					"DisplayType": "simple",
 					"Show": true
 				},
 				{
-					"LabelText": "D3",
-					"SKSnavn": "D3",
-					"SKScode": "Mangler",
+					"LabelText": "D3: komplet excision af tumornære lymfeknuder og alle regionale lymfeknude",
+					"SKSnavn": "D3: komplet excision af tumornære lymfeknuder og alle regionale lymfeknuder",
+					"SKScode": "KZLG00D3",
+					"Vejledning": "fjernelse af colon segment med tilhørende segment og centrale lymfeknuder",
+					"DisplayType": "simple",
+					"Show": true
+				},
+				{
+					"LabelText": "D9: ingen oplysninger om excision af tumornære lymfeknuder ",
+					"SKSnavn": "D9: ingen oplysninger om excision af tumornære lymfeknuder ",
+					"SKScode": "KZLG00D9",
 					"Vejledning": "fjernelse af colon segment med tilhørende segment og centrale lymfeknuder",
 					"DisplayType": "simple",
 					"Show": true
@@ -748,10 +756,10 @@
 			},
 			"Items": [
 				{
-					"LabelText": "Per-operativ blødning",
-					"SKSnavn": "Per-operativ blødning",
-					"SKScode": "T818F",
-          			"Vejledning": "<500 ml",
+					"LabelText": "Per-operativ blødning UNS",
+					"SKSnavn": "Per-operativ blødning UNS",
+					"SKScode": "DT818F",
+					"Vejledning": "<500 ml",
 					"DisplayType": "udvidet",
 					"Show": true
 				},
@@ -966,7 +974,7 @@
 			]
 		},
 		{
-			"GroupHeading": "Peroperativt fund af metastatisk sygdom",
+			"GroupHeading": "Peroperativt fund af metastatisk sygdom & supplerende resektioner",
 			"Description": [
 				"Kodes med lokalisering af metastase som bi-diagnose",
 				"Per-operative supplerende resektioner",
@@ -978,27 +986,27 @@
 				"LinkText": ""
 			},
 			"Items": [
-								{
+				{
 					"LabelText": "Gastrokoliske ligamenter ",
 					"SKSnavn": "Gastrokoliske ligamenter ",
 					"SKScode": "KJAL30B",
-					"Vejledning": "Inklusiv metastase D kode.",
+					"Vejledning": "Ved fjernelse af gastrokoliske ligament ",
 					"DisplayType": "udvidet",
 					"Show": true
 				},
-								{
+				{
 					"LabelText": "Lateralt lymfeknude",
-					"SKSnavn": "Lateralt lymfeknude",
-					"SKScode": "KJPD54",
-					"Vejledning": "Inklusiv metastase D kode",
+					"SKSnavn": "Radikal excision af iliakale lymfeknuder ",
+					"SKScode": "KPJD54",
+					"Vejledning": "Anvendes ved resektion af laterale lymfeknuder ",
 					"DisplayType": "udvidet",
 					"Show": true
 				},
-								{
-					"LabelText": "Kompartment på bækkenvæg ",
-					"SKSnavn": "Kompartment på bækkenvæg",
+				{
+					"LabelText": "Laparoskopisk radikal excision af iliakale lymfeknuder",
+					"SKSnavn": "Laparoskopisk radikal excision af iliakale lymfeknuderKompartment på bækkenvæg",
 					"SKScode": "KPJD74",
-					"Vejledning": "Inklusiv metastase D kode",
+					"Vejledning": "Anvendes ved resektion af kompartment på bækkenvæg ",
 					"DisplayType": "udvidet",
 					"Show": true
 				},

@@ -104,9 +104,9 @@
 			},
 			"Items": [
 				{
-					"LabelText": "Per-operativ blødning",
-					"SKSnavn": "Per-operativ blødning",
-					"SKScode": "T818F",
+					"LabelText": "Per-operativ blødning UNS",
+					"SKSnavn": "Per-operativ blødning UNS",
+					"SKScode": "DT818F",
           			"Vejledning": "<500 ml",
 					"DisplayType": "udvidet",
 					"Show": true
@@ -334,18 +334,18 @@
 				"LinkText": "Link til DCCG-1"
 			},
 			"Items": [
-                {
-                    "LabelText": "Post-operativ blødning",
-                    "SKSnavn": "Post-operativ blødning",
-                    "SKScode": "DT810G ",
-                    "Vejledning": "-",
-                    "DisplayType": "udvidet",
-                    "Show": true
-                },
+				{
+					"LabelText": "Post-operativ blødning UNS",
+					"SKSnavn": "Post-operativ blødning UNS",
+					"SKScode": "DT810G",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
 				{
                     "LabelText": "Dyb bristning af op. sår",
                     "SKSnavn": "Dyb bristning af op. sår ",
-                    "SKScode": "DT813D ",
+                    "SKScode": "DT813D",
                     "Vejledning": "Fascieruptur",
                     "DisplayType": "udvidet",
                     "Show": true
@@ -368,8 +368,8 @@
                 },
 				{
 				    "LabelText": "Post-op Stomi komplikation",
-                    "SKSnavn": "Post-op intra abd. abscess",
-                    "SKScode": "K914D",
+                    "SKSnavn": "Post-op intra stomi komplikationer",
+                    "SKScode": "DK914D",
                     "Vejledning": "Dækker prolaps, separation, retraktion, og infektion som så kodes med denne og ovenstående infektionskoder",
                     "DisplayType": "udvidet",
                     "Show": true
@@ -377,7 +377,7 @@
 				{
 				    "LabelText": "Post-op Stomi nekrose",
                     "SKSnavn": "Post-op Stomi nekrose",
-                    "SKScode": "K914C",
+                    "SKScode": "DK914C",
                     "Vejledning": "Vil medfører re-operation",
                     "DisplayType": "udvidet",
                     "Show": true

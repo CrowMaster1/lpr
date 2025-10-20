@@ -119,7 +119,7 @@
                 {
                     "LabelText": "Endoskopisk mucosa resektion (EMR) i tyktarm",
                     "SKSnavn": "Endoskopisk mucosa resektion (EMR) i tyktarm",
-                    "SKScode": "JFA55A",
+                    "SKScode": "KJFA55A",
                     "Vejledning": "-",
                     "DisplayType": "simple",
                     "Show": true
@@ -127,7 +127,7 @@
                 {
                     "LabelText": "Endoskopisk submukøs dissektion (ESD) i tyktarm",
                     "SKSnavn": "Endoskopisk submukøs dissektion (ESD) i tyktarm",
-                    "SKScode": "JFA55B",
+                    "SKScode": "KJFA55B",
                     "Vejledning": "-",
                     "DisplayType": "simple",
                     "Show": true

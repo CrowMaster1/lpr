@@ -501,7 +501,7 @@
                 {
                     "LabelText": "PS9",
                     "SKSnavn": "Performance Status Ukendt",
-                    "SKScode": "ZZV020U9*",
+                    "SKScode": "ZZV020U9",
                     "Vejledning": "Oplysning ikke tilgængelig i journal",
                     "DisplayType": "simple",
                     "Show": true,
@@ -582,7 +582,7 @@
                 {
                     "LabelText": "ASA9",
                     "SKSnavn": "ASA funktionsniveau, ASA Ukendt",
-                    "SKScode": "EZA9*",
+                    "SKScode": "EZA9",
                     "Vejledning": "Oplysning ikke tilgængelig i journal",
                     "DisplayType": "simple",
                     "Show": true,
@@ -928,7 +928,7 @@
         },
         {
             "GroupHeading": "Korteste afstand mellem cancervæv og den mesorektale fascie",
-            "Description": "Skal diskuters og ansøges",
+            "Description": "Gælder for det cancer væv(tumor/lymfeknude der er tættest på",
             "AllowsMultipleSelections": false,
             "showIf": {
 			"Condition": "DC209",
@@ -940,16 +940,36 @@
                 "LinkText": "Link til DCCG-1"
             },
             "Items": [
-                {
-                    "LabelText": "tumorvæv afstand til MRF",
-                    "SKSnavn": "tumorvæv afstand til MRF",
-                    "SKScode": "Ønskes",
-                    "Vejledning": "-",
-                    "DisplayType": "simple",
-                    "Show": true,
-                    "VPH": false,
-                    "SKScodestatus": "Godkendt"
-                }
+              {
+                "LabelText": "afstand til mesorektale fascie <= 1 mm",
+                "SKSnavn": "afstand til mesorektale fascie <= 1 mm",
+                "SKScode": "ZDW61D1",
+                "Vejledning": "-",
+                "DisplayType": "simple",
+                "Show": true,
+                "VPH": false,
+                "SKScodestatus": "Godkendt"
+              },
+              {
+                "LabelText": "afstand til mesorektale fascie > 1 mm",
+                "SKSnavn": "afstand til mesorektale fascie > 1 mm",
+                "SKScode": "ZDW61D2",
+                "Vejledning": "-",
+                "DisplayType": "simple",
+                "Show": true,
+                "VPH": false,
+                "SKScodestatus": "Godkendt"
+              },
+              {
+                "LabelText": "afstand til mesorektale fascie ukendt",
+                "SKSnavn": "afstand til mesorektale fascie ukendt",
+                "SKScode": "ZDW61D9",
+                "Vejledning": "-",
+                "DisplayType": "simple",
+                "Show": true,
+                "VPH": false,
+                "SKScodestatus": "Godkendt"
+              }
             ]
         },
 		        {
