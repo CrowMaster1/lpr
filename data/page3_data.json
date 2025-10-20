@@ -86,45 +86,6 @@
                 }
             ]
         },
-        {
-			"GroupHeading": "Anastomose læk",
-			"Description": [
-			"Anstomose lækager kodes iht nedenstående.", 
-			"Kræver et læk re-operation, skal der kodes ifølge nedenstående.",
-			"Der kodes for evt. Stomi og ekstra resektioner også. Kan også påføres ved udskrivelsen"
-			],
-			"AllowsMultipleSelections": false,
-			"SeeAlso": {
-				"URL": "https://dccg.dk",
-				"LinkText": "Link til DCCG-1"
-			},
-			"Items": [
-                {
-                    "LabelText": "Anastomoselækage, type A",
-                    "SKSnavn": "Anastomoselækage, type A",
-                    "SKScode": "ZDA03BA",
-                    "Vejledning": "-",
-                    "DisplayType": "udvidet",
-                    "Show": true
-                },
-				{
-                    "LabelText": "Anastomoselækage, type B",
-                    "SKSnavn": "Anastomoselækage, type B",
-                    "SKScode": "ZDA03BB",
-                    "Vejledning": "-",
-                    "DisplayType": "udvidet",
-                    "Show": true
-                },
-				{
-                    "LabelText": "Anastomoselækage, type C",
-                    "SKSnavn": "Anastomoselækage, type C",
-                    "SKScode": "ZDA03BC",
-                    "Vejledning": "-",
-                    "DisplayType": "udvidet",
-                    "Show": true
-                }
-			]	
-		},
 		{
 			"GroupHeading": "Per-operative komplikationer",
 			"Description": [
@@ -143,9 +104,9 @@
 			},
 			"Items": [
 				{
-					"LabelText": "Per-operativ blødning",
-					"SKSnavn": "Per-operativ blødning",
-					"SKScode": "T818F",
+					"LabelText": "Per-operativ blødning UNS",
+					"SKSnavn": "Per-operativ blødning UNS",
+					"SKScode": "DT818F",
           			"Vejledning": "<500 ml",
 					"DisplayType": "udvidet",
 					"Show": true
@@ -268,7 +229,7 @@
           			"SKScode": "DS364A",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": false
+          			"Show": true
 				},
 				{
           			"LabelText": "Læsion af galdeblæren",
@@ -276,7 +237,7 @@
           			"SKScode": "DS361B",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-					"Show": false
+					"Show": true
         		},
 				{
           			"LabelText": "Læsion af galdegang",
@@ -284,7 +245,7 @@
           			"SKScode": "DS361C",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": false
+          			"Show": true
 				},
 				{
           			"LabelText": "Læsion af tyktarmen",
@@ -292,7 +253,7 @@
           			"SKScode": "DS365",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": false
+          			"Show": true
 				},
 				{
           			"LabelText": "Læsion af leveren",
@@ -300,7 +261,7 @@
           			"SKScode": "DS361D",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": false
+          			"Show": true
 				},
 				{
           			"LabelText": "Læsion af milten",
@@ -308,7 +269,7 @@
           			"SKScode": "DS360",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": false
+          			"Show": true
 				},
 				{	
           			"LabelText": "Læsion af pancreas",
@@ -316,7 +277,7 @@
           			"SKScode": "DS362",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": false
+          			"Show": true
 				},
 				{
           			"LabelText": "Læsion af tyndtarmen",
@@ -324,7 +285,7 @@
           			"SKScode": "DS364",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": false
+          			"Show": true
 				},
 				{
 					"LabelText": "Læsion af mavesækken",
@@ -332,7 +293,7 @@
           			"SKScode": "DS363",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": false
+          			"Show": true
 				},
 				{
           			"LabelText": "Læsion af ovarie",
@@ -340,7 +301,7 @@
           			"SKScode": "DS374",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": false
+          			"Show": true
 				},
 				{
           			"LabelText": "Læsion af æggeleder",
@@ -348,7 +309,7 @@
           			"SKScode": "DS375",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": false
+          			"Show": true
 				},
 				{
           			"LabelText": "Læsion af livmoderen",
@@ -356,7 +317,7 @@
           			"SKScode": "DS376",
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
-          			"Show": false
+          			"Show": true
 				}				
 			]
 		},
@@ -373,18 +334,18 @@
 				"LinkText": "Link til DCCG-1"
 			},
 			"Items": [
-                {
-                    "LabelText": "Post-operativ blødning",
-                    "SKSnavn": "Post-operativ blødning",
-                    "SKScode": "DT810G ",
-                    "Vejledning": "-",
-                    "DisplayType": "udvidet",
-                    "Show": true
-                },
+				{
+					"LabelText": "Post-operativ blødning UNS",
+					"SKSnavn": "Post-operativ blødning UNS",
+					"SKScode": "DT810G",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
 				{
                     "LabelText": "Dyb bristning af op. sår",
                     "SKSnavn": "Dyb bristning af op. sår ",
-                    "SKScode": "DT813D ",
+                    "SKScode": "DT813D",
                     "Vejledning": "Fascieruptur",
                     "DisplayType": "udvidet",
                     "Show": true
@@ -407,8 +368,8 @@
                 },
 				{
 				    "LabelText": "Post-op Stomi komplikation",
-                    "SKSnavn": "Post-op intra abd. abscess",
-                    "SKScode": "K914D",
+                    "SKSnavn": "Post-op intra stomi komplikationer",
+                    "SKScode": "DK914D",
                     "Vejledning": "Dækker prolaps, separation, retraktion, og infektion som så kodes med denne og ovenstående infektionskoder",
                     "DisplayType": "udvidet",
                     "Show": true
@@ -416,7 +377,7 @@
 				{
 				    "LabelText": "Post-op Stomi nekrose",
                     "SKSnavn": "Post-op Stomi nekrose",
-                    "SKScode": "K914C",
+                    "SKScode": "DK914C",
                     "Vejledning": "Vil medfører re-operation",
                     "DisplayType": "udvidet",
                     "Show": true
@@ -426,6 +387,45 @@
                     "SKSnavn": "Postoperativ tarmobstruktion",
                     "SKScode": "DK913",
                     "Vejledning": "Anvendes post operativ og ikke DK567. Denne anvendes kun ved primær symptom.",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                }
+			]	
+		},
+		{
+			"GroupHeading": "Anastomose læk",
+			"Description": [
+			"Anstomose lækager kodes iht nedenstående.", 
+			"Kræver et læk re-operation, skal der kodes ifølge nedenstående.",
+			"Der kodes for evt. Stomi og ekstra resektioner også."
+			],
+			"AllowsMultipleSelections": false,
+			"SeeAlso": {
+				"URL": "https://dccg.dk",
+				"LinkText": "Link til DCCG-1"
+			},
+			"Items": [
+                {
+                    "LabelText": "Anastomoselækage, type A",
+                    "SKSnavn": "Anastomoselækage, type A",
+                    "SKScode": "ZDA03BA",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+				{
+                    "LabelText": "Anastomoselækage, type B",
+                    "SKSnavn": "Anastomoselækage, type B",
+                    "SKScode": "ZDA03BB",
+                    "Vejledning": "-",
+                    "DisplayType": "udvidet",
+                    "Show": true
+                },
+				{
+                    "LabelText": "Anastomoselækage, type C",
+                    "SKSnavn": "Anastomoselækage, type C",
+                    "SKScode": "ZDA03BC",
+                    "Vejledning": "-",
                     "DisplayType": "udvidet",
                     "Show": true
                 }

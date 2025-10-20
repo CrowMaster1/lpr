@@ -2,7 +2,7 @@
 	"Groups": [			
 		{
 			"GroupHeading": "Kontrol undersøgelse – uden recidiv",
-			"Description": "Et kontrol besøg uden recidiv tilføjes kode",
+			"Description": "Et kontrol besøg uden recidiv tilføjes koder – Begge tilføjes",
 			"AllowsMultipleSelections": true,
 			"SeeAlso": {
 				"URL": "https://dccg.dk",
@@ -10,11 +10,35 @@
 			},
 			"Items": [
 				{
-					"LabelText": "Bestået",
-					"SKSnavn": "Bestået",
-					"SKScode": "ZPR01A",
+					"LabelText": "Intet lokalrecidiv påvist",
+					"SKSnavn": "Intet lokalrecidiv påvist",
+					"SKScode": "DZ063A",
 					"Vejledning": "-",
 					"DisplayType": "simple",
+					"Show": true
+				},
+				{
+					"LabelText": "Ingen fjernmetastaser",
+					"SKSnavn": "Ingen fjernmetastaser",
+					"SKScode": "DZ061A",
+					"Vejledning": "-",
+					"DisplayType": "simple",
+					"Show": true
+				},
+				{
+					"LabelText": "Lokalrecidiv status ikke afklaret",
+					"SKSnavn": "Lokalrecidiv status ikke afklaret",
+					"SKScode": "DZ063B",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Lokalrecidiv status ikke relevant",
+					"SKSnavn": "Lokalrecidiv status ikke relevant",
+					"SKScode": "DZ063C",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
 					"Show": true
 				}
 			]
@@ -28,26 +52,34 @@
 				"LinkText": "Link til DCCG-1"
 			},
 			"Items": [
-                {
-                    "LabelText": "Lokalrecidiv",
-                    "SKSnavn": "Lokalrecidiv ",
-                    "SKScode": "ZDA03A1",
-                    "Vejledning": "-",
-                    "DisplayType": "simple",
-                    "Show": true
-                },
 				{
-					"LabelText": "Ingen fjernmetastaser",
+					"LabelText": "Lokalrecidiv",
+					"SKSnavn": "Lokalrecidiv ",
+					"SKScode": "DC991",
+					"Vejledning": "-",
+					"DisplayType": "simple",
+					"Show": true
+				},
+				{
+					"LabelText": "Lokalrecidiv i efterladt væv",
+					"SKSnavn": "Lokalrecidiv i efterladt væv",
+					"SKScode": "DC991A",
+					"Vejledning": "Kan anvendes ved genvækst kurativt strålebehandlet tumor",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Ingen fjernmetastaser - behøves ikke kodet(implicit)",
 					"SKSnavn": "Ingen fjernmetastaser",
 					"SKScode": "DZ061A",
 					"Vejledning": "-",
 					"DisplayType": "simple",
 					"Show": true
 				}
-            ]
+			]
         },
 		{
-			"GroupHeading": "Kontrol undersøgelse – Fjernrecidiv – ingen lokal recidiv",
+			"GroupHeading": "Kontrol undersøgelse – Fjernrecidiv – +/- lokal recidiv(koder tilføjes)",
 			"Description": "Et kontrol besøg med fjernrecidiv, ingen lokal recidiv – Begge tilføjes, eller anvend kombinationskoden",
 			"AllowsMultipleSelections": true,
 			"SeeAlso": {
@@ -55,14 +87,6 @@
 				"LinkText": "Link til DCCG-1"
 			},
 			"Items": [
-                {
-                    "LabelText": "Lokalrecidiv",
-                    "SKSnavn": "Lokalrecidiv ",
-                    "SKScode": "ZDA03A1",
-                    "Vejledning": "-",
-                    "DisplayType": "simple",
-                    "Show": true
-                },
 				{
 					"LabelText": "Fjernmetastase recidiv",
 					"SKSnavn": "Fjernmetastase recidiv",
@@ -79,10 +103,10 @@
 					"DisplayType": "simple",
 					"Show": true
 				}
-            ]
+			]
         },
 		{
-			"GroupHeading": "Kontrol undersøgelse – kurativt intenderede – med komplet response efter ikke kirurgisk behandling",
+			"GroupHeading": "Kontrol undersøgelse–kurativt–med komplet response efter ikke kirurgisk behandling",
 			"Description": [
 			"Så længe der ikke er konstateret genvækst/recidiv af behandlede tumor site anvendes.",
 			"Ved fremvækst af behandlet ved anvendes ZDW51G koden, efterfølgende procedurer kodes iht. gældende praksis. "
@@ -94,9 +118,9 @@
 			},
 			"Items": [
 				{
-					"LabelText": "Bestået",
-					"SKSnavn": "Bestået",
-					"SKScode": "ZPR01A",
+					"LabelText": "Intet lokalrecidiv påvist",
+					"SKSnavn": "Intet lokalrecidiv påvist",
+					"SKScode": "DZ063A",
 					"Vejledning": "-",
 					"DisplayType": "simple",
 					"Show": true
@@ -118,7 +142,7 @@
 				{
 					"LabelText": "Lever",
 					"SKSnavn": "Fjernmetastase i lever",
-					"SKScode": "DC78.7",
+					"SKScode": "DC787",
           			"Vejledning": "-",
 					"DisplayType": "udvidet",
 					"Show": true
@@ -126,7 +150,7 @@
 								{
 					"LabelText": "Lunge",
 					"SKSnavn": "Fjernmetastase i lunge",
-					"SKScode": "DC78.0",
+					"SKScode": "DC780",
           			"Vejledning": "-",
 					"DisplayType": "udvidet",
 					"Show": true
@@ -134,7 +158,7 @@
 								{
 					"LabelText": "Peritoneum",
 					"SKSnavn": "Carcinose i peritoneum",
-					"SKScode": "DC78.6D",
+					"SKScode": "DC786D",
           			"Vejledning": "-",
 					"DisplayType": "udvidet",
 					"Show": true
@@ -142,7 +166,7 @@
 								{
 					"LabelText": "Retroperitonum",
 					"SKSnavn": "Metastase i retroperitoneal rum",
-					"SKScode": "DC78.6C",
+					"SKScode": "DC786C",
           			"Vejledning": "-",
 					"DisplayType": "udvidet",
 					"Show": true
@@ -150,7 +174,7 @@
 				{
 					"LabelText": "Lever",
 					"SKSnavn": "Lever",
-					"SKScode": "DC78.7",
+					"SKScode": "DC787",
           			"Vejledning": "-",
 					"DisplayType": "udvidet",
 					"Show": true
@@ -158,7 +182,7 @@
 				{
 					"LabelText": "Knogle",
 					"SKSnavn": "Fjernmetastase i knogle",
-					"SKScode": "DC79.5B",
+					"SKScode": "DC795B",
 					"Vejledning": "-",
 					"DisplayType": "udvidet",
 					"Show": true
@@ -166,7 +190,7 @@
 				{
 					"LabelText": "Metastase UNS",
 					"SKSnavn": "Metastase UNS",
-					"SKScode": "DC79.8",
+					"SKScode": "DC798",
 					"Vejledning": "-",
 					"DisplayType": "udvidet",
 					"Show": true

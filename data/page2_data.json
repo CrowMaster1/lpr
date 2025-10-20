@@ -64,10 +64,17 @@
 			},	
 			"Items": [
 				{
+					"LabelText": "Elektiv",
+					"SKSnavn": "Elektiv procedure",
+					"SKScode": "ATA3",
+					"Vejledning": "Kan kodes ved elektive operation",
+					"Show": true
+				},
+				{
 					"LabelText": "Akut",
-					"SKSnavn": "Udført akut",
-					"SKScode": "ZPTP01",
-					"Vejledning": "Forklar-Txt",
+					"SKSnavn": "Akut procedure",
+					"SKScode": "ATA1",
+					"Vejledning": "Skal kodes ved akutte operationer",
 					"Show": true
 				}
 			]						
@@ -124,42 +131,42 @@
 			},
 			"Items": [
 				{
-					"LabelText": "D0",
-					"SKSnavn": "D0",
+					"LabelText": "D0: inkomplet excision af tumornære lymfeknuder",
+					"SKSnavn": "D0: inkomplet excision af tumornære lymfeknuder",
 					"SKScode": "KZLG00D0",
-					"Vejledning": "D0: inkomplet excision af tumornære lymfeknuder",
+					"Vejledning": "afventer",
 					"DisplayType": "simple",
 					"Show": true
 				},
 				{
-					"LabelText": "D1",
-					"SKSnavn": "D1",
+					"LabelText": "D1: komplet excision af tumornære lymfeknuder ",
+					"SKSnavn": "D1: komplet excision af tumornære lymfeknuder ",
 					"SKScode": "KZLG00D1",
-					"Vejledning": "D1: komplet excision af tumornære lymfeknuder",
+					"Vejledning": "fjernelse af colon segment med tilhørende tarmnære lymfeknuder",
 					"DisplayType": "simple",
 					"Show": true
 				},
 				{
-					"LabelText": "D2",
-					"SKSnavn": "D2",
+					"LabelText": "D2: komplet excision af tumornære lymfeknuder og intermediære lymfeknuder",
+					"SKSnavn": "D2: komplet excision af tumornære lymfeknuder og intermediære lymfeknuder",
 					"SKScode": "KZLG00D2",
-					"Vejledning": "D2: komplet excision af tumornære lymfeknuder og intermediære lymfeknuder",
+					"Vejledning": "fjernelse af colon segment med tilhørende segment lymfeknuder ",
 					"DisplayType": "simple",
 					"Show": true
 				},
 				{
-					"LabelText": "D3",
-					"SKSnavn": "D3",
+					"LabelText": "D3: komplet excision af tumornære lymfeknuder og alle regionale lymfeknude",
+					"SKSnavn": "D3: komplet excision af tumornære lymfeknuder og alle regionale lymfeknuder",
 					"SKScode": "KZLG00D3",
-					"Vejledning": "D3: komplet excision af tumornære lymfeknuder og alle regionale lymfeknuder",
+					"Vejledning": "fjernelse af colon segment med tilhørende segment og centrale lymfeknuder",
 					"DisplayType": "simple",
 					"Show": true
 				},
 				{
-					"LabelText": "D Ukendt",
-					"SKSnavn": "D ukendt",
+					"LabelText": "D9: ingen oplysninger om excision af tumornære lymfeknuder ",
+					"SKSnavn": "D9: ingen oplysninger om excision af tumornære lymfeknuder ",
 					"SKScode": "KZLG00D9",
-					"Vejledning": "ingen oplysninger om excision af tumornære lymfeknuder",
+					"Vejledning": "fjernelse af colon segment med tilhørende segment og centrale lymfeknuder",
 					"DisplayType": "simple",
 					"Show": true
 				}
@@ -749,10 +756,10 @@
 			},
 			"Items": [
 				{
-					"LabelText": "Per-operativ blødning",
-					"SKSnavn": "Per-operativ blødning",
-					"SKScode": "T818F",
-          			"Vejledning": "<500 ml",
+					"LabelText": "Per-operativ blødning UNS",
+					"SKSnavn": "Per-operativ blødning UNS",
+					"SKScode": "DT818F",
+					"Vejledning": "<500 ml",
 					"DisplayType": "udvidet",
 					"Show": true
 				},
@@ -967,7 +974,94 @@
 			]
 		},
 		{
-			"GroupHeading": "Supplerende beh. af erkendt patologisk væv",
+			"GroupHeading": "Peroperativt fund af metastatisk sygdom & supplerende resektioner",
+			"Description": [
+				"Kodes med lokalisering af metastase som bi-diagnose",
+				"Per-operative supplerende resektioner",
+				"Kodes som procedurer iht. SKS" 
+			],
+			"AllowsMultipleSelections": true,
+			"SeeAlso": {
+				"URL": "",
+				"LinkText": ""
+			},
+			"Items": [
+				{
+					"LabelText": "Gastrokoliske ligamenter ",
+					"SKSnavn": "Gastrokoliske ligamenter ",
+					"SKScode": "KJAL30B",
+					"Vejledning": "Ved fjernelse af gastrokoliske ligament ",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Lateralt lymfeknude",
+					"SKSnavn": "Radikal excision af iliakale lymfeknuder ",
+					"SKScode": "KPJD54",
+					"Vejledning": "Anvendes ved resektion af laterale lymfeknuder ",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Laparoskopisk radikal excision af iliakale lymfeknuder",
+					"SKSnavn": "Laparoskopisk radikal excision af iliakale lymfeknuderKompartment på bækkenvæg",
+					"SKScode": "KPJD74",
+					"Vejledning": "Anvendes ved resektion af kompartment på bækkenvæg ",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Lever",
+					"SKSnavn": "Fjernmetastase i leveren",
+					"SKScode": "DC787",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Peritoneum",
+					"SKSnavn": "Metastase i peritoneum",
+					"SKScode": "DC786B",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Retroperitoneum eller peritoneum",
+					"SKSnavn": "Metastase i retroperitonale rum eller i peritoneum",
+					"SKScode": "DC786",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "retroperitoneale rum",
+					"SKSnavn": "Metastase i retroperitoneale rum",
+					"SKScode": "DC786C",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "æggestok",
+					"SKSnavn": "Fjernmetastase i æggestok",
+					"SKScode": "DC796",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "lymfeknude UNS",
+					"SKSnavn": "Fjernmetastase i lymfeknude UNS",
+					"SKScode": "DC779A2",
+					"Vejledning": "-",
+					"DisplayType": "udvidet",
+					"Show": true
+				}
+			]
+		},
+		{
+			"GroupHeading": "Perop metastase beh.",
 			"Description": [
 				"Procedure Type"
 			],
@@ -1081,117 +1175,7 @@
 					"Show": true
 				}
 			]
-		},
-		{
-			"GroupHeading": "Supplerende Resektioner af ikke-erkendt patologisk væv/organ",
-			"Description": [
-				"Kodes ved supplerende fjernelse af organ",
-				"Ved cancer - husk at tilføje diagnose kode for organ metastase",
-				"Kodes som procedurer iht. SKS" 
-			],
-			"AllowsMultipleSelections": true,
-			"SeeAlso": {
-				"URL": "",
-				"LinkText": ""
-			},
-			"Items": [
-				{
-					"LabelText": "Supracolisk omentektomi",
-					"SKSnavn": "Radikal excision af iliakale lymfeknuder",
-					"SKScode": "KJAL30B",
-					"Vejledning": "evt. inklusiv metastase D kode.",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Lateralt lymfeknude",
-					"SKSnavn": "Radikal excision af iliakale lymfeknuder ",
-					"SKScode": "KJPD54",
-					"Vejledning": "evt. inklusiv metastase D kode",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-								{
-					"LabelText": "Kompartment på bækkenvæg ",
-					"SKSnavn": "Laparoskopisk radikal excision af iliakale lymfeknuder",
-					"SKScode": "KPJD74",
-					"Vejledning": "evt. inklusiv metastase D kode",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Anden excision af pancreas",
-					"SKSnavn": "Anden excision af pancreas",
-					"SKScode": "KJLC96",
-					"Vejledning": "evt. inklusiv metastase D kode",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Anden operation på tyndtarm eller tyktarm",
-					"SKSnavn": "Anden operation på tyndtarm eller tyktarm",
-					"SKScode": "KJFW96",
-					"Vejledning": "evt. inklusiv metastase D kode",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Enkeltsidig salpingo-ooforektomi",
-					"SKSnavn": "Enkeltsidig salpingo-ooforektomi",
-					"SKScode": "KLAF00",
-					"Vejledning": "evt. inklusiv metastase D kode",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Laparoskopisk enkeltsidig salpingo-ooforektomi",
-					"SKSnavn": "Laparoskopisk enkeltsidig salpingo-ooforektomi",
-					"SKScode": "KLAF01",
-					"Vejledning": "evt. inklusiv metastase D kode",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Dobbeltsidig salpingo-ooforektomi",
-					"SKSnavn": "Dobbeltsidig salpingo-ooforektomi",
-					"SKScode": "KLAF10",
-					"Vejledning": "evt. inklusiv metastase D kode",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Laparoskopisk dobbeltsidig salpingo-ooforektomi",
-					"SKSnavn": "Laparoskopisk dobbeltsidig salpingo-ooforektomi",
-					"SKScode": "KLAF11",
-					"Vejledning": "evt. inklusiv metastase D kode",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Andre operationer på brystvæg, pleura og diafragma",
-					"SKSnavn": "Andre operationer på brystvæg, pleura og diafragma",
-					"SKScode": "KGAW",
-					"Vejledning": "evt. inklusiv metastase D kode",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Resektion af milt",
-					"SKSnavn": "Resektion af milt",
-					"SKScode": "KJMA00",
-					"Vejledning": "evt. inklusiv metastase D kode",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Anden resektion eller vævsdestruktion i urinblæren",
-					"SKSnavn": "Anden resektion eller vævsdestruktion i urinblæren",
-					"SKScode": "KKCD96",
-					"Vejledning": "evt. inklusiv metastase D kode",
-					"DisplayType": "udvidet",
-					"Show": true
-				}
-			]
 		}
+
 	]
 }

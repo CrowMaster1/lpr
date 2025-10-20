@@ -36,14 +36,14 @@
                     "DisplayType": "simple",
                     "Show": true
                 },
-                {
-					"LabelText": "downstaging",
-					"SKSnavn": "Downstaging",
-					"SKScode": "ZPZA02E",
-					"Vejledning": "Behandling af non-resektabel sygdom, hvor skrumpning kan give mulighed for resektion",
-                    "DisplayType": "simple",
-                    "Show": true
-                },
+              {
+                "LabelText": "downstaging/downsizing",
+                "SKSnavn": "Downstaging",
+                "SKScode": "ZPZA02E",
+                "Vejledning": "Behandling af non-resektabel sygdom, hvor skrumpning kan give mulighed for resektion",
+                "DisplayType": "simple",
+                "Show": true
+              },
 				{
 					"LabelText": "palliativ",
 					"SKSnavn": "Palliativ",
@@ -127,7 +127,7 @@
                 {
                     "LabelText": "PS9",
                     "SKSnavn": "Performance Status Ukendt",
-                    "SKScode": "ZZV020U9*",
+                    "SKScode": "ZZV020U9",
                     "Vejledning": "Oplysning ikke tilgængelig i journal",
                     "DisplayType": "simple",
                     "Show": true
