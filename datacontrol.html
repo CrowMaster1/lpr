@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Control</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/navigation_bar.css">
+    <style>
+        body { padding-top: 20px; }
+        #results-container { margin-top: 20px; }
+        .table thead th { background-color: #f8f9fa; }
+        .similarity-perfect { background-color: #d4edda; }
+        .similarity-good { background-color: #fff3cd; }
+        .similarity-bad { background-color: #f8d7da; }
+        .summary { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navigation-container"></div>
+    </header>
+
+    <main class="container">
+        <h1 class="mt-4">SKS kode præcision ifht medinfo.dk</h1>
+        <p>Denne side sammenligner SKS koder anvendt på denne side med ordlyd fra medinfo.dk</p>
+
+        <div class="form-row align-items-center">
+            <div class="col-auto">
+                <label for="page-select">Select Data to Audit:</label>
+                <select id="page-select" class="form-control">
+                    <option value="page1">page1</option>
+                    <option value="page2">page2</option>
+                    <option value="page3">page3</option>
+                    <option value="page4">page4</option>
+                    <option value="page5">page5</option>
+                    <option value="page6">page6</option>
+                    <option value="page7">page7</option>
+                    <option value="page8">page8</option>
+                </select>
+            </div>
+            <div class="col-auto">
+                 <button id="start-audit-btn" class="btn btn-primary mt-4">Start Audit</button>
+            </div>
+        </div>
+
+        <div id="summary-container" class="mt-4"></div>
+
+        <div id="results-container"></div>
+
+    </main>
+
+    <script src="js/datacontrol.js"></script>
+    <script>
+        // Load navigation
+        fetch('navigation.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('.navigation-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
