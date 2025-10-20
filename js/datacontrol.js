@@ -1,3 +1,13 @@
+// Escape untrusted strings before injecting into HTML
+function escapeHtml(text) {
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const startAuditBtn = document.getElementById('start-audit-btn');
     if (startAuditBtn) {
@@ -29,7 +39,7 @@ async function runAudit() {
         renderResults(comparisonResults, resultsContainer);
 
     } catch (error) {
-        resultsContainer.innerHTML = `<div class="alert alert-danger"><strong>Error:</strong> ${error.message}</div>`;
+        resultsContainer.innerHTML = `<div class="alert alert-danger"><strong>Error:</strong> ${escapeHtml(error.message)}</div>`;
         console.error("Audit failed:", error);
     }
 }
