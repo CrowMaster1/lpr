@@ -121,11 +121,11 @@
                     "SKSnavn": "Performance Status 5",
                     "SKScode": "ZZV020U5",
                     "Vejledning": "Død",
-                    "DisplayType": "simple",
+                    "DisplayType": "udvidet",
                     "Show": true
                 },
                 {
-                    "LabelText": "PS9",
+                    "LabelText": "PS Ukendt",
                     "SKSnavn": "Performance Status Ukendt",
                     "SKScode": "ZZV020U9",
                     "Vejledning": "Oplysning ikke tilgængelig i journal",
@@ -172,9 +172,11 @@
             ]
         },
 		{
-			"GroupHeading": "anatomisk lokalisation af target",
+			"GroupHeading": "anatomisk lokalisation af target (hvis ikke A diagnose)",
 			"Description": [
-			"Gives pallierende stråleterapi angives lokalisation"
+			"Gives pallierende stråleterapi angives lokalisation",
+            "anvendes kodepraksis hvor metastase diagnosen anvendes som A diagnose med primær tumor som B diagnose kan lokalisation udelades",
+            "Er der ikke lokalisation eller metastase som A diagnose, vil behandling opfattes som givet mod primærtumor"
 			],
 			"AllowsMultipleSelections": true,
 			"SeeAlso": {
@@ -182,14 +184,6 @@
 				"LinkText": "Link til DCCG-1"
 			},
 			"Items": [
-                {
-                    "LabelText": "Rektum",
-                    "SKSnavn": "Rektum",
-                    "SKScode": "T000751",
-                    "Vejledning": "",
-                    "DisplayType": "simple",
-                    "Show": true
-                },
                 {
                     "LabelText": "Cerebrum",
                     "SKSnavn": "Cerebrum",

@@ -122,10 +122,10 @@
                     "SKScode": "ZZV020U5",
                     "Vejledning": "Død",
                     "DisplayType": "simple",
-                    "Show": true
+                    "Show": false
                 },
                 {
-                    "LabelText": "PS9",
+                    "LabelText": "PS Ukendt",
                     "SKSnavn": "Performance Status Ukendt",
                     "SKScode": "ZZV020U9",
                     "Vejledning": "Oplysning ikke tilgængelig i journal",
@@ -135,7 +135,7 @@
             ]
         },
 		{
-            "GroupHeading": "Kombinations regimer",
+            "GroupHeading": "Kombinations regimer (to)",
             "Description": [
 			"Behandlinger med kombinerede kemoterapeutiske midler.",
 			"Må gerne kombineres med enkelt stoffer, hvis ikke dækkende"
@@ -181,7 +181,7 @@
             ]
         },
         {
-            "GroupHeading": "Enkeltstofbehandlinger",
+            "GroupHeading": "Enkeltstofbehandlinger (to) - kan kombineres",
             "Description": [
 			"Behandlinger med enkelte kemoterapeutiske eller biologiske stoffer.",
 			"Kan kombineres"

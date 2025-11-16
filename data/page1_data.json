@@ -493,13 +493,13 @@
                     "SKSnavn": "Performance Status 5",
                     "SKScode": "ZZV020U5",
                     "Vejledning": "Død",
-                    "DisplayType": "simple",
+                    "DisplayType": "udvidet",
                     "Show": true,
                     "VPH": false,
                     "SKScodestatus": "Godkendt"
                 },
                 {
-                    "LabelText": "PS9",
+                    "LabelText": "PS ukendt",
                     "SKSnavn": "Performance Status Ukendt",
                     "SKScode": "ZZV020U9",
                     "Vejledning": "Oplysning ikke tilgængelig i journal",
@@ -580,7 +580,7 @@
                     "SKScodestatus": "Godkendt"
                 },
                 {
-                    "LabelText": "ASA9",
+                    "LabelText": "ASA ukendt",
                     "SKSnavn": "ASA funktionsniveau, ASA Ukendt",
                     "SKScode": "EZA9",
                     "Vejledning": "Oplysning ikke tilgængelig i journal",
@@ -593,7 +593,13 @@
         },
         {
             "GroupHeading": "Alkohol",
-            "Description": "Alkohol indtag vurderes over sidste måned. Ved tidligere alkohol afhængighed kodes med DF102*, Ukendt undestøttes aktuelt ikke. Værdi undlades i dette tilfælde",
+            "Description": [
+                "Alkohol indtag vurderes over sidste måned.",
+                "Ved tidligere alkohol afhængighed kan kodes med DF102*",
+                "Ukendt understøttes aktuelt ikke. Værdi undlades i dette tilfælde",
+                "Der er 12 gram alkohol per genstand",
+                "Forefindes ingen andre oplysninger kan DZ721C/D anvendes, disse oversættes dog i databasen til antal og mindsker kvalitet"                
+            ],              
             "AllowsMultipleSelections": false,
             "SeeAlso": {
                 "URL": "https://dccg.dk",
@@ -603,7 +609,7 @@
                 {
                     "LabelText": "Alkohol",
                     "SKSnavn": "Alkoholforbrug, antal genstande per uge",
-                    "SKScode": "DVRB02",
+                    "SKScode": "DVRB51",
                     "VPH": true,
 					"VPHtext": "Antal genstande",
                     "Vejledning": "VPH#### = antallet af genstande (####)",
@@ -800,7 +806,7 @@
         {
             "GroupHeading": "Højde på rectumtumor-Skopi",
             "Description": "Husk at kode rektoskopi som procedure i LPR",
-            "AllowsMultipleSelections": false,
+            "AllowsMultipleSelections": true,
             "showIf": {
 			"Condition": "DC209",
 			"GroupHeading": "Tumor lokalisation",
@@ -814,7 +820,7 @@
             "Items": [
                 {
                     "LabelText": "Tumor Højde - Rectoskop",
-                    "SKSnavn": "Rectum Tumor Højde + bestemt ved Rectoskop",
+                    "SKSnavn": "Skopi målt Rectum Tumor Højde",
                     "SKScode": "ZZV009A1A",
                     "VPH": true,
 					"VPHtext": "højde i cm",
@@ -824,35 +830,8 @@
                     "SKScodestatus": "Godkendt"
                 },
                 {
-                    "LabelText": "Tumor Højde - Rectoskop UK",
-                    "SKSnavn": "Rectum Tumor Højde + bestemt ved Rectoskop + ukendt",
-                    "SKScode": "ZZV009A9",
-                    "VPH": false,
-                    "SKSStatus": "Findes",
-                    "Vejledning": "Hvis den ikke er foretaget",
-                    "DisplayType": "simple",
-                    "Show": true,
-                    "SKScodestatus": "Godkendt"
-                }
-            ]
-        },
-        {
-            "GroupHeading": "MR højde på tumor",
-            "Description": "-",
-            "AllowsMultipleSelections": false,
-            "showIf": {
-			"Condition": "DC209",
-			"GroupHeading": "Tumor lokalisation",
-			"Value": true
-			},
-			"SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
-            },
-            "Items": [
-                {
-                    "LabelText": "Rectum Tumor Højde MR",
-                    "SKSnavn": "MR højde på tumor",
+                    "LabelText": "MR målt Rectum Tumor Højde",
+                    "SKSnavn": "MR bestemt højde på tumor",
                     "SKScode": "ZZV009A1B",
                     "Vejledning": "i cm",
                     "DisplayType": "simple",
@@ -862,10 +841,10 @@
                     "SKScodestatus": "Godkendt"
                 },
                 {
-                    "LabelText": "Rectum Tumor Højde MR UK",
-                    "SKSnavn": "Rectum Tumor Højde + bestemt ved MR + ukendt",
-                    "SKScode": "ZZV009A9 ",
-                    "Vejledning": "-",
+                    "LabelText": "Rectum Tumor Højde Ukendt",
+                    "SKSnavn": "Tumor størrelse ukendt",
+                    "SKScode": "ZZV009A9",
+                    "Vejledning": "Anvendes såfremt hverken MR eller Rectoskopi højde er bestemt",
                     "DisplayType": "simple",
                     "Show": true,
                     "VPH": false,

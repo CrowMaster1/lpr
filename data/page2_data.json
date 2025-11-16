@@ -136,7 +136,7 @@
 					"LabelText": "D1: komplet excision af tumornære lymfeknuder ",
 					"SKSnavn": "D1: komplet excision af tumornære lymfeknuder ",
 					"SKScode": "KZLG00D1",
-					"Vejledning": "fjernelse af colon segment med tilhørende tarmnære lymfeknuder",
+					"Vejledning": "fjernelse af segment med tilhørende tarmnære lymfeknuder",
 					"DisplayType": "simple",
 					"Show": true
 				},
@@ -144,7 +144,7 @@
 					"LabelText": "D2: komplet excision af tumornære lymfeknuder og intermediære lymfeknuder",
 					"SKSnavn": "D2: komplet excision af tumornære lymfeknuder og intermediære lymfeknuder",
 					"SKScode": "KZLG00D2",
-					"Vejledning": "fjernelse af colon segment med tilhørende segment lymfeknuder ",
+					"Vejledning": "fjernelse af segment med tilhørende segment lymfeknuder ",
 					"DisplayType": "simple",
 					"Show": true
 				},
@@ -152,7 +152,7 @@
 					"LabelText": "D3: komplet excision af tumornære lymfeknuder og alle regionale lymfeknude",
 					"SKSnavn": "D3: komplet excision af tumornære lymfeknuder og alle regionale lymfeknuder",
 					"SKScode": "KZLG00D3",
-					"Vejledning": "fjernelse af colon segment med tilhørende segment og centrale lymfeknuder",
+					"Vejledning": "fjernelse af segment med tilhørende segment og centrale lymfeknuder",
 					"DisplayType": "simple",
 					"Show": true
 				},
@@ -160,7 +160,7 @@
 					"LabelText": "D9: ingen oplysninger om excision af tumornære lymfeknuder ",
 					"SKSnavn": "D9: ingen oplysninger om excision af tumornære lymfeknuder ",
 					"SKScode": "KZLG00D9",
-					"Vejledning": "fjernelse af colon segment med tilhørende segment og centrale lymfeknuder",
+					"Vejledning": "fjernelse af segment med tilhørende segment og centrale lymfeknuder",
 					"DisplayType": "simple",
 					"Show": true
 				}
