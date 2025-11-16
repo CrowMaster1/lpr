@@ -51,6 +51,28 @@
 				}
 			]
 		},
+        {
+			"GroupHeading": "Prioritet",
+			"Description": [
+				"En akut operation defineres, som en procedure, der ikke kan afvente regelret udredningsprogram",
+				"Ved akutte operation anføres tilstande der fører til den akutte indikation som bi diagnoser fx ileus, perforation etc.",
+				"Kun akutte operationer påføres koden, explecit elektiv såfremt denne ikke er tilføjet"
+			],	
+			"AllowsMultipleSelections": false,
+			"SeeAlso": {
+				"URL": "",
+				"LinkText": ""
+			},	
+			"Items": [
+				{
+					"LabelText": "Akut",
+					"SKSnavn": "udført Akut",
+					"SKScode": "ZPTP01",
+					"Vejledning": "Skal kodes ved akutte operationer",
+					"Show": true
+				}
+			]						
+		},
 		{
             "GroupHeading": "Endoskopiske og Kirurgiske Procedurer",
             "Description": "Procedurer i endetarm og tyktarm, herunder endoskopiske og kirurgiske teknikker.",

@@ -55,7 +55,8 @@
 			"GroupHeading": "Prioritet",
 			"Description": [
 				"En akut operation defineres, som en procedure, der ikke kan afvente regelret udredningsprogram",
-				"Ved akutte operation anføres tilstande der fører til den akutte indikation som bi diagnoser fx ileus, perforation etc."
+				"Ved akutte operation anføres tilstande der fører til den akutte indikation som bi diagnoser fx ileus, perforation etc.",
+				"Kun akutte operationer påføres koden, explecit elektiv såfremt denne ikke er tilføjet"
 			],	
 			"AllowsMultipleSelections": false,
 			"SeeAlso": {
@@ -64,16 +65,9 @@
 			},	
 			"Items": [
 				{
-					"LabelText": "Elektiv",
-					"SKSnavn": "Elektiv procedure",
-					"SKScode": "ATA3",
-					"Vejledning": "Kan kodes ved elektive operation",
-					"Show": true
-				},
-				{
 					"LabelText": "Akut",
-					"SKSnavn": "Akut procedure",
-					"SKScode": "ATA1",
+					"SKSnavn": "udført Akut",
+					"SKScode": "ZPTP01",
 					"Vejledning": "Skal kodes ved akutte operationer",
 					"Show": true
 				}
@@ -974,9 +968,8 @@
 			]
 		},
 		{
-			"GroupHeading": "Peroperativt fund af metastatisk sygdom & supplerende resektioner",
+			"GroupHeading": "Supplerende resektioner",
 			"Description": [
-				"Kodes med lokalisering af metastase som bi-diagnose",
 				"Per-operative supplerende resektioner",
 				"Kodes som procedurer iht. SKS" 
 			],
@@ -1009,7 +1002,21 @@
 					"Vejledning": "Anvendes ved resektion af kompartment på bækkenvæg ",
 					"DisplayType": "udvidet",
 					"Show": true
-				},
+				}
+
+			]
+		},
+		{
+			"GroupHeading": "Perop metastase fund.",
+			"Description": [
+				"Tilføjes til operation, hvis fund under denne, ellers kan tilføjes indlæggelses forløb"
+			],
+			"AllowsMultipleSelections": true,
+			"SeeAlso": {
+				"URL": "",
+				"LinkText": ""
+			},
+			"Items": [
 				{
 					"LabelText": "Lever",
 					"SKSnavn": "Fjernmetastase i leveren",
@@ -1128,13 +1135,30 @@
 					"Show": true
 				},
 				{
+					"LabelText": "Lap. Excision bugvæg",
+					"SKSnavn": "Laparoskopisk biopsi og excision af patologisk væv i bugvæg",
+					"SKScode": "KJAA11",
+					"Vejledning": "Forklar-Txt",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
 					"LabelText": "Excision diafragma",
+					"SKSnavn": "Transabdominal biopsi eller excision af patologisk væv i diafragma",
+					"SKScode": "KJBA10",
+					"Vejledning": "Forklar-Txt",
+					"DisplayType": "udvidet",
+					"Show": true
+				},
+				{
+					"LabelText": "Lap. Excision diafragma",
 					"SKSnavn": "Laparoskopisk biopsi eller excision af patologisk væv i diafragma",
 					"SKScode": "KJBA11",
 					"Vejledning": "Forklar-Txt",
 					"DisplayType": "udvidet",
 					"Show": true
-				},{
+				},
+				{
 					"LabelText": "Excision retroperitoneum",
 					"SKSnavn": "Excision af retroperitonealt patologisk væv",
 					"SKScode": "KKKB10",
