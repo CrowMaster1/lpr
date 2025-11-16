@@ -1,7 +1,7 @@
 {
 	"Groups": [			
 		{
-			"GroupHeading": "Kontrol undersøgelse | uden recidiv / ikke afklaret",
+			"GroupHeading": "Kontrol undersøgelse uden recidiv",
 			"Description": "Et kontrol besøg uden recidiv tilføjes koder | Begge tilføjes",
 			"AllowsMultipleSelections": true,
 			"SeeAlso": {
@@ -36,7 +36,7 @@
 			]
 		},
 		{
-			"GroupHeading": "Kontrol undersøgelse | Lokal recidiv",
+			"GroupHeading": "Kontrol undersøgelse med lokal recidiv",
 			"Description": "Et kontrol besøg med lokal recidiv, ingen fjernmetastaser | Begge tilføjes | kontakt dato = recidivdato",
 			"AllowsMultipleSelections": true,
 			"SeeAlso": {
@@ -61,17 +61,17 @@
 					"Show": true
 				},
 				{
-					"LabelText": "Ingen fjernmetastaser - behøves ikke kodet(implicit) - da der ellers kodes for disse",
+					"LabelText": "Ingen fjernmetastaser",
 					"SKSnavn": "Ingen fjernmetastaser",
 					"SKScode": "DZ061A",
-					"Vejledning": "-",
+					"Vejledning": "Kan undlades, da det betragets implicit såfremt der ikke fremgår metastase diagnosekoder",
 					"DisplayType": "udvidet",
 					"Show": true
 				}
 			]
         },
 		{
-			"GroupHeading": "Kontrol undersøgelse | Fjernrecidiv +/- lokal recidiv(koder tilføjes)",
+			"GroupHeading": "Kontrol us. m. fjernrecidiv +/- lokal recidiv",
 			"Description": "Et kontrol besøg med fjernrecidiv, ingen lokal recidiv | Begge tilføjes, eller anvend kombinationskoden | kontakt dato = recidivdato",
 			"AllowsMultipleSelections": true,
 			"SeeAlso": {
@@ -119,8 +119,9 @@
 					"Show": true
 				}				
             ]
-        },{
-			"GroupHeading": "Tillæg ved Fjernrecidiv (udvalgte)",
+        },
+		{
+			"GroupHeading": "Tillæg ved fjernrecidiv (udvalgte)",
 			"Description": [
 			"Ved systemisk recidiv kodes med recidiv lokalisation fra organet som A-diagnose",
 			"med primær CRC cancer som bi-diagnose & evt. AZCA2 som tillægskode (klinisk recidiv).",
