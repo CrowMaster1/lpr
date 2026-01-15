@@ -596,9 +596,9 @@
             "Description": [
                 "Alkohol indtag vurderes over sidste måned.",
                 "Ved tidligere alkohol afhængighed kan kodes med DF102*",
-                "Ukendt understøttes aktuelt ikke. Værdi undlades i dette tilfælde",
+                "Ukendt og intet indtag understøttes aktuelt ikke i SKS. Værdi undlades i dette tilfælde",
                 "Der er 12 gram alkohol per genstand",
-                "Forefindes ingen andre oplysninger kan DZ721C/D anvendes, disse oversættes dog i databasen til antal og mindsker kvalitet"                
+                "DVRB51 + antal kan også anvendes"                
             ],              
             "AllowsMultipleSelections": false,
             "SeeAlso": {
@@ -607,12 +607,23 @@
             },
             "Items": [
                 {
-                    "LabelText": "Alkohol",
-                    "SKSnavn": "Alkoholforbrug, antal genstande per uge",
-                    "SKScode": "DVRB51",
-                    "VPH": true,
-					"VPHtext": "Antal genstande",
-                    "Vejledning": "VPH#### = antallet af genstande (####)",
+                    "LabelText": "Alkohol >10 genstande ugentligt",
+                    "SKSnavn": "Antal alkoholgenstande ugentligt overskrider 10",
+                    "SKScode": "DZ721C",
+                    "VPH": false,
+					"VPHtext": "",
+                    "Vejledning": "",
+                    "DisplayType": "simple",
+                    "Show": true,
+                    "SKScodestatus": "Godkendt"
+                },
+                {
+                    "LabelText": "Alkohol indtag overskrider 4 genstande dagligt",
+                    "SKSnavn": "Antal alkoholgenstande samme dag overskrider 4",
+                    "SKScode": "DZ721D",
+                    "VPH": false,
+					"VPHtext": "",
+                    "Vejledning": "",
                     "DisplayType": "simple",
                     "Show": true,
                     "SKScodestatus": "Godkendt"
@@ -681,7 +692,7 @@
             ]
         },
         {
-            "GroupHeading": "Vægt",
+            "GroupHeading": "Patient Vægt",
             "Description": "Ukendt understøttes ikke, undlad i dette tilfælde",
             "AllowsMultipleSelections": false,
             "SeeAlso": {
@@ -703,7 +714,7 @@
             ]
         },
         {
-            "GroupHeading": "Højde",
+            "GroupHeading": "Patient Højde",
             "Description": "Ukendt understøttes ikke, undlad i dette tilfælde",
             "AllowsMultipleSelections": false,
             "SeeAlso": {
