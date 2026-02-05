@@ -1,1 +1,16 @@
-﻿
+﻿# Ignore all Python script files
+*.py
+
+# Ignore all Batch files
+*.bat
+
+# --- Gemini CLI specific ---
+.gemini/          # Workspace settings & local state
+.geminiignore     # (Optional) If you don't want to track your ignore rules
+.aiexclude        # Google Code Assist / Gemini exclusion file
+
+# --- Claude Code specific ---
+.claude/          # Memory, project instructions, and local settings
+.claudeignore     # Claude-specific ignore rules
+CLAUDE.md         # Main project instructions (if you prefer it private)
+CLAUDE.local.md   # Local-only Claude memory (usually auto-ignored)

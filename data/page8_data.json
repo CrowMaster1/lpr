@@ -1,6 +1,27 @@
 {
 	"Groups": [			
 		{
+			"GroupHeading": "Pt. følges ikke med kontrol (pt. eller lægefaglig besluttet)",
+			"Description": "",
+			"AllowsMultipleSelections": true,
+			"SeeAlso": {
+				"URL": "https://dccg.dk",
+				"LinkText": "Link til DCCG-1"
+			},
+			"Items": [
+				{
+                    "LabelText": "Pt. ønsker ikke kontrol",
+                    "SKSnavn": "Patienten ønsker ikke kontrol",
+                    "SKScode": "ZWCM9C",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true,
+                    "VPH": false,
+                    "SKScodestatus": "Godkendt"
+				}
+			]
+		},
+		{
 			"GroupHeading": "Kontrol undersøgelse uden recidiv",
 			"Description": "Et kontrol besøg uden recidiv tilføjes koder | Begge tilføjes",
 			"AllowsMultipleSelections": true,
