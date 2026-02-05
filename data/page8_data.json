@@ -23,7 +23,7 @@
 		},
 		{
 			"GroupHeading": "Kontrol undersøgelse uden recidiv",
-			"Description": "Et kontrol besøg uden recidiv tilføjes koder | Begge tilføjes",
+			"Description": "Et kontrol besøg uden recidiv tilføjes koder",
 			"AllowsMultipleSelections": true,
 			"SeeAlso": {
 				"URL": "https://dccg.dk",
@@ -57,8 +57,8 @@
 			]
 		},
 		{
-			"GroupHeading": "Kontrol undersøgelse med lokal recidiv",
-			"Description": "Et kontrol besøg med lokal recidiv, ingen fjernmetastaser | Begge tilføjes | kontakt dato = recidivdato",
+			"GroupHeading": "Lokal recidiv",
+			"Description": "Et kontrol besøg med lokal recidiv | kontakt dato = recidivdato",
 			"AllowsMultipleSelections": true,
 			"SeeAlso": {
 				"URL": "https://dccg.dk",
@@ -72,77 +72,12 @@
 					"Vejledning": "-",
 					"DisplayType": "simple",
 					"Show": true
-				},
-				{
-					"LabelText": "Lokalrecidiv i efterladt væv",
-					"SKSnavn": "Lokalrecidiv i efterladt væv",
-					"SKScode": "DC991A",
-					"Vejledning": "Kan anvendes ved genvækst kurativt strålebehandlet tumor",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Ingen fjernmetastaser",
-					"SKSnavn": "Ingen fjernmetastaser",
-					"SKScode": "DZ061A",
-					"Vejledning": "Kan undlades, da det betragets implicit såfremt der ikke fremgår metastase diagnosekoder",
-					"DisplayType": "udvidet",
-					"Show": true
 				}
+
 			]
         },
 		{
-			"GroupHeading": "Kontrol us. m. fjernrecidiv +/- lokal recidiv",
-			"Description": "Et kontrol besøg med fjernrecidiv, ingen lokal recidiv | Begge tilføjes, eller anvend kombinationskoden | kontakt dato = recidivdato",
-			"AllowsMultipleSelections": true,
-			"SeeAlso": {
-				"URL": "https://dccg.dk",
-				"LinkText": "Link til DCCG-1"
-			},
-			"Items": [
-				{
-					"LabelText": "Fjernmetastase recidiv",
-					"SKSnavn": "Fjernmetastase recidiv",
-					"SKScode": "ZDW51MF",
-					"Vejledning": "-",
-					"DisplayType": "simple",
-					"Show": true
-				},
-				{
-					"LabelText": "Lokal- og Fjern-recidv ",
-					"SKSnavn": "Lokal- og Fjern-recidv",
-					"SKScode": "ZDW51MX",
-					"Vejledning": "-",
-					"DisplayType": "simple",
-					"Show": true
-				}
-			]
-        },
-		{
-			"GroupHeading": "Kontrol undersøgelse|kurativt med komplet response efter ikke kirurgisk behandling",
-			"Description": [
-			"Så længe der ikke er konstateret genvækst/recidiv af behandlede tumor site anvendes.",
-			"Ved fremvækst af behandlet ved anvendes ZDW51G koden, efterfølgende procedurer kodes iht. gældende praksis.",
-			"ZDW52A kan også anvendes (uden recidiv)"
-			],
-			"AllowsMultipleSelections": true,
-			"SeeAlso": {
-				"URL": "https://dccg.dk",
-				"LinkText": "Link til DCCG-1"
-			},
-			"Items": [
-				{
-					"LabelText": "Intet lokalrecidiv påvist",
-					"SKSnavn": "Intet lokalrecidiv påvist",
-					"SKScode": "DZ063A",
-					"Vejledning": "-",
-					"DisplayType": "simple",
-					"Show": true
-				}				
-            ]
-        },
-		{
-			"GroupHeading": "Tillæg ved fjernrecidiv (udvalgte)",
+			"GroupHeading": "Pt. har fjern recidiv - A-diagnose koder (udvalgte)",
 			"Description": [
 			"Ved systemisk recidiv kodes med recidiv lokalisation fra organet som A-diagnose",
 			"med primær CRC cancer som bi-diagnose & evt. AZCA2 som tillægskode (klinisk recidiv).",
@@ -211,6 +146,33 @@
 					"Show": true
 				}				
 			]
-		}	
+		},
+		{
+			"GroupHeading": "Fjernrecidiv +/- lokal recidiv",
+			"Description": "kodning med A diagnose for fjernrecidiv bør foretrækkes - kodning for lokal recidiv bør også foretrækkes",
+			"AllowsMultipleSelections": true,
+			"SeeAlso": {
+				"URL": "https://dccg.dk",
+				"LinkText": "Link til DCCG-1"
+			},
+			"Items": [
+				{
+					"LabelText": "Fjernmetastase recidiv",
+					"SKSnavn": "Fjernmetastase recidiv",
+					"SKScode": "ZDW51MF",
+					"Vejledning": "-",
+					"DisplayType": "simple",
+					"Show": true
+				},
+				{
+					"LabelText": "Lokal- og Fjern-recidv ",
+					"SKSnavn": "Lokal- og Fjern-recidv",
+					"SKScode": "ZDW51MX",
+					"Vejledning": "-",
+					"DisplayType": "simple",
+					"Show": true
+				}
+			]
+        }	
     ]
 }
