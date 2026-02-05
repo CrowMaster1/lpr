@@ -94,7 +94,7 @@
 					"SKSnavn": "Fjernmetastase i lever",
 					"SKScode": "DC787",
           			"Vejledning": "-",
-					"DisplayType": "udvidet",
+					"DisplayType": "simple",
 					"Show": true
 				},
 								{
@@ -102,7 +102,7 @@
 					"SKSnavn": "Fjernmetastase i lunge",
 					"SKScode": "DC780",
           			"Vejledning": "-",
-					"DisplayType": "udvidet",
+					"DisplayType": "simple",
 					"Show": true
 				},
 								{
@@ -110,7 +110,7 @@
 					"SKSnavn": "Carcinose i peritoneum",
 					"SKScode": "DC786D",
           			"Vejledning": "-",
-					"DisplayType": "udvidet",
+					"DisplayType": "simple",
 					"Show": true
 				},
 								{
@@ -118,15 +118,7 @@
 					"SKSnavn": "Metastase i retroperitoneal rum",
 					"SKScode": "DC786C",
           			"Vejledning": "-",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Lever",
-					"SKSnavn": "Lever",
-					"SKScode": "DC787",
-          			"Vejledning": "-",
-					"DisplayType": "udvidet",
+					"DisplayType": "simple",
 					"Show": true
 				},
 				{
@@ -134,7 +126,7 @@
 					"SKSnavn": "Fjernmetastase i knogle",
 					"SKScode": "DC795B",
 					"Vejledning": "-",
-					"DisplayType": "udvidet",
+					"DisplayType": "simple",
 					"Show": true
 				},
 				{
