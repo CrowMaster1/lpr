@@ -8,8 +8,8 @@
 			],
 			"AllowsMultipleSelections": false,
 			"SeeAlso": {
-				"URL": "https://dccg.dk",
-				"LinkText": "Link til DCCG-1"
+				"URL": "https://manual.dccg-lpr.dk",
+				"LinkText": "DCCG LPR manual"
 			},
             "Items": [
                 {
@@ -72,8 +72,8 @@
 			],
 			"AllowsMultipleSelections": false,
 			"SeeAlso": {
-				"URL": "https://dccg.dk",
-				"LinkText": "Link til DCCG-1"
+				"URL": "https://manual.dccg-lpr.dk",
+				"LinkText": "DCCG LPR manual"
 			},
             "Items": [
                 {

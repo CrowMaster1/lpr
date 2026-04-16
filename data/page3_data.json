@@ -5,8 +5,8 @@
 			"Description": "Kodes KUN såfremt forløbet har været ukompliceret - dvs ingen Clavion-Dindo Grad",
 			"AllowsMultipleSelections": false,
 			"SeeAlso": {
-				"URL": "https://dccg.dk",
-				"LinkText": "Link til DCCG-1"
+				"URL": "https://manual.dccg-lpr.dk",
+				"LinkText": "DCCG LPR manual"
 			},
 			"Items": [
 				{
@@ -24,8 +24,8 @@
 			"Description": "Inkluderer i DCCG både kirurgiske og medicinske",
 			"AllowsMultipleSelections": false,
 			"SeeAlso": {
-				"URL": "https://dccg.dk",
-				"LinkText": "Link til DCCG-1"
+				"URL": "https://manual.dccg-lpr.dk",
+				"LinkText": "DCCG LPR manual"
 			},
 			"Items": [
                 {
@@ -330,8 +330,8 @@
 			],
 			"AllowsMultipleSelections": true,
 			"SeeAlso": {
-				"URL": "https://dccg.dk",
-				"LinkText": "Link til DCCG-1"
+				"URL": "https://manual.dccg-lpr.dk",
+				"LinkText": "DCCG LPR manual"
 			},
 			"Items": [
 				{
@@ -401,8 +401,8 @@
 			],
 			"AllowsMultipleSelections": false,
 			"SeeAlso": {
-				"URL": "https://dccg.dk",
-				"LinkText": "Link til DCCG-1"
+				"URL": "https://manual.dccg-lpr.dk",
+				"LinkText": "DCCG LPR manual"
 			},
 			"Items": [
                 {
@@ -438,8 +438,8 @@
 			],
 			"AllowsMultipleSelections": true,
 			"SeeAlso": {
-				"URL": "https://dccg.dk",
-				"LinkText": "Link til DCCG-1"
+				"URL": "https://manual.dccg-lpr.dk",
+				"LinkText": "DCCG LPR manual"
 			},
 			"Items": [
                 {
@@ -486,8 +486,8 @@
 			],
 			"AllowsMultipleSelections": true,
 			"SeeAlso": {
-				"URL": "https://dccg.dk",
-				"LinkText": "Link til DCCG-1"
+				"URL": "https://manual.dccg-lpr.dk",
+				"LinkText": "DCCG LPR manual"
 			},
 			"Items": [
 				{
@@ -613,8 +613,8 @@
 			],
 			"AllowsMultipleSelections": true,
 			"SeeAlso": {
-				"URL": "https://dccg.dk",
-				"LinkText": "Link til DCCG-1"
+				"URL": "https://manual.dccg-lpr.dk",
+				"LinkText": "DCCG LPR manual"
 			},
 			"Items": [	
 				{

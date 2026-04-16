@@ -5,8 +5,8 @@
             "Description": "Pg1",
             "AllowsMultipleSelections": false,
             "SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
+                "URL": "https://manual.dccg-lpr.dk",
+                "LinkText": "DCCG LPR manual"
             },
             "Items": [
                 {

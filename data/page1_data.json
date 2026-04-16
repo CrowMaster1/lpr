@@ -12,8 +12,8 @@
             ],
             "AllowsMultipleSelections": false,
             "SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
+                "URL": "https://manual.dccg-lpr.dk",
+                "LinkText": "DCCG LPR manual"
             },
             "Items": [
                 {
@@ -129,8 +129,8 @@
             ],
             "AllowsMultipleSelections": false,
             "SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
+                "URL": "https://manual.dccg-lpr.dk",
+                "LinkText": "DCCG LPR manual"
             },
             "Items": [
                 {
@@ -264,8 +264,8 @@
             ],
             "AllowsMultipleSelections": false,
             "SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
+                "URL": "https://manual.dccg-lpr.dk",
+                "LinkText": "DCCG LPR manual"
             },
             "Items": [
                 {
@@ -321,8 +321,8 @@
             ],
             "AllowsMultipleSelections": false,
             "SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
+                "URL": "https://manual.dccg-lpr.dk",
+                "LinkText": "DCCG LPR manual"
             },
             "Items": [
                 {
@@ -383,8 +383,8 @@
             ],
             "AllowsMultipleSelections": false,
             "SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
+                "URL": "https://manual.dccg-lpr.dk",
+                "LinkText": "DCCG LPR manual"
             },
             "Items": [
                 {
@@ -434,8 +434,8 @@
             "Description": "Performance status oplyses som den der danner grundlag for behandlingsbeslutningen. Ved flere opgivne vælges sidste inden proceduren. Der bør ikke foretages vurdering ihft journal vurdering. Her bør anvendes PS ukendt.",
             "AllowsMultipleSelections": false,
             "SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
+                "URL": "https://manual.dccg-lpr.dk",
+                "LinkText": "DCCG LPR manual"
             },
             "Items": [
                 {
@@ -515,8 +515,8 @@
             "Description": "ASA score oplyses, som den der danner grundlag for behandlingsbeslutningen. Ved flere opgivne vælges sidste inden proceduren. Der bør ikke foretages vurdering ihft journal vurdering. Her bør anvendes ASA ukendt.",
             "AllowsMultipleSelections": false,
             "SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
+                "URL": "https://manual.dccg-lpr.dk",
+                "LinkText": "DCCG LPR manual"
             },
             "Items": [
                 {
@@ -602,8 +602,8 @@
             ],              
             "AllowsMultipleSelections": true,
             "SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
+                "URL": "https://manual.dccg-lpr.dk",
+                "LinkText": "DCCG LPR manual"
             },
             "Items": [
                 {
@@ -635,8 +635,8 @@
             "Description": "",
             "AllowsMultipleSelections": false,
             "SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
+                "URL": "https://manual.dccg-lpr.dk",
+                "LinkText": "DCCG LPR manual"
             },
             "Items": [
                 {
@@ -696,8 +696,8 @@
             "Description": "Ukendt understøttes ikke, undlad i dette tilfælde",
             "AllowsMultipleSelections": false,
             "SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
+                "URL": "https://manual.dccg-lpr.dk",
+                "LinkText": "DCCG LPR manual"
             },
             "Items": [
                 {
@@ -718,8 +718,8 @@
             "Description": "Ukendt understøttes ikke, undlad i dette tilfælde",
             "AllowsMultipleSelections": false,
             "SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
+                "URL": "https://manual.dccg-lpr.dk",
+                "LinkText": "DCCG LPR manual"
             },
             "Items": [
                 {
@@ -746,8 +746,8 @@
             ],
             "AllowsMultipleSelections": false,
             "SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
+                "URL": "https://manual.dccg-lpr.dk",
+                "LinkText": "DCCG LPR manual"
             },
             "Items": [
                 {
@@ -767,8 +767,8 @@
             "Description": "Aktuelt er fokus på anæmi, husk andre komorbiditeter også",
             "AllowsMultipleSelections": false,
             "SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
+                "URL": "https://manual.dccg-lpr.dk",
+                "LinkText": "DCCG LPR manual"
             },
             "Items": [
                 {
@@ -788,8 +788,8 @@
             "Description": "Fokus interventioner, andre skal også gerne kodes",
             "AllowsMultipleSelections": true,
             "SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
+                "URL": "https://manual.dccg-lpr.dk",
+                "LinkText": "DCCG LPR manual"
             },
             "Items": [
                 {
@@ -824,8 +824,8 @@
 			"Value": true
 			},
 			"SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
+                "URL": "https://manual.dccg-lpr.dk",
+                "LinkText": "DCCG LPR manual"
             },
 			
             "Items": [
@@ -873,8 +873,8 @@
 			"Value": true
 			},
 			"SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
+                "URL": "https://manual.dccg-lpr.dk",
+                "LinkText": "DCCG LPR manual"
             },
             "Items": [
                 {
@@ -900,8 +900,8 @@
 			"Value": true
 			},
 			"SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
+                "URL": "https://manual.dccg-lpr.dk",
+                "LinkText": "DCCG LPR manual"
             },
             "Items": [
                 {
@@ -926,8 +926,8 @@
 			"Value": true
 			},
 			"SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
+                "URL": "https://manual.dccg-lpr.dk",
+                "LinkText": "DCCG LPR manual"
             },
             "Items": [
               {
@@ -967,8 +967,8 @@
             "Description": "Denne kode tilføjes behandlingsforløb såfremt pt ikke har modtaget behandling/DCCG procedure. ZWCM7 anvendes hvis pt. Er henvist og har modtaget anden behandling på kirurgisk afdeling – dvs ikke fra kirurgisk til onkologisk afd.",
             "AllowsMultipleSelections": false,
             "SeeAlso": {
-                "URL": "https://dccg.dk",
-                "LinkText": "Link til DCCG-1"
+                "URL": "https://manual.dccg-lpr.dk",
+                "LinkText": "DCCG LPR manual"
             },
             "Items": [
                 {

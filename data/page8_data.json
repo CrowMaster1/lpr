@@ -5,8 +5,8 @@
 			"Description": "",
 			"AllowsMultipleSelections": true,
 			"SeeAlso": {
-				"URL": "https://dccg.dk",
-				"LinkText": "Link til DCCG-1"
+				"URL": "https://manual.dccg-lpr.dk",
+				"LinkText": "DCCG LPR manual"
 			},
 			"Items": [
 				{
@@ -26,8 +26,8 @@
 			"Description": "Et kontrol besøg uden recidiv tilføjes koder",
 			"AllowsMultipleSelections": true,
 			"SeeAlso": {
-				"URL": "https://dccg.dk",
-				"LinkText": "Link til DCCG-1"
+				"URL": "https://manual.dccg-lpr.dk",
+				"LinkText": "DCCG LPR manual"
 			},
 			"Items": [
 				{
@@ -61,8 +61,8 @@
 			"Description": "Et kontrol besøg med lokal recidiv | kontakt dato = recidivdato",
 			"AllowsMultipleSelections": true,
 			"SeeAlso": {
-				"URL": "https://dccg.dk",
-				"LinkText": "Link til DCCG-1"
+				"URL": "https://manual.dccg-lpr.dk",
+				"LinkText": "DCCG LPR manual"
 			},
 			"Items": [
 				{
@@ -144,8 +144,8 @@
 			"Description": "kodning med A diagnose for fjernrecidiv bør foretrækkes - kodning for lokal recidiv bør også foretrækkes",
 			"AllowsMultipleSelections": true,
 			"SeeAlso": {
-				"URL": "https://dccg.dk",
-				"LinkText": "Link til DCCG-1"
+				"URL": "https://manual.dccg-lpr.dk",
+				"LinkText": "DCCG LPR manual"
 			},
 			"Items": [
 				{
