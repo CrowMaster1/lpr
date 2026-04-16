@@ -600,7 +600,7 @@
                 "Der er 12 gram alkohol per genstand",
                 "DVRB51 + antal kan også anvendes"                
             ],              
-            "AllowsMultipleSelections": false,
+            "AllowsMultipleSelections": true,
             "SeeAlso": {
                 "URL": "https://dccg.dk",
                 "LinkText": "Link til DCCG-1"
