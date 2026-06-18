@@ -138,7 +138,7 @@
             "GroupHeading": "Kombinations regimer (to)",
             "Description": [
 			"Behandlinger med kombinerede kemoterapeutiske midler.",
-			"Må gerne kombineres med enkelt stoffer, hvis ikke dækkende"
+			""
 			],
             "AllowsMultipleSelections": true,
             "SeeAlso": {

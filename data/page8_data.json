@@ -1,27 +1,6 @@
 {
 	"Groups": [			
 		{
-			"GroupHeading": "Pt. følges ikke med kontrol (pt. eller lægefaglig besluttet)",
-			"Description": "",
-			"AllowsMultipleSelections": true,
-			"SeeAlso": {
-				"URL": "https://manual.dccg-lpr.dk",
-				"LinkText": "DCCG LPR manual"
-			},
-			"Items": [
-				{
-                    "LabelText": "Pt. ønsker ikke kontrol",
-                    "SKSnavn": "Patienten ønsker ikke kontrol",
-                    "SKScode": "ZWCM9C",
-                    "Vejledning": "-",
-                    "DisplayType": "simple",
-                    "Show": true,
-                    "VPH": false,
-                    "SKScodestatus": "Godkendt"
-				}
-			]
-		},
-		{
 			"GroupHeading": "Kontrol undersøgelse uden recidiv",
 			"Description": "Et kontrol besøg uden recidiv tilføjes koder",
 			"AllowsMultipleSelections": true,
@@ -37,27 +16,11 @@
 					"Vejledning": "-",
 					"DisplayType": "simple",
 					"Show": true
-				},
-				{
-					"LabelText": "Lokalrecidiv status ikke afklaret",
-					"SKSnavn": "Lokalrecidiv status ikke afklaret",
-					"SKScode": "DZ063B",
-					"Vejledning": "-",
-					"DisplayType": "udvidet",
-					"Show": true
-				},
-				{
-					"LabelText": "Lokalrecidiv status ikke relevant",
-					"SKSnavn": "Lokalrecidiv status ikke relevant",
-					"SKScode": "DZ063C",
-					"Vejledning": "-",
-					"DisplayType": "udvidet",
-					"Show": true
 				}
 			]
 		},
 		{
-			"GroupHeading": "Lokal recidiv",
+			"GroupHeading": "Lokal recidiv incl. hvis samtidig metastatisk recidiv",
 			"Description": "Et kontrol besøg med lokal recidiv | kontakt dato = recidivdato",
 			"AllowsMultipleSelections": true,
 			"SeeAlso": {
@@ -77,10 +40,9 @@
 			]
         },
 		{
-			"GroupHeading": "Pt. har fjern recidiv - A-diagnose koder (udvalgte)",
+			"GroupHeading": "Metastatisk Recidiv (hyppige koder), lokal recidiv kode tilføjes såfremt dette også er tilstede",
 			"Description": [
-			"Ved systemisk recidiv kodes med recidiv lokalisation fra organet som A-diagnose",
-			"med primær CRC cancer som bi-diagnose & evt. AZCA2 som tillægskode (klinisk recidiv).",
+			"Ved systemisk recidiv kodes med recidiv lokalisation fra organet som A-diagnose, hvis også lokal recidiv kodes dette også",
 			"• kontakt dato = recidivdato"
 			],
 			"AllowsMultipleSelections": true,
@@ -139,9 +101,9 @@
 				}				
 			]
 		},
-		{
-			"GroupHeading": "Fjernrecidiv +/- lokal recidiv",
-			"Description": "kodning med A diagnose for fjernrecidiv bør foretrækkes - kodning for lokal recidiv bør også foretrækkes",
+				{
+			"GroupHeading": "Pt. følges ikke med kontrol",
+			"Description": "",
 			"AllowsMultipleSelections": true,
 			"SeeAlso": {
 				"URL": "https://manual.dccg-lpr.dk",
@@ -149,22 +111,17 @@
 			},
 			"Items": [
 				{
-					"LabelText": "Fjernmetastase recidiv",
-					"SKSnavn": "Fjernmetastase recidiv",
-					"SKScode": "ZDW51MF",
-					"Vejledning": "-",
-					"DisplayType": "simple",
-					"Show": true
-				},
-				{
-					"LabelText": "Lokal- og Fjern-recidv ",
-					"SKSnavn": "Lokal- og Fjern-recidv",
-					"SKScode": "ZDW51MX",
-					"Vejledning": "-",
-					"DisplayType": "simple",
-					"Show": true
+                    "LabelText": "Helbredsforløb afsluttes",
+                    "SKSnavn": "Helbredsforløb afsluttes",
+                    "SKScode": "-",
+                    "Vejledning": "-",
+                    "DisplayType": "simple",
+                    "Show": true,
+                    "VPH": false,
+                    "SKScodestatus": "Godkendt"
 				}
 			]
-        }	
+		}
+			
     ]
 }

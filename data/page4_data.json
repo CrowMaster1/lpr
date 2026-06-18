@@ -13,7 +13,7 @@
 					"LabelText": "Diagnostisk",
 					"SKSnavn": "diagnostisk",
 					"SKScode": "ZPZA01",
-					"Vejledning": "Procedure aimed at diagnosis.",
+					"Vejledning": "",
 					"DisplayType": "simple",
 					"Show": true
 				},
@@ -21,7 +21,7 @@
 					"LabelText": "Kurativt",
 					"SKSnavn": "intenderet kurativ behandling",
 					"SKScode": "ZPZA02C",
-					"Vejledning": "Procedure intended for curative treatment.",
+					"Vejledning": "",
 					"DisplayType": "simple",
 					"Show": true
 				},
@@ -29,7 +29,7 @@
 					"LabelText": "Neoadjuverende",
 					"SKSnavn": "neoadjuverende behandling",
 					"SKScode": "ZPZA02B",
-					"Vejledning": "Procedure for neoadjuvant treatment.",
+					"Vejledning": "",
 					"DisplayType": "udvidet",
 					"Show": false
 				},
@@ -37,7 +37,7 @@
 					"LabelText": "Palliativt",
 					"SKSnavn": "palliativ",
 					"SKScode": "ZPZA05",
-					"Vejledning": "Procedure aimed at palliation.",
+					"Vejledning": "",
 					"DisplayType": "simple",
 					"Show": true
 				},
@@ -45,7 +45,7 @@
 					"LabelText": "Metastasebehandling",
 					"SKSnavn": "metastasebehandling",
 					"SKScode": "ZPZA02D",
-					"Vejledning": "Procedure for metastasis treatment.",
+					"Vejledning": "",
 					"DisplayType": "simple",
 					"Show": false
 				}
