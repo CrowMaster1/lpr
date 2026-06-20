@@ -1,8 +1,8 @@
 {
-	"Groups": [			
+	"Groups": [
 		{
-			"GroupHeading": "Ingen komplikationer",
-			"Description": "Kodes KUN såfremt forløbet har været ukompliceret - dvs ingen Clavion-Dindo Grad",
+			"GroupHeading": "Registreringstype",
+			"Description": "Vælg type af komplikationsregistrering for denne kontakt. 'Ingen komplikationer' kodes KUN såfremt forløbet har været ukompliceret.",
 			"AllowsMultipleSelections": false,
 			"SeeAlso": {
 				"URL": "https://manual.dccg-lpr.dk",
@@ -10,23 +10,52 @@
 			},
 			"Items": [
 				{
-					"LabelText": "Ingen komplikationer ",
-					"SKSnavn": "Ingen komplikationer ",
+					"LabelText": "Ingen komplikationer",
+					"SKSnavn": "Ingen komplikationer",
 					"SKScode": "VV00051",
-					"Vejledning": "",
+					"Vejledning": "Tillægskode til aktionsdiagnosen. Kodes KUN ved ukompliceret forløb - dvs. ingen Clavien-Dindo gradering.",
 					"DisplayType": "simple",
 					"Show": true
-				}				
+				},
+				{
+					"LabelText": "Komplikationer under Primære Indgreb",
+					"SKSnavn": "Komplikationer under Primære Indgreb",
+					"SKScode": "PRIMAER",
+					"Vejledning": "Komplikationer registreres som bi-diagnoser til aktionsdiagnosen med tillægskode for grad (Clavien-Dindo).",
+					"DisplayType": "simple",
+					"Show": true,
+					"SkipSummary": true
+				},
+				{
+					"LabelText": "Genindlæggelse - Komplikationer",
+					"SKSnavn": "Genindlæggelse - Komplikationer",
+					"SKScode": "GENIND",
+					"Vejledning": "Komplikationen registreres som aktionsdiagnose på genindlæggelsen/ambulant besøg. Tilføj tillægskode for grad (Clavien-Dindo).",
+					"DisplayType": "simple",
+					"Show": true,
+					"SkipSummary": true
+				}
 			]
 		},
 		{
+			"GroupHeading": "Kodningsvejledning - Primære Indgreb",
+			"InfoBanner": "<strong>Primære Indgreb:</strong> Komplikationer registreres som <em>bi-diagnoser</em> til aktionsdiagnosen med tillægskode for grad (Clavien-Dindo). Samtlige komplikationer tilføjes. Der foretages en samlet opgørelse fra proceduren til udskrivelse/afslutning af kontakt.",
+			"showIf": { "Condition": "PRIMAER", "Value": true }
+		},
+		{
+			"GroupHeading": "Kodningsvejledning - Genindlæggelse",
+			"InfoBanner": "<strong>Genindlæggelse:</strong> Komplikationen der medførte genindlæggelsen registreres som <em>aktionsdiagnose</em> på genindlæggelsen/ambulant besøg. Tilføj tillægskode for grad (Clavien-Dindo).",
+			"showIf": { "Condition": "GENIND", "Value": true }
+		},
+		{
 			"GroupHeading": "Clavien-Dindo Kategori",
-			"Description": "Inkluderer i DCCG både kirurgiske og medicinske",
+			"Description": "Inkluderer i DCCG både kirurgiske og medicinske komplikationer. Det er den værste komplikation som bestemmer graden.",
 			"AllowsMultipleSelections": false,
 			"SeeAlso": {
 				"URL": "https://manual.dccg-lpr.dk",
 				"LinkText": "DCCG LPR manual"
 			},
+			"showIf": { "Condition": ["PRIMAER", "GENIND"], "Value": true },
 			"Items": [
                 {
                     "LabelText": "Clavien grad 1",
@@ -102,6 +131,7 @@
 				"URL": "",
 				"LinkText": ""
 			},
+			"showIf": { "Condition": "PRIMAER", "Value": true },
 			"Items": [
 				{
 					"LabelText": "Per-operativ blødning UNS",
@@ -271,7 +301,7 @@
           			"DisplayType": "udvidet",
           			"Show": true
 				},
-				{	
+				{
           			"LabelText": "Læsion af pancreas",
           			"SKSnavn": "Læsion af pancreas",
           			"SKScode": "DS362",
@@ -318,7 +348,7 @@
           			"Vejledning": "-",
           			"DisplayType": "udvidet",
           			"Show": true
-				}				
+				}
 			]
 		},
 		{
@@ -333,6 +363,7 @@
 				"URL": "https://manual.dccg-lpr.dk",
 				"LinkText": "DCCG LPR manual"
 			},
+			"showIf": { "Condition": ["PRIMAER", "GENIND"], "Value": true },
 			"Items": [
 				{
 					"LabelText": "Post-operativ blødning UNS",
@@ -358,7 +389,7 @@
                     "DisplayType": "udvidet",
                     "Show": true
                 },
-				                {
+				{
                     "LabelText": "Post-op intra abd. abscess",
                     "SKSnavn": "Post-op intra abd. abscess",
                     "SKScode": "DT814B",
@@ -390,12 +421,12 @@
                     "DisplayType": "udvidet",
                     "Show": true
                 }
-			]	
+			]
 		},
 		{
 			"GroupHeading": "Anastomose læk",
 			"Description": [
-			"Anstomose lækager kodes iht nedenstående.", 
+			"Anstomose lækager kodes iht nedenstående.",
 			"Kræver et læk re-operation, skal der kodes ifølge nedenstående.",
 			"Der kodes for evt. Stomi og ekstra resektioner også."
 			],
@@ -404,6 +435,7 @@
 				"URL": "https://manual.dccg-lpr.dk",
 				"LinkText": "DCCG LPR manual"
 			},
+			"showIf": { "Condition": ["PRIMAER", "GENIND"], "Value": true },
 			"Items": [
                 {
                     "LabelText": "Anastomoselækage, type A",
@@ -429,7 +461,7 @@
                     "DisplayType": "udvidet",
                     "Show": true
                 }
-			]	
+			]
 		},
 		{
 			"GroupHeading": "Anastomose re-operation",
@@ -441,6 +473,7 @@
 				"URL": "https://manual.dccg-lpr.dk",
 				"LinkText": "DCCG LPR manual"
 			},
+			"showIf": { "Condition": ["PRIMAER", "GENIND"], "Value": true },
 			"Items": [
                 {
                     "LabelText": "Re-operation anastomose insuff - åben",
@@ -474,14 +507,14 @@
                     "DisplayType": "udvidet",
                     "Show": true
                 }
-			]	
+			]
 		},
 		{
 			"GroupHeading": "Re-operationer",
 			"Description": [
 			"Alle re-operationer kodes efter re-operations klassifikation, så specifik som muligt.",
 			"• Er dette ikke dækkende, anvendes KJWW(96 –98) og subspecikke koder for ekstra procedurer.",
-			"• Eksp.Lap SKAL ikke anvendes som re-operations kode.", 
+			"• Eksp.Lap SKAL ikke anvendes som re-operations kode.",
 			"o Se under anastomose re-op for specifikke kodning heraf."
 			],
 			"AllowsMultipleSelections": true,
@@ -489,6 +522,7 @@
 				"URL": "https://manual.dccg-lpr.dk",
 				"LinkText": "DCCG LPR manual"
 			},
+			"showIf": { "Condition": ["PRIMAER", "GENIND"], "Value": true },
 			"Items": [
 				{
 					"LabelText": "Sutur af sårruptur efter gastroenterologisk operation",
@@ -603,20 +637,20 @@
 					"Show": true
 				}
 			]
-
 		},
 		{
 			"GroupHeading": "Medicinske komplikationer",
 			"Description": [
 			"Medicinske komplikationer kodes så udtømmende som mulight iht. SKS.",
-			"• Listen er hyppigt forekommende - ikke udtømmende"			
+			"• Listen er hyppigt forekommende - ikke udtømmende"
 			],
 			"AllowsMultipleSelections": true,
 			"SeeAlso": {
 				"URL": "https://manual.dccg-lpr.dk",
 				"LinkText": "DCCG LPR manual"
 			},
-			"Items": [	
+			"showIf": { "Condition": ["PRIMAER", "GENIND"], "Value": true },
+			"Items": [
 				{
 					"LabelText": "Postoperativ sepsis",
 					"SKSnavn": "Postoperativ sepsis",
@@ -706,6 +740,6 @@
 					"Show": true
 				}
 			]
-		}	
+		}
     ]
 }

@@ -28,6 +28,7 @@ function showSummary() {
                 const itemData = groupData.Items.find(item => item.LabelText === labelText);
                 if (itemData) {
                     console.log("Found item data:", itemData);
+                    if (itemData.SkipSummary) return; // context-selector items, not real SKS codes
                     const SKScode = itemData.SKScode || "Unknown";
                     const SKSnavn = itemData.LabelText;
 
@@ -49,6 +50,12 @@ function showSummary() {
     savedSelections.forEach(selection => {
         console.log("Processing saved selection:", selection);
         if (!displayedSelections.has(`${selection.group}-${selection.label}`)) {
+            // Check SkipSummary on the source item (e.g. context-selector items)
+            const groupData = options && options.Groups && options.Groups.find(g => g.GroupHeading === selection.group);
+            if (groupData && groupData.Items) {
+                const itemData = groupData.Items.find(i => i.LabelText === selection.label);
+                if (itemData && itemData.SkipSummary) return;
+            }
             const sksAndVph = vphData[selection.label] ? `${selection.SKS} + VPH${vphData[selection.label]}` : selection.SKS;
             content += `<tr><td>${selection.SKSnavn}</td><td>${sksAndVph}</td></tr>`;
             displayedSelections.add(`${selection.group}-${selection.label}`);

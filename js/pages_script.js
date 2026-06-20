@@ -101,6 +101,16 @@ function generateDataEntry(data) {
 
     // Iterate through each group in the data
     data.Groups.forEach((group, groupIndex) => {
+        // ponytail: InfoBanner groups render as alert divs, not group-boxes
+        if (group.InfoBanner !== undefined) {
+            const bannerDiv = document.createElement('div');
+            bannerDiv.className = 'info-banner alert alert-info w-100 mb-3';
+            bannerDiv.setAttribute('data-group-index', groupIndex);
+            bannerDiv.innerHTML = group.InfoBanner;
+            dataEntryDiv.appendChild(bannerDiv);
+            return;
+        }
+
         const inputType = group.AllowsMultipleSelections ? 'checkbox' : 'radio';
 
         const groupDiv = document.createElement('div');
@@ -116,7 +126,7 @@ function generateDataEntry(data) {
 
         group.Items.forEach((item, itemIndex) => {
             if (!item.Show) return;
-            
+
             const itemElement = createItemElement(item, group.GroupHeading, inputType);
             itemElement.setAttribute('data-item-index', itemIndex); // Add data attribute for debugging
             itemElement.setAttribute('data-item-label', item.LabelText); // Track label
@@ -225,7 +235,7 @@ function updateGroupVisibility() {
 
     // Iterate over groups and handle visibility
     options.Groups.forEach((group, groupIndex) => {
-        const groupElement = document.querySelector(`.group-box[data-group-index="${groupIndex}"]`);
+        const groupElement = document.querySelector(`.group-box[data-group-index="${groupIndex}"], .info-banner[data-group-index="${groupIndex}"]`);
 
         if (!groupElement) {
             console.warn(`Group element for "${group.GroupHeading}" not found in the DOM.`);
@@ -233,9 +243,10 @@ function updateGroupVisibility() {
         }
 
         if (group.showIf) {
-            // Handle groups with showIf condition
+            // Handle groups with showIf condition; Condition can be a string or array (OR logic)
             const { Condition, Value } = group.showIf;
-            const shouldShow = selectedSKScodes.has(Condition) === Value;
+            const conditions = Array.isArray(Condition) ? Condition : [Condition];
+            const shouldShow = conditions.some(c => selectedSKScodes.has(c)) === Value;
 
             console.log(`Group: ${group.GroupHeading}, Condition: ${Condition}, Should Show: ${shouldShow}`);
             groupElement.style.display = shouldShow ? 'block' : 'none';
@@ -261,7 +272,7 @@ function attachVisibilityHandlers() {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function toggleUdvidet(groupIndex) {
-    const groupBox = document.querySelectorAll('.group-box')[groupIndex];
+    const groupBox = document.querySelector(`.group-box[data-group-index="${groupIndex}"]`);
     const udvidetItems = groupBox.querySelectorAll('.udvidet-item');
     const toggleButton = groupBox.querySelector('.toggle-udvidet');
 
