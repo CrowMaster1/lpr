@@ -10,13 +10,15 @@ There is no build system, no package manager, and no test suite. Development is 
 
 ## Running Locally
 
-The site must be served over HTTP — opening HTML files directly as `file://` will fail due to CORS on `fetch()` calls. Use any static server, e.g.:
+The site must be served over HTTP — opening HTML files directly as `file://` will fail due to CORS on `fetch()` calls. Prefer the project's no-cache server during development:
 
 ```bash
+python serve_local.py   # sets Cache-Control: no-store on all responses
+# or fallback
 python -m http.server 8000
-# or
-npx serve .
 ```
+
+`serve_local.py` prevents stale-cache issues when iterating on JS/JSON changes.
 
 ## Architecture
 
@@ -118,9 +120,18 @@ Each `data/pageX_data.json` follows this schema:
 | `data/json_to_excel.py` | Converts between `data/pageX_data.json` and Excel. Uses pandas + tkinter. |
 | `data/json_to_excel_or_rev.py` | Bidirectional JSON ↔ Excel conversion. Uses pandas + tkinter. |
 
+## Deployment
+
+The site is deployed via GitHub Pages at `www.dccg-lpr.dk` (configured by the `CNAME` file). Pushing to `main` is sufficient to deploy.
+
+Note: `*.py` files are in `.gitignore` — Python utility scripts are local-only and not committed to the repository.
+
 ## Key Patterns
 
 - **Adding a new page**: create `pageN.html` (copy an existing one, update `data-page-id` on `<body>` — marked with `<!-- ÆNDRE HER -->` comment — and update the `<h1>` heading), add `data/pageN_data.json`, `data/pageN_data_secondary.json`, `vejledninger/pageN_vejledning.html`, and add a nav link in `navigation.html`.
 - **Conditional group visibility**: add a `showIf: { "Condition": "<SKScode>", "Value": true }` field to the group in JSON. The group will only appear when that SKScode is selected.
 - **Cache busting**: JS files use `?v=1.0` query strings on `<script src>` tags — increment version when deploying JS changes.
 - **SKS code audit**: navigate to `datacontrol.html` in a running local server to compare any page's SKS names against the reference dataset.
+- **Global `options` variable**: after JSON loads, the full page data is stored in `window.options` — all JS modules share it without re-fetching.
+- **localStorage format**: `savedSelections` key holds an array of `{ pageId, group, label, SKSnavn, SKS }` objects. Cleared by "Ryd Valg" (clears all pages, not just current).
+- **Radio undo**: clicking an already-checked radio deselects it (`enableRadioUndo()` in `pages_script.js`). Non-standard behavior — preserve it when refactoring input handling.

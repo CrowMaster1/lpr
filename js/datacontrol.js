@@ -6,9 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 async function runAudit() {
-    const pageSelect = document.getElementById('page-select');
-    const selectedOption = pageSelect.options[pageSelect.selectedIndex];
-    const pageId = selectedOption.value;
+    const pageId = document.getElementById('page-select').value;
 
     const resultsContainer = document.getElementById('results-container');
     const summaryContainer = document.getElementById('summary-container');
@@ -17,8 +15,8 @@ async function runAudit() {
 
     try {
         const [localData, sksData] = await Promise.all([
-            fetchLocalData(pageId),
-            fetchSksData()
+            fetchJSON(`data/${pageId}_data.json`),
+            fetchJSON('dumpfiles/sks_processed.json')
         ]);
 
         const localMap = createMapFromJson(localData);
@@ -34,19 +32,9 @@ async function runAudit() {
     }
 }
 
-async function fetchLocalData(pageId) {
-    const response = await fetch(`data/${pageId}_data.json`);
-    if (!response.ok) {
-        throw new Error(`Could not fetch local data file: data/${pageId}_data.json`);
-    }
-    return response.json();
-}
-
-async function fetchSksData() {
-    const response = await fetch('dumpfiles/sks_processed.json');
-    if (!response.ok) {
-        throw new Error('Failed to fetch sks_processed.json.');
-    }
+async function fetchJSON(url) {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`Failed to fetch: ${url}`);
     return response.json();
 }
 
@@ -71,9 +59,10 @@ function compareData(localMap, sksData) {
     };
 
     for (const [code, localText] of localMap.entries()) {
-        if (sksData.hasOwnProperty(code)) {
+        if (code in sksData) {
             const dumpText = sksData[code];
-            const similarity = calculateSimilarity(localText, dumpText);
+            const maxLength = Math.max(localText.length, dumpText.length);
+            const similarity = maxLength === 0 ? 100 : (1 - levenshtein(localText, dumpText) / maxLength) * 100;
             results.matches.push({ code, localText, dumpText, similarity });
         } else {
             results.missingInDump.push({ code, localText });
@@ -134,14 +123,6 @@ function renderResults(results, container) {
 
     tableHtml += '</tbody></table>';
     container.innerHTML = tableHtml;
-}
-
-function calculateSimilarity(s1, s2) {
-    const distance = levenshtein(s1, s2);
-    const maxLength = Math.max(s1.length, s2.length);
-    if (maxLength === 0) return 100;
-    const similarity = (1 - distance / maxLength) * 100;
-    return similarity;
 }
 
 function levenshtein(s1, s2) {
